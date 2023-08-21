@@ -1,11 +1,11 @@
-<header>
-  <img src="{{ '/images/logo.svg' | relative_url }}" alt="Logo" />
+<header role="banner" class="flex items-center justify-between !mt-10 !mb-20">
+  <a href="{{ '/' | relative_url }}">
+    {% svg "/images/logo.svg" %}
+  </a>
+  <nav role="navigation" class="flex gap-4">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/about' | relative_url }}">About</a>
+    <a href="{{ '/posts' | relative_url }}">Posts</a>
+  </nav>
 </header>
 
-<nav>
-  <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/about' | relative_url }}">About</a></li>
-    <li><a href="{{ '/posts' | relative_url }}">Posts</a></li>
-  </ul>
-</nav>

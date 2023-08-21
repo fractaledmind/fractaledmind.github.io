@@ -8,3 +8,11 @@
 @tailwind utilities;
 
 @import "variables.css";
+
+.stroke-current{
+  stroke: currentColor
+}
+
+.text-\[var\(--tw-prose-body\)\]{
+  color: var(--tw-prose-body)
+}
