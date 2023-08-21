@@ -1,0 +1,11 @@
+@import "open-props/open-props.min.css";
+
+/* Uncomment this if you want addiitonal "default" styles applied: */
+/* @import "open-props/normalize.min.css"; */
+
+:root {
+  /* Define additional variables here. */
+
+  /* You can use variables from Open Props in your own custom properties. */
+  --color-medium-gray: var(--gray-7);
+}

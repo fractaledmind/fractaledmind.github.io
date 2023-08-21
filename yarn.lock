@@ -634,6 +634,11 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
+open-props@^1.5.13:
+  version "1.5.13"
+  resolved "https://registry.yarnpkg.com/open-props/-/open-props-1.5.13.tgz#ce96d128fce8708431cce6b5367c6f4567c1d255"
+  integrity sha512-j8qiCQgdiYWxpBq+l92A7tiNjnGzpExP32VIN+YEoyQyOx5/DMjj4qQebGczadEJdky2Z82wpx1r+u+KgqM6iQ==
+
 path-key@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-3.1.1.tgz#581f6ade658cbba65a0d3380de7753295054f375"
