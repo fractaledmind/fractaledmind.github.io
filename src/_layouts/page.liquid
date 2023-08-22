@@ -2,12 +2,7 @@
 layout: default
 ---
 
-{% unless data.pagination_info == empty %}
-  {% assign pagination_text = '(Page ' | append: data.pagination_info.curr_page | append: ')' %}
-  <h1>{{ data.title | remove: pagination_text }}</h1>
-{% else %}
-  <h1>{{ data.title }}</h1>
-{% endunless %}
+<h1>{{ data.title }}</h1>
 
 <article class="">
   {{ content }}

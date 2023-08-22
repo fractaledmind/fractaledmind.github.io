@@ -4,6 +4,8 @@ title: Posts with tag <code>:prototype-term</code>
 prototype:
   collection: posts
   term: tag
+pagination:
+  title: ':title'
 ---
 
 <a href="{{ '/posts' | relative_url }}" class="no-underline">
