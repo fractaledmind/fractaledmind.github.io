@@ -11,7 +11,7 @@ Sometimes in our Rails applications we need to build forms that represent state 
 
 <!--/summary-->
 
->**NOTE:** I first detailed this helper in a larger post on [basic RESTful filtering in Rails](http://fractaledmind.com/articles/basic-restful-filtering-with-rails/).
+>**NOTE:** I first detailed this helper in a larger post on [basic RESTful filtering in Rails]({% link _posts/2018-04-09-basic-restful-filtering-with-rails.md %}).
 
 - - -
 

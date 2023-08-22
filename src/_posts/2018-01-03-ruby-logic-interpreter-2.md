@@ -14,7 +14,7 @@ tags:
 summary: The second in a series of posts laying out the process, step by step, of building an interpreter in Ruby for working with propositional logic. In this second post, we expand the interpreter to handle the full range of valid expressions in classical propositional logic.
 ---
 
-In the [first post](http://fractaledmind.com/articles/ruby-logic-interpreter-1/) of this series, we built an interpreter to work with a basic subset of propositional logic. In this post, we are going to extend that interpreter to handle the full range of valid expressions in classical propositional logic. Specifically, this means we are going to allow for
+In the [first post]({% link _posts/2017-12-29-ruby-logic-interpreter-1.md %}) of this series, we built an interpreter to work with a basic subset of propositional logic. In this post, we are going to extend that interpreter to handle the full range of valid expressions in classical propositional logic. Specifically, this means we are going to allow for
 
 - handling stacked negation operators (e.g. `~~T`),
 - parentheses to group sub-expressions (e.g. `~(T v F) & T`),
@@ -323,7 +323,7 @@ formula :: (NOT)* formula | LPAREN expression RPAREN | term
 term :: TRUE | FALSE
 ~~~
 
-We can recall from [the section on the visitor pattern](http://fractaledmind.com/articles/ruby-logic-interpreter-1/#the-interpreter) from the previous post that our abstract syntax tree is _evaluated_ from the lowest (leftmost) nodes up. So, for a tree like this:
+We can recall from [the section on the visitor pattern]({% link _posts/2017-12-29-ruby-logic-interpreter-1.md %}#the-interpreter) from the previous post that our abstract syntax tree is _evaluated_ from the lowest (leftmost) nodes up. So, for a tree like this:
 
 <div class="tree">
   <ul>

@@ -8,7 +8,7 @@ tags:
   - trees
 ---
 
-In our [last post](http://fractaledmind.com/articles/css-tree/), we built a simple pure-CSS tree from a nested list. That tree was horizontally oriented, but what if we wanted a vertically oriented tree? Today, let's build that.
+In our [last post]({% link _posts/2018-03-05-css-tree.md %}), we built a simple pure-CSS tree from a nested list. That tree was horizontally oriented, but what if we wanted a vertically oriented tree? Today, let's build that.
 
 <!--/summary-->
 

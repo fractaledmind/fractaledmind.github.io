@@ -898,6 +898,6 @@ In the next post, we are going to expand our grammar to allow for grouped expres
 
 > You can find the script we have built to this point in [this Gist](https://gist.github.com/fractaledmind/a072674b18086fdebf3b3a535c0f7dfb/09e7c7c28c71823f7611e8d1597a8758350cc9f2)
 
-[^1]: I have covered most of this in a section of a previous article: [A Primer on Propositional Logic](http://fractaledmind.com/articles/conjunctive-binarism/#a-primer-on-propositional-logic)
+[^1]: I have covered most of this in a section of a previous article: [A Primer on Propositional Logic]({% link _posts/2016-02-21-conjunctive-binarism.md %}#a-primer-on-propositional-logic)
 [^2]: The `:IFSO` type does not have a corollary in the set of logic gates. This is a constant that I made up to fit the basic semantic pattern.
 [^3]: Our code here can be quite simple like this since our grammar specifies that a `formula` is optionally preceeded by _zero or one_ negation operators. If our grammar allowed for _zero or more_ negation operators, we would have to change this code fairly significantly. This will be one of the ways in which we evolve our grammar and thus our interpreter in this series of posts.

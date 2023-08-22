@@ -16,7 +16,7 @@ This is a way to determine the number of characters per line in the various layo
 
 $$\sum_{n=1}^{\infty} \frac{1}{n}$$
 
-This text is *italic*, while this is **bold**, and this is a [link](smargh.github.io).
+This text is *italic*, while this is **bold**, and this is a [link](example.com).
 
 For code, you have two types:
 

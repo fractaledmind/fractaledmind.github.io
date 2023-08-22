@@ -77,4 +77,4 @@ We simply set the default value and then change the value whenever the `input` s
 
 Having the ability to work with binary state gives us a foundation upon which to start building pure CSS interactive features. Using this technique, in a future post, we will use only CSS to implement a tabs feature.
 
-[^1]: For example, consider my [Togglicons](http://fractaledmind.com/projects/togglicons/) library and my work with [CSS trees](http://fractaledmind.com/articles/css-tree/)
+[^1]: For example, consider my [Togglicons](https://github.com/fractaledmind/togglicons) library and my work with [CSS trees]({% link _posts/2018-03-05-css-tree.md %})

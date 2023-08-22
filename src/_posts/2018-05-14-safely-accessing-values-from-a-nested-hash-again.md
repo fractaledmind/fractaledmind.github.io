@@ -7,7 +7,7 @@ tags:
 summary: Implementing a companion method to <code data-language="ruby">Hash#dig</code> that <em>always</em> returns a value and <em>never</em> throws an error and allows for a default return value.
 ---
 
-In an [earlier post](http://fractaledmind.com/articles/accessing-values-from-nested-hashes/) I discussed some potential issues with accessing values from a nested hash. That post ended with a method that utilized the `ActiveSupport` `try` in conjunction with the Ruby `dig` method to allow for accessing a nested hash without throwing an error even if the keypath didn't properly match the hash structure. Since writing that post, I have come to further refine that method.
+In an [earlier post]({% link _posts/2016-07-15-accessing-values-from-nested-hashes.md %}) I discussed some potential issues with accessing values from a nested hash. That post ended with a method that utilized the `ActiveSupport` `try` in conjunction with the Ruby `dig` method to allow for accessing a nested hash without throwing an error even if the keypath didn't properly match the hash structure. Since writing that post, I have come to further refine that method.
 
 - - -
 

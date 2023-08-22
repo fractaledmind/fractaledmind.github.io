@@ -8,7 +8,8 @@ tags:
 summary: An example of building an "ERB component", that is, an ERB partial that has ansome flexibility around their HTML output articulated via an interface in the <code>render</code> call.
 ---
 
-In a [previous post](http://fractaledmind.com/articles/a-function-for-generating-html-attribute-values/) I discussed my need for a flexible function for generating values to pass into the HTML attribute options hash of the `content_tag` helper. In this post, I want to discuss one particular context in which I needed the `meld` method.
+
+In a [previous post]({% link _posts/2016-08-02-a-function-for-generating-html-attribute-values.md %}) I discussed my need for a flexible function for generating values to pass into the HTML attribute options hash of the `content_tag` helper. In this post, I want to discuss one particular context in which I needed the `meld` method.
 
 For one particular work project I found myself building a few "ERB components", that is, ERB partials that had some flexibility around their HTML output via params passed on `render`. In one specific example, I was building a simple partial for rendering a key-value pair. I was using the description list HTML element (`dl`), but I wanted the flexibility to have the entry render _either_ as a "column" _or_ as a "row", e.g.:
 
@@ -96,7 +97,7 @@ Now, I just needed to write the `props_for` and `value_for` methods for the part
 %>
 ~~~
 
-> **NOTE:** The `value_for` method here is precisely the same as the `access` method I discussed in [this past article](http://fractaledmind.com/articles/accessing-values-form-nested-hashes/).
+> **NOTE:** The `value_for` method here is precisely the same as the `access` method I discussed in [this past article]({% link _posts/2016-07-15-accessing-values-from-nested-hashes.md %}).
 
 While simple and elegant, these methods have two problems. First, `local_assigns` is not accessible from any scope except the outer partial scope; you will get a `undefined local variable or method 'local_assigns'` error when you try to run these methods in the partial. Second, these methods won't handle params passed using string keys. Let's refactor and fix both of these issues:
 
