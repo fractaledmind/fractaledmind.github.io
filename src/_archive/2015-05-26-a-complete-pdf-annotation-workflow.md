@@ -8,7 +8,7 @@ summary: In this post I want to outline how I (1) prepare PDFs, (2) annotate PDF
 
 When I was in graduate school, I was inundated with PDFs. PDFs of all kinds, from all kinds of sources, with all kinds of needs. Suffice to say, over a few years my tinkering spirit and the sheer number of PDFs I needed to handle led to a collection of tools organized into a workflow that I believe works well, and is thus well worth sharing. In this post I want to outline how I (1) [prepare PDFs](#pdf-preparation), (2) [annotate PDFs](#pdf-annotation), and (3) [store PDFs](#pdf-storage).
 
-{{read more}}
+<!--/summary-->
 
 ## PDF Preparation
 

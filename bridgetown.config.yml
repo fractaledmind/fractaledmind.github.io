@@ -25,7 +25,7 @@ template_engine: liquid
 highlighter: ""
 
 collections:
-  essays:
+  archive:
     output: true
     permalink: pretty
     sort_direction: descending

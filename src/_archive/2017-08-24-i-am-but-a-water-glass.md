@@ -12,7 +12,7 @@ Life osmoses through me
 forming droplets of moments  
 that ruin rivulet-like to the tabletop.  
 
-{{read more}}
+<!--/summary-->
 
 I am but a water glass,  
 separating inner from outer.  
