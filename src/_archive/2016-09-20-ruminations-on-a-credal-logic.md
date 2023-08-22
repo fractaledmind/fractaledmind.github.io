@@ -2,7 +2,7 @@
 title: Ruminations on a Credal Logic
 date: 2016-09-20
 image: credal_logic.png
-tags:
+archive_tags:
   - philosophy
   - epistemology
   - faith

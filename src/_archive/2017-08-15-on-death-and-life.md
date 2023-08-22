@@ -1,7 +1,7 @@
 ---
 title: On Death and Life
 date: 2017-08-15
-tags:
+archive_tags:
   - prose
   - life
 summary: A short meditation on death and life.

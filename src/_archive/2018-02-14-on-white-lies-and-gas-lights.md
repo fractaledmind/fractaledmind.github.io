@@ -1,7 +1,7 @@
 ---
 title: On White Lies and Gas Lights
 date: 2018-02-14
-tags:
+archive_tags:
   - prose
   - philosophy
   - relationships

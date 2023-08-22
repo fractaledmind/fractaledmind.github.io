@@ -1,7 +1,7 @@
 ---
 title: A life forgotten
 date: 2017-05-14
-tags:
+archive_tags:
   - poetry
 summary: null
 ---

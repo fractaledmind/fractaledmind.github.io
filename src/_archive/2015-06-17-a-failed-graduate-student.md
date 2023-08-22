@@ -1,7 +1,7 @@
 ---
 title: A Failed Graduate Student
 date: 2015-06-17 00:18 UTC
-tags:
+archive_tags:
   - prose
   - self
 ---

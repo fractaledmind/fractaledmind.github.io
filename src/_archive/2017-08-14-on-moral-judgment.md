@@ -1,7 +1,7 @@
 ---
 title: "On Moral Judgment"
 date: 2017-08-14 12:25 UTC
-tags:
+archive_tags:
   - philosophy
   - ethics
 summary: What is judgment with respect to the moral universe, how can it be used properly, and how is it often used improperly?

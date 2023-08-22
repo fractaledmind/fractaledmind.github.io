@@ -1,7 +1,7 @@
 ---
 title: 'Portrait of Pain II'
 date: 2017-08-20
-tags:
+archive_tags:
   - prose
   - relationships
   - self

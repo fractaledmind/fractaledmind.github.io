@@ -1,7 +1,7 @@
 ---
 title: A Depressed Graduate Student
 date: 2015-06-18 17:38 UTC
-tags:
+archive_tags:
   - prose
   - self
 ---

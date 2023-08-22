@@ -41,6 +41,11 @@ defaults:
 
 summary_separator: <!--/summary-->
 
+taxonomies:
+  archive_tags:
+    key: archive_tags
+    title: "Tags"
+
 # Other options you might want to investigate:
 #
 # base_path: "/" # the subpath of your site, e.g. /blog. If you set this option,

@@ -1,7 +1,7 @@
 ---
 title: "Recalling my earliest deep regret"
 date: 2017-08-18
-tags:
+archive_tags:
   - prose
   - self
   - life

@@ -2,7 +2,7 @@
 title: Flatland and Theological Expectations
 date: 2017-03-09
 image: tesseract_1.gif
-tags:
+archive_tags:
   - philosophy
   - epistemology
   - faith
