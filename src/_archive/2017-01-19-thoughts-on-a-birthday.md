@@ -1,9 +1,9 @@
 ---
 title: Thoughts on a Birthday
+date: 2017-01-19
 tags:
   - prose
   - self
-date: 2017-01-19
 ---
 
 I am 26 and as this, my 26th year, comes to a close I see that I have learned a lot.

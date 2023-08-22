@@ -1,10 +1,10 @@
 ---
 title: On Death and Life
+date: 2017-08-15
 tags:
   - prose
   - life
 summary: A short meditation on death and life.
-date: 2017-08-15
 ---
 To anyone who has ever hedged or criticized someone who has committed suicide. Don't.
 

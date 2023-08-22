@@ -1,9 +1,9 @@
 ---
 title: I am but a water glass
+date: 2017-08-24 00:00 UTC
 tags:
   - poetry
-summary:
-date: 2017-08-24 00:00 UTC
+summary: null
 ---
 
 I am but a water glass,  

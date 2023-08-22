@@ -1,11 +1,11 @@
 ---
 title: On White Lies and Gas Lights
+date: 2018-02-14
 tags:
   - prose
   - philosophy
   - relationships
   - ethics
-date: 2018-02-14
 ---
 
 When was the last time you told a "white lie"? You know the one I mean, that harmless little lie you told to avoid hurting someone's feelings. Our world is rife with them, and they are slowly killing me.

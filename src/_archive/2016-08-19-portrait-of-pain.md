@@ -1,10 +1,10 @@
 ---
 title: Portrait of Pain
+date: 2016-08-19
 tags:
   - prose
   - relationships
 summary: She lies. Then the sting. Now the ache.
-date: 2016-08-19
 ---
 She swipes from right to left, the red square appearing and then disappearing, along with the words. Five minutes later, caught initially in my peripheral vision, the red square again.
 

@@ -1,9 +1,9 @@
 ---
 title: A life forgotten
+date: 2017-05-14
 tags:
   - poetry
-summary:
-date: 2017-05-14
+summary: null
 ---
 A life forgotten  
 
