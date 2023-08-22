@@ -5,6 +5,7 @@ tags:
   - code
   - tutorial
   - git
+summary: Let's write down so we remember how to delete [1] old remote branches, [2] already-merged remote branches, and [3] already-merged local branches.
 ---
 
 ### Deleting old remote branches

@@ -1,10 +1,10 @@
 ---
 title: The Lifecycle of a Web Request
+date: 2018-02-21
 tags:
   - code
   - http
   - rails
-date: 2018-02-21
 ---
 
 As a part of a recent job application process, I was asked a few general questions pertaining to software development. I thought I would share the questions and my answers here on my blog.

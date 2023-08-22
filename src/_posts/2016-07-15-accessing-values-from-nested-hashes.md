@@ -1,14 +1,10 @@
 ---
-layout: post
 title: Accessing Values from Nested Hashes
-description: How can you access values from a nested (i.e. multidimensional) hash without throwing errors when the shape of the hash is not strictly fixed?
-image: null
-published_time: 2016-07-15
-modified_time: null
-author: Stephen Margheim
+date: 2016-07-15
 tags:
   - code
   - ruby
+summary: How can you access values from a nested (i.e. multidimensional) hash without throwing errors when the shape of the hash is not strictly fixed?
 ---
 
 <p>I need a function that will allow me to access values from a nested (i.e. multidimensional) hash. However, the shape of the hash is not strictly fixed.</p>

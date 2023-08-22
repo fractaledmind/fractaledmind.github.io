@@ -1,6 +1,6 @@
 ---
 title: 'Building an Interpreter for Propositional Logic'
-subtitle: 'Part 2: Proper Propositional Logic'
+subtitle: 'Proper Propositional Logic'
 date: 2018-01-03
 tags:
   - code

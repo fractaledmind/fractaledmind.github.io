@@ -1,9 +1,9 @@
 ---
 title: Maintaining Binary State in CSS
+date: 2018-03-06
 tags:
   - code
   - css
-date: 2018-03-06
 ---
 
 I really like CSS, and I think of it as a programming language. It does not, however, have many of the utilities of other programming languages. As a result, many programmers quickly turn to Javascript whenever they need client-side interactivity. For whatever reason, this is a habit that I never picked up; in fact, I picked up the complete opposite habit---whenever I need some particular client-side interactivity, I first try to implement it in pure CSS.

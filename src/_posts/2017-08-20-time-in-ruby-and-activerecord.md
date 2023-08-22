@@ -5,7 +5,7 @@ tags:
   - code
   - ruby
   - rails
-summary: How does the Ruby `Time` class relate to the ActiveRecord `time` column type?
+summary: How does the Ruby <code data-language="ruby">Time</code> class relate to the ActiveRecord <code data-language="ruby">time</code> column type?
 ---
 
 I recently lost about a day of work trying to figure what the hell was going on when I was working with an ActiveRecord model that had a `time` type column. In the hopes that I will not loose such time again and that this post can help others avoid such lost time, I want to lay out my investigation into time in Ruby and ActiveRecord.

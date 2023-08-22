@@ -1,6 +1,6 @@
 ---
 title: 'Building an Interpreter for Propositional Logic'
-subtitle: 'Part 1: Starting Simple'
+subtitle: 'Starting Simple'
 date: 2017-12-29
 tags:
   - code

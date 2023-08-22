@@ -1,10 +1,10 @@
 ---
 title: What is MVC?
+date: 2018-02-21
 tags:
   - code
   - rails
   - mvc
-date: 2018-02-21
 ---
 
 As a part of a recent job application process, I was asked a few general questions pertaining to software development. I thought I would share the questions and my answers here on my blog.

@@ -1,7 +1,7 @@
 ---
 title: Example *Article*
 date: 2012-01-01
-header-image: ./images/mobile-logo.png
+image: ./images/mobile-logo.png
 ---
 
 This is an example article. It contains a wide range of various content to demonstrate how this blog styles such content. For example, this is some text with a footnote.[^1]

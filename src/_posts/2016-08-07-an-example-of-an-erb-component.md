@@ -5,7 +5,7 @@ tags:
   - code
   - ruby
   - rails
-summary: An example of building an "ERB component", that is, an ERB partial that has ansome flexibility around their HTML output articulated via an interface in the `render` call.
+summary: An example of building an "ERB component", that is, an ERB partial that has ansome flexibility around their HTML output articulated via an interface in the <code>render</code> call.
 ---
 
 In a [previous post](http://fractaledmind.com/articles/a-function-for-generating-html-attribute-values/) I discussed my need for a flexible function for generating values to pass into the HTML attribute options hash of the `content_tag` helper. In this post, I want to discuss one particular context in which I needed the `meld` method.

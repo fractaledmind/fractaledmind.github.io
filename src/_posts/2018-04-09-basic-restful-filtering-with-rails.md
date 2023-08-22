@@ -1,10 +1,10 @@
 ---
 title: Basic RESTful Filtering with Rails
+date: 2018-04-09
 tags:
   - code
   - ruby
   - rails
-date: 2018-04-09
 ---
 
 Filtering a collection of data objects into a subset is one of the most common tasks in data-management applications. While well-tread, this problem space provides rich opportunity for exploring and learning about how to implement RESTful, maintainable, flexible, and robust Rails applications. In this post I want to implement a simple filtering feature, walking through the various aspects at the model, controller, and view layers.

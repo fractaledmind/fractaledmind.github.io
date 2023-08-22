@@ -1,11 +1,11 @@
 ---
-title: Building Pure CSS Trees (part 2)
+title: Building Pure CSS Trees (<em>part 2</em>)
+date: 2018-03-06
 tags:
   - code
   - tutorial
   - css
   - trees
-date: 2018-03-06
 ---
 
 In our [last post](http://fractaledmind.com/articles/css-tree/), we built a simple pure-CSS tree from a nested list. That tree was horizontally oriented, but what if we wanted a vertically oriented tree? Today, let's build that.

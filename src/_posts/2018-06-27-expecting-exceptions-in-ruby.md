@@ -1,12 +1,12 @@
 ---
 title: Expecting Exceptions in Ruby
+date: 2018-06-27
 tags:
   - code
   - ruby
-date: 2018-06-27
 ---
 
-Sometimes in Ruby code, having to use the `begin ... rescue .. end` construction to capture and deal with exceptions can feel overly burdensome. I recently found myself in such a situation and wrote a small function to make my code read a bit more elegantly.
+Sometimes in Ruby code, having to use the <code data-language="ruby">begin ... rescue .. end</code> construction to capture and deal with exceptions can feel overly burdensome. I recently found myself in such a situation and wrote a small function to make my code read a bit more elegantly.
 
 <!--/summary-->
 
