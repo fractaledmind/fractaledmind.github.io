@@ -20,3 +20,11 @@
 [aria-hidden="true"] {
   display: none;
 }
+
+.pagination [aria-current="page"] {
+  text-decoration: none;
+  color: var(--tw-prose-captions)
+}
+.pagination li > span:only-child {
+  color: var(--tw-prose-captions)
+}
