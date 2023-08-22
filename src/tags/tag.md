@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Posts with tag :prototype-term
+title: Posts with tag <code>:prototype-term</code>
 prototype:
   collection: posts
   term: tag
 ---
 
-<a href="{{ '/' | relative_url }}" class="no-underline">
+<a href="{{ '/posts' | relative_url }}" class="no-underline">
   <i>←</i>
   <span class="underline">All blog posts</span>
 </a>
