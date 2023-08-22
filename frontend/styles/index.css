@@ -28,3 +28,7 @@
 .pagination li > span:only-child {
   color: var(--tw-prose-captions)
 }
+
+h1 {
+  font-size: 2rem !important;
+}
