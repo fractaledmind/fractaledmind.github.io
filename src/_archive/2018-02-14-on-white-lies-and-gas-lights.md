@@ -1,8 +1,10 @@
 ---
 title: On White Lies and Gas Lights
 tags:
-  - prose>relationships
-  - philosophy>ethics
+  - prose
+  - philosophy
+  - relationships
+  - ethics
 date: 2018-02-14
 ---
 

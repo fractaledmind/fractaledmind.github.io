@@ -1,9 +1,11 @@
 ---
 title: Ruminations on a Credal Logic
 tags:
-  - philosophy>epistemology>math
-  - philosophy>epistemology>logic
-  - philosophy>faith
+  - philosophy
+  - epistemology
+  - faith
+  - math
+  - logic
 date: 2016-09-20
 image: credal_logic.png
 ---

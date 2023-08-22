@@ -1,7 +1,8 @@
 ---
 title: On Death and Life
 tags:
-  - prose>life
+  - prose
+  - life
 summary: A short meditation on death and life.
 date: 2017-08-15
 ---

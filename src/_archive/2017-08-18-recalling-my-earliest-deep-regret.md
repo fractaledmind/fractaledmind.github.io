@@ -2,8 +2,9 @@
 title: "Recalling my earliest deep regret"
 date: 2017-08-18
 tags:
-  - prose>self
-  - prose>life
+  - prose
+  - self
+  - life
 summary: A recollection of rocks, regret, and Snickers.
 ---
 

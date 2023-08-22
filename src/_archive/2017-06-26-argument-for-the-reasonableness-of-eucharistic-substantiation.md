@@ -1,7 +1,8 @@
 ---
 title: Argument for the Reasonableness of Eucharistic Substantiation
 tags:
-  - philosophy>faith
+  - philosophy
+  - faith
 summary:
 date: 2017-06-26
 summary: I believe both that [consubstantiation](http://www.theopedia.com/consubstantiation) is reasonable and true. Here's a short argument for why.

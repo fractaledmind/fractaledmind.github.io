@@ -2,8 +2,10 @@
 title: Flatland and Theological Expectations
 date: 2017-03-09
 tags:
-  - philosophy>epistemology>math
-  - philosophy>faith
+  - philosophy
+  - epistemology
+  - faith
+  - math
 image: tesseract_1.gif
 ---
 

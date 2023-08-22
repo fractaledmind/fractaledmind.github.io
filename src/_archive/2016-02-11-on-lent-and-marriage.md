@@ -2,8 +2,9 @@
 title: On Lent and Marriage
 date: 2016-02-11 03:16 UTC
 tags:
-  - prose>relationships
-  - prose>faith
+  - prose
+  - relationships
+  - faith
 summary: What does it mean to love unconditionally? How do we do so within a marriage? This Lent, I hope to find some answers to these questions. This is why.
 ---
 

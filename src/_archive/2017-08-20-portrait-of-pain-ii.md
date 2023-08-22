@@ -2,9 +2,10 @@
 title: 'Portrait of Pain II'
 date: 2017-08-20
 tags:
-  - prose>relationships
-  - prose>self
-  - prose>life
+  - prose
+  - relationships
+  - self
+  - life
 ---
 
 I had felt it for a while, though even then I didn't know it. I didn't know that I knew. It's odd when truth gnaws at your gut, but you stubbornly ignore it. It is odd because, on the one hand, _you_ know it, but on the other, _you_ don't. It's odd and it's dangerous. The truth is the truth, and you know it, and it gnaws at your gut. But you ignore it, and it keeps gnawing and gnawing and biting and biting, until it finally eats you up. The truth eats you up and spits you out. I remember the night the truth vomited me out.

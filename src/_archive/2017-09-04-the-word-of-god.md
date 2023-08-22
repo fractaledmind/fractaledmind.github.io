@@ -2,7 +2,8 @@
 title: 'The Word of God'
 date: 2017-09-04
 tags:
-  - philosophy>faith
+  - philosophy
+  - faith
 summary: What does the phrase **Word of God** mean?
 ---
 

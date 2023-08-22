@@ -3,7 +3,8 @@ title: "Death of Self"
 subtitle: "A Christmas Story"
 date: 2017-12-19
 tags:
-  - prose>self
+  - prose
+  - self
 summary: A remembering of the time I experienced the death of my self.
 ---
 
