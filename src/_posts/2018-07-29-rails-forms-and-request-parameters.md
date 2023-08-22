@@ -1,14 +1,15 @@
 ---
 title: Rails Forms and Request Parameters
 tags:
-  - code>ruby
-  - code>rails
+  - code
+  - ruby
+  - rails
 date: 2018-07-29
 ---
 
 Sometimes in our Rails applications we need to build forms that represent state stored in URL query parameters that is independent of any persisted object in our backend datastore, like in the case of a search form. In this post I offer a simple, flexible, generic helper for doing just that. 
 
-{{read more}}
+<!--/summary-->
 
 >**NOTE:** I first detailed this helper in a larger post on [basic RESTful filtering in Rails](http://fractaledmind.com/articles/basic-restful-filtering-with-rails/).
 

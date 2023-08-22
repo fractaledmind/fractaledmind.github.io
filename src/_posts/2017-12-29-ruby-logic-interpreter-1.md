@@ -3,9 +3,14 @@ title: 'Building an Interpreter for Propositional Logic'
 subtitle: 'Part 1: Starting Simple'
 date: 2017-12-29
 tags:
-  - code>ruby>interpreter
-  - philosophy>epistemology>logic
-  - tutorial>interpreter
+  - code
+  - ruby
+  - interpreter
+  - philosophy
+  - epistemology
+  - logic
+  - tutorial
+  - interpreter
 summary: The first in a series of posts laying out the process, step by step, of building an interpreter in Ruby for working with propositional logic. In this first post, we build an interpreter for working with simple logical expressions and dig into the specifics of the parts of an interpreter as well as the basics of propositional logic.
 ---
 

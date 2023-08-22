@@ -1,14 +1,15 @@
 ---
 title: Slideover Bootstrap Modals
 tags:
-  - code>css
-  - code>css>bootstrap
+  - code
+  - css
+  - bootstrap
 date: 2018-07-31
 ---
 
 Sometimes we don't want a modal floating in the center of the viewport; sometimes, we want a full-height modal that slides into frame. Luckily, we can write a bit of CSS to extend the Bootstrap `modal` component to support slideover modals.
 
-{{read more}}
+<!--/summary-->
 
 We want our slideover modals to have a few key characteristics:
 

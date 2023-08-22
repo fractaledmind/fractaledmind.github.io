@@ -2,8 +2,9 @@
 title: 'A function for generating HTML attribute values'
 date: 2016-08-02
 tags:
-  - code>ruby
-  - code>rails
+  - code
+  - ruby
+  - rails
 summary: How might I write a function that was as flexible as possible in its type signature, and yet still predictable and sane in its output of HTML attribute values?
 ---
 

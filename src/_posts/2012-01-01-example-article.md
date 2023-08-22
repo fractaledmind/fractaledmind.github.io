@@ -8,7 +8,7 @@ This is an example article. It contains a wide range of various content to demon
 
 [^1]: This is a footnote for my `Example Article`.
 
-{{read more}}
+<!--/summary-->
 
 This is a way to determine the number of characters per line in the various layouts:
 

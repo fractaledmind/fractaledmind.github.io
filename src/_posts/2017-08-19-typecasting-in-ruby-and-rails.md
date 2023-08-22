@@ -2,8 +2,9 @@
 title: 'Typecasting in Ruby and Rails'
 date: 2017-08-19
 tags:
-  - code>ruby
-  - code>rails
+  - code
+  - ruby
+  - rails
 summary: I recently had the need to typecast string values passed as query parameters to a controller action to their appropriate type. In solving this problem, I've learned a lot about Rails' typecasting layer, Ruby's typecasting methods, as well as a handful of edge cases. The result was a typecasting function that I think has a lot to offer.
 ---
 

@@ -2,7 +2,8 @@
 title: "Introducing: Togglicons"
 date: 2017-08-03 11:20 UTC
 tags:
-  - code>css
+  - code
+  - css
 summary: Togglicons offers a single *SCSS mixin* for bringing customizable toggling icons into your web application.
 image: projects/togglicons.svg
 ---

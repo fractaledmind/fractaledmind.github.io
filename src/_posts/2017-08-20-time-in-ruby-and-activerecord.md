@@ -2,8 +2,9 @@
 title: 'Time in Ruby and ActiveRecord'
 date: 2017-08-20
 tags:
-  - code>ruby
-  - code>rails
+  - code
+  - ruby
+  - rails
 summary: How does the Ruby `Time` class relate to the ActiveRecord `time` column type?
 ---
 

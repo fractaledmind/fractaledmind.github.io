@@ -7,6 +7,7 @@ published_time: 2016-07-15
 modified_time: null
 author: Stephen Margheim
 tags:
+  - code
   - ruby
 ---
 

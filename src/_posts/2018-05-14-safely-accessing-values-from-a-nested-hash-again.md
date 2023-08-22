@@ -2,7 +2,8 @@
 title: Safely Accessing Values from Nested Hashes (again)'
 date: 2018-05-14
 tags:
-  - code>ruby
+  - code
+  - ruby
 summary: Implementing a companion method to `Hash#dig` that _always_ returns a value and _never_ throws an error and allows for a default return value.
 ---
 

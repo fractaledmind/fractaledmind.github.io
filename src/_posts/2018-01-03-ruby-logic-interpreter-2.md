@@ -3,9 +3,14 @@ title: 'Building an Interpreter for Propositional Logic'
 subtitle: 'Part 2: Proper Propositional Logic'
 date: 2018-01-03
 tags:
-  - code>ruby>interpreter
-  - philosophy>epistemology>logic
-  - tutorial>interpreter
+  - code
+  - ruby
+  - interpreter
+  - philosophy
+  - epistemology
+  - logic
+  - tutorial
+  - interpreter
 summary: The second in a series of posts laying out the process, step by step, of building an interpreter in Ruby for working with propositional logic. In this second post, we expand the interpreter to handle the full range of valid expressions in classical propositional logic.
 ---
 

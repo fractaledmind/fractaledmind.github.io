@@ -2,8 +2,10 @@
 title: "Initial Thoughts on Infinite Sets and Procedures"
 date: 2017-08-09 12:25 UTC
 tags:
-  - philosophy>epistemology>math
-  - philosophy>epistemology>logic
+  - philosophy
+  - epistemology
+  - math
+  - logic
 summary: Is modern mathematics built on a logical fallacy? How ought we to understand infinite sets? What's a procedure? I'm starting to explore these topics as I think through the mathematics and logic of infinity.
 ---
 

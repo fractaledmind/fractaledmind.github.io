@@ -3,8 +3,10 @@ title: "Encoding the Logic of Sets"
 subtitle: "More on Sets as Procedures"
 date: 2017-08-16
 tags:
-  - philosophy>epistemology>math
-  - philosophy>epistemology>logic
+  - philosophy
+  - epistemology
+  - math
+  - logic
 summary: How can procedures be used to encode the logic of both infinite and finite sets?
 ---
 

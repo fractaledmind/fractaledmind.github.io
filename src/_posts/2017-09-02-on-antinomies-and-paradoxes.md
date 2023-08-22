@@ -2,9 +2,11 @@
 title: 'On Antinomies and Paradoxes'
 date: 2017-09-02
 tags:
-  - philosophy>epistemology>logic
-  - philosophy>faith
-summary: Should the central tenets of Christian theology be best understood as _antinomies_, or _paradoxes_, or both?
+  - philosophy
+  - epistemology
+  - faith
+  - logic
+summary: Should the central tenets of Christian theology be best understood as <em>antinomies</em>, or <em>paradoxes</em>, or both?
 ---
 
 > **Note:** This post builds on and relates to a number of earlier posts where I am thinking through the nature of theological reasoning and logic. If you read this and it seems thin and implicit, try reading the other articles with these tags to flesh out the picture.

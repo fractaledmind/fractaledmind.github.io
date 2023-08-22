@@ -2,11 +2,13 @@
 title: Degrees of Separation
 date: 2017-08-25
 tags:
-  - philosophy>epistemology>math
-  - philosophy>epistemology>logic
+  - philosophy
+  - epistemology
+  - math
+  - logic
 ---
 
-When talking about God, I’m not so certain that we have a great understanding of what we can and cannot say properly, or what we can and cannot understand properly. {{read more}} Might there not be degrees of separation between what we think we understand and what it actually is that we are attempting to understand?
+When talking about God, I’m not so certain that we have a great understanding of what we can and cannot say properly, or what we can and cannot understand properly. <!--/summary--> Might there not be degrees of separation between what we think we understand and what it actually is that we are attempting to understand?
 
 I’m toying with a tripartite division of terms (and thus degrees):
 

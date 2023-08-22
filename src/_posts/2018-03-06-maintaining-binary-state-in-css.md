@@ -1,7 +1,8 @@
 ---
 title: Maintaining Binary State in CSS
 tags:
-  - code>css
+  - code
+  - css
 date: 2018-03-06
 ---
 
@@ -9,7 +10,7 @@ I really like CSS, and I think of it as a programming language. It does not, how
 
 As you might imagine, this doesn't always work out. It has, however, led me to some pure CSS solutions that I quite like.[^1] In this post, I want to outline one technique that I use time and time again to make more pure CSS solutions possible.
 
-{{read more}}
+<!--/summary-->
 
 - - -
 

@@ -2,8 +2,9 @@
 title: 'An Example of an ERB Component'
 date: 2016-08-07
 tags:
-  - code>ruby
-  - code>rails
+  - code
+  - ruby
+  - rails
 summary: An example of building an "ERB component", that is, an ERB partial that has ansome flexibility around their HTML output articulated via an interface in the `render` call.
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: What is MVC?
 tags:
-  - code>rails
-  - code>mvc
+  - code
+  - rails
+  - mvc
 date: 2018-02-21
 ---
 
@@ -12,7 +13,7 @@ As a part of a recent job application process, I was asked a few general questio
 
 Please describe in as much detail as you think is appropriate what the MVC design pattern is, what the responsibilities of the Model, View, and Controller are, both in general and in Rails specifically, and what the benefits of this separation are. Also touch on how the Concern and Service patterns fit into this.
 
-{{read more}}
+<!--/summary-->
 
 - - -
 
