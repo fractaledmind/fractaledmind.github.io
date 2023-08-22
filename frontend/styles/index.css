@@ -16,3 +16,7 @@
 .text-\[var\(--tw-prose-body\)\]{
   color: var(--tw-prose-body)
 }
+
+[aria-hidden="true"] {
+  display: none;
+}
