@@ -1,5 +1,4 @@
 Bridgetown.configure do |config|
-  init :"bridgetown-svg-inliner"
   # You can configure aspects of your Bridgetown site here instead of using
   # `bridgetown.config.yml`. For example:
   #
@@ -17,6 +16,8 @@ Bridgetown.configure do |config|
   #
   # init :dotenv
   #
+  init :"bridgetown-svg-inliner"
+  init :"bridgetown-feed"
 
   # Uncomment to use Bridgetown SSR (aka dynamic rendering of content via Roda):
   #

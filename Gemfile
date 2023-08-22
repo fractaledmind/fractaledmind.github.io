@@ -36,3 +36,5 @@ gem "puma", "< 7"
 # gem "nokolexbor", "~> 0.4"
 
 gem "bridgetown-svg-inliner", "~> 2.0"
+
+gem "bridgetown-feed", "~> 3.0"
