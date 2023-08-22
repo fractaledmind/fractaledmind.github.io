@@ -22,6 +22,9 @@ url: "" # the base hostname & protocol for your site, e.g. https://example.com
 permalink: pretty
 template_engine: liquid
 
+pagination:
+  enabled: true
+
 highlighter: ""
 
 collections:

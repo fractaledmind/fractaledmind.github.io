@@ -1,0 +1,31 @@
+{% if paginator.total_pages > 1 %}
+<nav class="pagination border-t border-dashed">
+  <ol class="list-none flex !pl-0 justify-center items-center">
+    <li>
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="no-underline"><i>←</i></a>
+      {% else %}
+        <span><i>←</i></span>
+      {% endif %}
+    </li>
+    {% for i in (1..paginator.total_pages) %}
+      <li>
+        {% if paginator.first_page == i %}
+          <a href="{{ paginator.first_page_path }}" {% if paginator.page == i %}aria-current="page"{% endif %}>{{ i | prepend: '00' | slice: -2, 2 }}</a>
+        {% elsif paginator.last_page == i %}
+          <a href="{{ paginator.last_page_path }}" {% if paginator.page == i %}aria-current="page"{% endif %}>{{ i | prepend: '00' | slice: -2, 2 }}</a>
+        {% else %}
+          <a href="{{ paginator.last_page_path | replace: paginator.last_page, i }}" {% if paginator.page == i %}aria-current="page"{% endif %}>{{ i | prepend: '00' | slice: -2, 2 }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+    <li>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}"><i>→</i></a>
+      {% else %}
+        <span><i>→</i></span>
+      {% endif %}
+    </li>
+  </ol>
+</nav>
+{% endif %}
