@@ -1,8 +1,9 @@
 ---
 title: The Lifecycle of a Web Request
 tags:
-  - code>http
-  - code>rails
+  - code
+  - http
+  - rails
 date: 2018-02-21
 ---
 
@@ -12,7 +13,7 @@ As a part of a recent job application process, I was asked a few general questio
 
 A user browses to some URL in their browser. Please describe in as much detail as you think is appropriate the lifecycle of this request and what happens in the browser, over the network, on servers, and in the Rails application before the request completes.
 
-{{read more}}
+<!--/summary-->
 
 - - -
 
