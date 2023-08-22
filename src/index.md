@@ -4,14 +4,22 @@
 layout: default
 ---
 
-# Welcome to your new Bridgetown website.
+<figure class="h-32 w-32">
+  <img class="rounded-full" src="{{ '/images/headshot.jpg' | relative_url }}" alt="This is my headshot" />
+</figure>
 
-You can learn more about how to build and deploy your new website by reading the  [Bridgetown documentation](https://www.bridgetownrb.com/docs).
+# Stephen Margheim
 
-You can choose a [theme](https://github.com/topics/bridgetown-theme) or add some [plugins](https://www.bridgetownrb.com/plugins/) to get started quickly.
+Hey there! 👋 
 
-Be sure to check out the [Bridgetown Cards](https://bridgetown.cards) community site for helpful tips & tricks.
+I'm full-stack Ruby on Rails Software Engineer, an Engineering Manager, and general web denizen. This is my personal website where I document my journey as a full stack developer and/or manager, as well as publish tutorials/write-ups of things I've learned for myself and others.
 
-If you run into any issues or have additional questions, please join us in our [Discord chat](https://discord.gg/4E6hktQGz4) or in [GitHub discussions](https://github.com/bridgetownrb/bridgetown/discussions).
+<a href="{{ '/about' | relative_url }}" class="no-underline">
+  <span class="underline">Learn more about me</span>
+  <i>→</i>
+</a>
 
-_Have fun and **good luck**!_
+<a href="{{ '/posts' | relative_url }}" class="no-underline">
+  <span class="underline">Check out my most recent posts</span>
+  <i>→</i>
+</a>
