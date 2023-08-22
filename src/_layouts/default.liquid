@@ -3,10 +3,10 @@
   <head>
     {% render "head", metadata: site.metadata, title: data.title %}
   </head>
-  <body class="{{ data.layout }} {{ data.page_class }} min-h-screen antialiased bg-neutral-50 dark:bg-neutral-900 prose prose-neutral mx-auto lg:prose-lg dark:prose-invert px-4 sm:px-6 md:px-8 flex flex-col">
+  <body class="{{ data.layout }} {{ data.page_class }} min-h-screen antialiased bg-zinc-50 dark:bg-zinc-900 prose prose-zinc mx-auto lg:prose-lg dark:prose-invert px-4 sm:px-6 md:px-8 flex flex-col">
     {% render "navbar", metadata: site.metadata, resource: resource %}
 
-    <main class="flex-grow">
+    <main role="main" class="flex-grow">
       {{ content }}
     </main>
 

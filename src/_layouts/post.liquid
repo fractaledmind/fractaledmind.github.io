@@ -2,8 +2,26 @@
 layout: default
 ---
 
-<h1>{{ data.title }}</h1>
+{% render "post_note", post: resource %}
 
-<article class="">
+<h1 class="!text-4xl">{{ data.title }}</h1>
+
+{% if data.image %}
+<figure>
+  <img src="{{ data.image | prepend: '/images/' | relative_url }}" alt="" />
+</figure>
+{% endif %}
+
+<article class="mt-16">
   {{ content }}
 </article>
+
+{% if data.pdf %}
+<p><a href="{{ data.pdf }}" target="_blank">Read in separate tab →</a></p>
+
+<object data="{{ data.pdf }}" type="application/pdf" width="100%" style="height: 50rem;">
+  alt: <a href="{{ data.pdf }}">{{ data.title }}</a>
+</object>
+{% endif %}
+
+<div class="mb-10"></div>
