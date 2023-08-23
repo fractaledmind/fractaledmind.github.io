@@ -2,6 +2,7 @@
 title: Example *Article*
 date: 2012-01-01
 image: ./images/mobile-logo.png
+published: false
 ---
 
 This is an example article. It contains a wide range of various content to demonstrate how this blog styles such content. For example, this is some text with a footnote.[^1]
