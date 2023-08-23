@@ -32,3 +32,133 @@
 h1 {
   font-size: 2rem !important;
 }
+
+.truth-table {
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+  line-height: 1.15;
+
+  .atom-top {
+    border-bottom:1px solid;
+  }
+  .atom-left {
+    border-right:1px solid;
+  }
+  td, th {
+    padding: 0.25em 0.5em;
+  }
+  td {
+    border: 1px solid #ddd;
+  }
+}
+
+.tree {
+  margin: 2rem auto;
+}
+.tree * {
+  margin: 0 !important;
+  padding: 0;
+}
+.tree ul, .tree ol {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  list-style: none;
+  position: relative;
+  padding-top: 30px;
+  padding-left: 0;
+  /* Parent Connectors */
+}
+.tree ul ul::before,
+.tree ul ol::before, .tree ol ul::before,
+.tree ol ol::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid var(--tw-prose-counters);
+  height: 30px;
+}
+.tree ul:first-child, .tree ol:first-child {
+  padding-top: 0;
+}
+.tree li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 100%;
+  position: relative;
+  padding: 30px 3px 0 3px;
+  /* Connectors */
+  /* remove left connector from first child and right connector from last child */
+}
+.tree li::before, .tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 30px;
+  border-top: 1px solid var(--tw-prose-counters);
+}
+.tree li::before {
+  right: 50%;
+}
+.tree li::after {
+  left: 50%;
+  border-left: 1px solid var(--tw-prose-counters);
+}
+.tree li:only-child {
+  padding-top: 0;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+.tree li:last-child::before {
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid var(--tw-prose-counters);
+}
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+.tree a,
+.tree span {
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.75em;
+  margin: 0 auto;
+  border: 1px solid var(--tw-prose-counters);
+  padding: 0.33em 0.66em;
+  color: var(--tw-prose-body);
+  border-radius: 6px;
+  transition-property: background, border-color;
+  transition-duration: 0.33s;
+  background-color: transparent;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  /* apply the hover effect to lineage of element */
+  /*Connector styles on hover*/
+}
+.tree span:hover, .tree span:hover + ul li span, .tree span:hover + ol li span {
+  background-color: #38bdf833;
+  color: rgb(56 189 248);
+  border-color: rgb(56 189 248);
+}
+.tree span:hover + ul li::after,
+.tree span:hover + ul li::before,
+.tree span:hover + ul::before,
+.tree span:hover + ul ul::before,
+.tree span:hover + ul ol::before,
+.tree span:hover + ol li::after,
+.tree span:hover + ol li::before,
+.tree span:hover + ol::before,
+.tree span:hover + ol ol::before,
+.tree span:hover + ol ul::before {
+  border-color: rgb(56 189 248);
+}

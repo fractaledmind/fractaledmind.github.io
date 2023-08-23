@@ -76,7 +76,7 @@ This is a [_truth table_](https://en.wikipedia.org/wiki/Truth_table) and it repr
 
 For the binary operators, there are four possible states:
 
-<div style="display:flex;justify-content:space-around;margin-bottom:1rem;">
+<div style="display:flex;flex-direction:column;justify-content:space-around;margin-bottom:1rem;">
   <table class="truth-table">
     <thead>
       <tr>
@@ -146,7 +146,7 @@ For the binary operators, there are four possible states:
 
 These are the rules that our interpreter is going to have to encode when it comes time to actually evaluate the expressions. For our initial pass we aren't going to worry yet about the [order of precedence](https://en.wikipedia.org/wiki/Order_of_operations) of the operators as we will only be working with simple expressions (e.g. expressions with only one binary operator). So, having laid out the shape of the input our interpreter is going to be working with as well as the output it needs to generate, let's go ahead and write some simple tests that can help guide as we start working on the actual Ruby code:
 
-~~~ruby
+```ruby
 # the classes and methods reference are what we will eventually build
 def assert_expression_equals(expression, result)
   error_msg = "Expected '#{expression}' to evaluate to #{result}"
@@ -185,7 +185,7 @@ def run_tests
 
   'SUCCESS!'
 end
-~~~
+```
 
 - - -
 
@@ -344,21 +344,21 @@ Jargony? Yes. But also detailed and specific. But, maybe a concrete example will
 <div class="tree">
   <ul>
     <li>
-      <a href="#" class="monospace bg-lightgrey font-1em bold">-</a>
+      <span>-</span>
       <ul>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">+</a>
+          <span>+</span>
           <ul>
             <li>
-              <a href="#" class="monospace bg-lightgrey font-1em bold">2</a>
+              <span>2</span>
             </li>
             <li>
-              <a href="#" class="monospace bg-lightgrey font-1em bold">2</a>
+              <span>2</span>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">3</a>
+          <span>3</span>
         </li>
       </ul>
     </li>
@@ -370,18 +370,18 @@ In the case of our propositional logic language, the abstract syntax tree for th
 <div class="tree">
   <ul>
     <li>
-      <a href="#" class="monospace bg-lightgrey font-1em bold">&</a>
+      <span>&</span>
       <ul>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">~</a>
+          <span>~</span>
           <ul>
             <li>
-              <a href="#" class="monospace bg-lightgrey font-1em bold">T</a>
+              <span>T</span>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">F</a>
+          <span>F</span>
         </li>
       </ul>
     </li>
@@ -645,18 +645,18 @@ The question becomes, how do we work with our abstract syntax tree to evaluate a
 <div class="tree">
   <ul>
     <li>
-      <a href="#" class="monospace bg-lightgrey font-1em bold">&</a>
+      <span>&</span>
       <ul>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">~</a>
+          <span>~</span>
           <ul>
             <li>
-              <a href="#" class="monospace bg-lightgrey font-1em bold">T</a>
+              <span>T</span>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">F</a>
+          <span>F</span>
         </li>
       </ul>
     </li>
@@ -665,23 +665,23 @@ The question becomes, how do we work with our abstract syntax tree to evaluate a
 
 How would we interpret this statement properly ourselves? We would take the first value---`T` for `true`--- and negate it; this would give us a value of `false`. We would then compute the result of the expression `F & F`, which, given the truth table for the conjunction operator, would give us `false`. Simple enough. Now, how could we do something essentially the same as this in code?
 
-Well, what is it precisely that we did when we "processed" this expression ourselves? We started with values, applied operators to get new values, and followed this process until we had no more operators left, and thus only a value. We need to do the same thing with the abstract syntax tree. Let's go ahead and translate our tree just above into a visual representation of our abstract syntax tree for this expression:
+Well, what is it precisely what we did when we "processed" this expression ourselves? We started with values, applied operators to get new values, and followed this process until we had no more operators left, and thus only a value. We need to do the same thing with the abstract syntax tree. Let's go ahead and translate our tree just above into a visual representation of our abstract syntax tree for this expression:
 
 <div class="tree">
   <ul>
     <li>
-      <a href="#" class="monospace bg-lightgrey font-1em bold">AST::Conjunction</a>
+      <span>AST::Conjunction</span>
       <ul>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">AST::Negation</a>
+          <span>AST::Negation</span>
           <ul>
             <li>
-              <a href="#" class="monospace bg-lightgrey font-1em bold">AST::Atom(true)</a>
+              <span>AST::Atom(true)</span>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">AST::Atom(false)</a>
+          <span>AST::Atom(false)</span>
         </li>
       </ul>
     </li>
@@ -897,6 +897,15 @@ All in all, we have worked through a **ton** of important and interesting materi
 In the next post, we are going to expand our grammar to allow for grouped expressions (e.g. `~(T v F)`), to allow multiple binary operators (e.g. an expression like `T & F v T`), to handle operator precedence (`T & F v T` should be read as `(T & F) v T`, not `T & (F v T)`), and to handle stacked negations (e.g. `~~T`). Hope you'll be back to dive into that when it gets published.
 
 > You can find the script we have built to this point in [this Gist](https://gist.github.com/fractaledmind/a072674b18086fdebf3b3a535c0f7dfb/09e7c7c28c71823f7611e8d1597a8758350cc9f2)
+
+- - -
+
+## All posts in this series
+
+* {:.bg-[var(--tw-prose-bullets)]}[Part 1 — starting simple]({% link _posts/2017-12-29-ruby-logic-interpreter-1.md %})
+* [Part 2 — proper propositional logic]({% link _posts/2018-01-03-ruby-logic-interpreter-2.md %})
+
+- - -
 
 [^1]: I have covered most of this in a section of a previous article: [A Primer on Propositional Logic]({% link _posts/2016-02-21-conjunctive-binarism.md %}#a-primer-on-propositional-logic)
 [^2]: The `:IFSO` type does not have a corollary in the set of logic gates. This is a constant that I made up to fit the basic semantic pattern.

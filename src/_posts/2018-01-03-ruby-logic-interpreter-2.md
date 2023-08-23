@@ -38,13 +38,13 @@ The `?` meant that a `:NOT` token could be present before a `term` zero or one t
 <div class="tree">
   <ul>
     <li>
-      <a href="#" class="monospace bg-lightgrey font-1em bold">~</a>
+      <span>~</span>
       <ul>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">~</a>
+          <span>~</span>
           <ul>
             <li>
-              <a href="#" class="monospace bg-lightgrey font-1em bold">T</a>
+              <span>T</span>
             </li>
           </ul>
         </li>
@@ -189,13 +189,13 @@ Our current `Parser` does not properly handle expressions with multiple binary o
 <div class="tree">
   <ul>
     <li>
-      <a href="#" class="monospace bg-lightgrey font-1em bold">&</a>
+      <span>&</span>
       <ul>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">T</a>
+          <span>T</span>
         </li>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">F</a>
+          <span>F</span>
         </li>
       </ul>
     </li>
@@ -313,7 +313,7 @@ Given the operator precedence, how should `F & T v T` be understood? Since conju
 
 We need to encode the precedence of our operators, but how do we do so?
 
-I'll be honest, my first thought was to tweak the order of the branches in the `if/else` clause of the `Parser#expression` methods. This will not solve the problem. Regardless of the order of the conditions, if all of those conditions live in the same method, the parser will still imply precedence from left to right. To encode the logic that this operator take precedence over that operator, regardless of which comes first in the expression, we need the precedence levels to be encoded as separate methods; that is, we need to expand our grammar.
+I'll be honest, my first thought was to tweak the order of the branches in the `if/else` clause of the `Parser#expression` methods. However, this will **_not_** solve the problem. Regardless of the order of the conditions, if all of those conditions live in the same method, the parser will still imply precedence from left to right. To encode the logic that this operator take precedence over that operator, regardless of which comes first in the expression, we need the precedence levels to be encoded as separate methods; that is, we need to expand our grammar.
 
 This is the state of our grammar after our additions and improvements above:
 
@@ -328,18 +328,18 @@ We can recall from [the section on the visitor pattern]({% link _posts/2017-12-2
 <div class="tree">
   <ul>
     <li>
-      <a href="#" class="monospace bg-lightgrey font-1em bold">&</a>
+      <span>&</span>
       <ul>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">~</a>
+          <span>~</span>
           <ul>
             <li>
-              <a href="#" class="monospace bg-lightgrey font-1em bold">T</a>
+              <span>T</span>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" class="monospace bg-lightgrey font-1em bold">F</a>
+          <span>F</span>
         </li>
       </ul>
     </li>
@@ -638,5 +638,13 @@ In the next post, I want us to expand our interpreter to allow for variables in 
 
 > You can find the script we have built to this point in [this revision of this Gist](https://gist.github.com/fractaledmind/a072674b18086fdebf3b3a535c0f7dfb/0c340cfc3437522d0ec45bd3f7b7820133d25fbd)
 
+- - -
+
+## All posts in this series
+
+* [Part 1 — starting simple]({% link _posts/2017-12-29-ruby-logic-interpreter-1.md %})
+* {:.bg-[var(--tw-prose-bullets)]}[Part 2 — proper propositional logic]({% link _posts/2018-01-03-ruby-logic-interpreter-2.md %})
+
+- - -
 
 [^1]: I say "classical propositional logic" because modern propositional logic has many more valid operators. But this is an addition we will get to in the next post.
