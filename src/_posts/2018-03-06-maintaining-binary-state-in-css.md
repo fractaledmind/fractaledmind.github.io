@@ -69,7 +69,6 @@ input:checked ~ span { color: red }
 ~~~
 
 <p data-height="261" data-theme-id="0" data-slug-hash="QQeyqz" data-default-tab="css,result" data-user="smargh" data-embed-version="2" data-pen-title="Using label > input to create text element with toggleable state" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/QQeyqz/">Using label &rt; input to create text element with toggleable state</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 We simply set the default value and then change the value whenever the `input` state is changed. And that's all there is to it!
 

@@ -55,4 +55,3 @@ With these goals in mind, I wrote a small bit of CSS to achieve our ends. I used
 Here is a CodePen that offers a number of examples of Bootstrap 4 modals converted to slideover modals. Enjoy!
 
 <p data-height="530" data-theme-id="0" data-slug-hash="MXaaaB" data-default-tab="result" data-user="smargh" data-pen-title="Bootstrap 4 SlideOut Modal examples" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/MXaaaB/">Bootstrap 4 SlideOut Modal examples</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>

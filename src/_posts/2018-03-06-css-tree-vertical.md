@@ -17,7 +17,6 @@ In our [last post]({% link _posts/2018-03-05-css-tree.md %}), we built a simple 
 We left our tree last in this state:
 
 <p data-height="250" data-theme-id="0" data-slug-hash="EQBKKw" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree__8" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/EQBKKw/">css-tree__8</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Let's take that same HTML, the lessons we learned from our horizontal tree, and start over to build a vertically oriented tree. We can start with our basic `.tree` styles, our node styles, our our `li` styles; however, we will need to flip the `flex-direction` of the `li`s:
 
@@ -42,7 +41,6 @@ Let's take that same HTML, the lessons we learned from our horizontal tree, and 
 ~~~
 
 <p data-height="235" data-theme-id="0" data-slug-hash="KQjzqg" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree-vertical__1" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/KQjzqg/">css-tree-vertical__1</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 This gets us heading in the right direction, but we need to have siblings on the same horizontal row. Well, in our HTML, how are is a sibling group defined? As a list (either a `ul` or `ol`). And if we want a group of elements to be rendered on the same horizontal row, we can use the `flex-direction: row` property. So, let's apply that to all of the lists (both the top most `.tree` list and any descendant lists):
 
@@ -59,7 +57,6 @@ This gets us heading in the right direction, but we need to have siblings on the
 ~~~
 
 <p data-height="250" data-theme-id="0" data-slug-hash="YeoqOb" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree-vertical__2" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/YeoqOb/">css-tree-vertical__2</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Now that is starting to look good! Let's now add our parent-to-child connector, which we want to render down from the bottom of a parent node. Since all we are doing is rotating our tree, we should be able to simply "rotate" the CSS used for our horizontal tree:
 
@@ -85,7 +82,6 @@ Now that is starting to look good! Let's now add our parent-to-child connector, 
 ~~~
 
 <p data-height="250" data-theme-id="0" data-slug-hash="aqgNXa" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree-vertical__3" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/aqgNXa/">css-tree-vertical__3</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Next, let's go ahead and add the child-to-parent connector:
 
@@ -113,7 +109,6 @@ Next, let's go ahead and add the child-to-parent connector:
 ~~~
 
 <p data-height="250" data-theme-id="0" data-slug-hash="XZLdLB" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree-vertical__4" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/XZLdLB/">css-tree-vertical__4</a> by PMACS Team X (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Once again, we need to remove any parent-related connectors from the root node:
 
@@ -133,7 +128,6 @@ Once again, we need to remove any parent-related connectors from the root node:
 ~~~
 
 <p data-height="250" data-theme-id="0" data-slug-hash="oErLvR" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree-vertical__5" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/oErLvR/">css-tree-vertical__5</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Finally, we simply need to add the sibling connector:
 
@@ -170,7 +164,6 @@ Finally, we simply need to add the sibling connector:
 ~~~
 
 <p data-height="250" data-theme-id="0" data-slug-hash="NyZrWp" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree-vertical__6" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/NyZrWp/">css-tree-vertical__6</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 The only major bit we will add for now is some vertical spacing between children nodes by adding
 
@@ -182,8 +175,17 @@ The only major bit we will add for now is some vertical spacing between children
 to the `li` selector.
 
 <p data-height="250" data-theme-id="0" data-slug-hash="PQrzPz" data-default-tab="result" data-user="smargh" data-embed-version="2" data-pen-title="css-tree-vertical__7" class="codepen">See the Pen <a href="https://codepen.io/smargh/pen/PQrzPz/">css-tree-vertical__7</a> by Stephen Margheim (<a href="https://codepen.io/smargh">@smargh</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 - - -
 
 Since our vertical tree is really only a "rotation" of our horizontal tree, in our next post, we will consolidate these two components into one `.tree` component with two modifiers.
+
+- - -
+
+## All posts in this series
+
+* [Part 1 — horizontally oriented trees]({% link _posts/2018-03-05-css-tree.md %})
+* {:.bg-[var(--tw-prose-bullets)]}[Part 2 — vertically oriented trees]({% link _posts/2018-03-06-css-tree-vertical.md %})
+* [Part 3 — inverse directions]({% link _posts/2018-03-07-css-tree-inverses.md %})
+* [Part 4 — centered trees]({% link _posts/2018-03-08-css-tree-centered.md %})
+* [Part 5 — tree experiments]({% link _posts/2018-03-09-css-tree-experiments.md %})
