@@ -644,6 +644,7 @@ In the next post, I want us to expand our interpreter to allow for variables in 
 
 * [Part 1 — starting simple]({% link _posts/2017-12-29-ruby-logic-interpreter-1.md %})
 * {:.bg-[var(--tw-prose-bullets)]}[Part 2 — proper propositional logic]({% link _posts/2018-01-03-ruby-logic-interpreter-2.md %})
+* [Interlude — minitest tests]({% link _posts/2018-01-04-ruby-logic-interpreter-3.md %})
 
 - - -
 
