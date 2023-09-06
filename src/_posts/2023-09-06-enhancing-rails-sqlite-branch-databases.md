@@ -105,3 +105,10 @@ Which this simple configuration added, we now have our ideal setup. Every Git br
 I can say, I have been using this setup in a few different Rails applications and I _absolutely love it_! And I love how easy Rails and SQLite make such a feature to setup. This was a grand total of **_four_** lines (and could easily be _two_ if we used an inline block for `after_initialize`) to provide a similar (and in some key ways improved) feature to a fancy platform like PlanetScale.
 
 It is precisely these kinds of enhancements—simple, small, but powerful—that I want to explore in the coming weeks and months. So, stay tuned. And, if you enjoyed this tip, please do reach out on Twitter [@fractaledmind](http://twitter.com/fractaledmind?ref=fractaledmind.github.io).
+
+- - -
+
+## All posts in this series
+
+* {:.bg-[var(--tw-prose-bullets)]}[Part 1 — branch-specific databases]({% link _posts/2023-09-06-enhancing-rails-sqlite-branch-databases.md %})
+* [Part 2 — fine-tuning SQLite configuration]({% link _posts/2023-09-07-enhancing-rails-sqlite-fine-tuning.md %})
