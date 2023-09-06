@@ -77,7 +77,4 @@ I really like being able to use minitest and move beyond our hand-rolled test ha
 * [Part 1 — starting simple]({% link _posts/2017-12-29-ruby-logic-interpreter-1.md %})
 * [Part 2 — proper propositional logic]({% link _posts/2018-01-03-ruby-logic-interpreter-2.md %})
 * {:.bg-[var(--tw-prose-bullets)]}[Interlude — minitest tests]({% link _posts/2018-01-04-ruby-logic-interpreter-3.md %})
-
-- - -
-
-[^1]: I say "classical propositional logic" because modern propositional logic has many more valid operators. But this is an addition we will get to in the next post.
+* [Part 3 — handling variables]({% link _posts/2019-01-26-ruby-logic-interpreter-4.md %})

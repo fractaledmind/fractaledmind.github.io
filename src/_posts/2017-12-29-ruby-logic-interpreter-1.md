@@ -905,6 +905,7 @@ In the next post, we are going to expand our grammar to allow for grouped expres
 * {:.bg-[var(--tw-prose-bullets)]}[Part 1 — starting simple]({% link _posts/2017-12-29-ruby-logic-interpreter-1.md %})
 * [Part 2 — proper propositional logic]({% link _posts/2018-01-03-ruby-logic-interpreter-2.md %})
 * [Interlude — minitest tests]({% link _posts/2018-01-04-ruby-logic-interpreter-3.md %})
+* [Part 3 — handling variables]({% link _posts/2019-01-26-ruby-logic-interpreter-4.md %})
 
 - - -
 
