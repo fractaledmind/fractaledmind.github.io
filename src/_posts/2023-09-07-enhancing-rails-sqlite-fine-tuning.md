@@ -312,7 +312,7 @@ Now, we can replace the `timeout: 5000` setting with a `retries: 1000` setting i
 
 - - - 
 
-> You can find the files we have written throughout this post in [this Gist](https://gist.github.com/fractaledmind/3565e12db7e59ab46f839025d26b5715)
+> You can find the files we have written throughout this post in [this Gist](https://gist.github.com/fractaledmind/3565e12db7e59ab46f839025d26b5715/645f2d2dde3a275c270eabc00ce3067583b1b530)
 
 - - -
 
