@@ -129,7 +129,7 @@ This is interesting, but of course not every pragma is equally important for tun
 * `cache_size`
 * `busy_timeout`/`busy_handler`
 
-It is important that we understand what each of these pragmas does, and how best to tune them for our usage in Rails and ActiveRecord.
+It is important that we understand what each of these pragmas does, and how best to tune them for our usage in Rails and ActiveRecord.[^1]
 
 - - -
 
@@ -181,7 +181,7 @@ It is worth noting, for full understanding, that the page cache is private to ea
 
 ### The `busy_timeout`/`busy_handler` pragma
 
-The final pragma that is important to understand and tune is the [`busy_timeout` pragma](https://www.sqlite.org/pragma.html#pragma_busy_timeout). This tells SQLite how long to wait to successfully connect to the database when trying to establish a new connection. When you create a new Rails app with SQLite, Rails will set the `timeout` option in the `/config/database.yml` to `5000` milliseconds. SQLite uses an exponential backoff algorithm to retry connection attempts for as long as you specify the timeout (the backoff waits `1, 2, 5, 10, 15, 20, 25, 25, 25, 50, 50, 100` milliseconds between each attempt, retrying every 100 milliseconds once 12 retries have been attempted[^1]). This is a reasonable default, but for more aggressive performance tuning we could manually set [a `busy_handler`](https://www.sqlite.org/c3ref/busy_handler.html) instead. The `busy_timeout` provides a higher level interface for setting the `busy_handler` that SQLite will use. It is possible, however, to set a custom `busy_handler` function ourselves tho. A common approach is to eschew exponential backoff and simply retry the connection as quickly as possible to establish a connection as soon as possible. In order to prevent infinite retries, we can simply cap the maximum number of retry attempts. Using the [`SQLite3` Ruby adapter](https://github.com/sparklemotion/sqlite3-ruby), we can set a `busy_handler` by passing a proc, e.g.:
+The final pragma that is important to understand and tune is the [`busy_timeout` pragma](https://www.sqlite.org/pragma.html#pragma_busy_timeout). This tells SQLite how long to wait to successfully connect to the database when trying to establish a new connection. When you create a new Rails app with SQLite, Rails will set the `timeout` option in the `/config/database.yml` to `5000` milliseconds. SQLite uses an exponential backoff algorithm to retry connection attempts for as long as you specify the timeout (the backoff waits `1, 2, 5, 10, 15, 20, 25, 25, 25, 50, 50, 100` milliseconds between each attempt, retrying every 100 milliseconds once 12 retries have been attempted[^2]). This is a reasonable default, but for more aggressive performance tuning we could manually set [a `busy_handler`](https://www.sqlite.org/c3ref/busy_handler.html) instead. The `busy_timeout` provides a higher level interface for setting the `busy_handler` that SQLite will use. It is possible, however, to set a custom `busy_handler` function ourselves tho. A common approach is to eschew exponential backoff and simply retry the connection as quickly as possible to establish a connection as soon as possible. In order to prevent infinite retries, we can simply cap the maximum number of retry attempts. Using the [`SQLite3` Ruby adapter](https://github.com/sparklemotion/sqlite3-ruby), we can set a `busy_handler` by passing a proc, e.g.:
 
 ```ruby
 @raw_connection.busy_handler do |count|
@@ -189,7 +189,7 @@ The final pragma that is important to understand and tune is the [`busy_timeout`
 end
 ```
 
-In the implementation section, we will discuss how to enable our Rails application to set a max retries instead of a max timeout. For now, let's suffice to say that whether you use a `busy_timeout` or a `busy_handler` comes down to how optimistic you are about how and when you might experience `BUSY` exceptions.[^2] For most Rails applications, I would recommend setting the `busy_handler` so that you can establish connections as quickly as possible.
+In the implementation section, we will discuss how to enable our Rails application to set a max retries instead of a max timeout. For now, let's suffice to say that whether you use a `busy_timeout` or a `busy_handler` comes down to how optimistic you are about how and when you might experience `BUSY` exceptions.[^3] For most Rails applications, I would recommend setting the `busy_handler` so that you can establish connections as quickly as possible.
 
 
 ### Pragmas summary
@@ -323,5 +323,6 @@ Now, we can replace the `timeout: 5000` setting with a `retries: 1000` setting i
 
 - - -
 
-[^1]: This is mentioned by a maintainer in a [forum response](https://sqlite.org/forum/info/3fd33f0b9be72353) and can be seen in the `sqliteDefaultBusyCallback` method in the [`main.c` file](https://sqlite.org/src/file?name=src/main.c&ci=trunk).
-[^2]: If you want to dive deeper into understanding how and when SQLite will throw a `BUSY` exception, this is an excellent blog post: [https://activesphere.com/blog/2018/12/24/understanding-sqlite-busy](https://activesphere.com/blog/2018/12/24/understanding-sqlite-busy).
+[^1]: Here are some other posts that dig into the pragmas to tune for SQLite in production: [https://phiresky.github.io/blog/2020/sqlite-performance-tuning/](https://phiresky.github.io/blog/2020/sqlite-performance-tuning/) and [https://blog.devart.com/increasing-sqlite-performance.html](https://blog.devart.com/increasing-sqlite-performance.html)
+[^2]: This is mentioned by a maintainer in a [forum response](https://sqlite.org/forum/info/3fd33f0b9be72353) and can be seen in the `sqliteDefaultBusyCallback` method in the [`main.c` file](https://sqlite.org/src/file?name=src/main.c&ci=trunk).
+[^3]: If you want to dive deeper into understanding how and when SQLite will throw a `BUSY` exception, this is an excellent blog post: [https://activesphere.com/blog/2018/12/24/understanding-sqlite-busy](https://activesphere.com/blog/2018/12/24/understanding-sqlite-busy).
