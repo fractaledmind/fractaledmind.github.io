@@ -8,7 +8,7 @@ class Builders::Katex < SiteBuilder
     inspect_html do |document|
       document.query_selector_all(SELECTOR).each do |element|
         result, _stderr_str, _status = Open3.capture3("npx katex", stdin_data: element.text)
-        element.replace(result.strip)
+        element.replace(result.encode('UTF-8').strip)
       end
     end
   end
