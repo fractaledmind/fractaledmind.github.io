@@ -1,6 +1,6 @@
 ---
 title: Linked headings in your BridgetownRB site
-date: 2023-09-08
+date: 2023-09-07
 tags:
   - code
   - ruby
