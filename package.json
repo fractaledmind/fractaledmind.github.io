@@ -24,5 +24,9 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "open-props": "^1.5.13"
-  }
+  },
+  "engines": {
+    "yarn": "^3.6.1"
+  },
+  "packageManager": "yarn@3.6.3"
 }
