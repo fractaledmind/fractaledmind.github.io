@@ -314,6 +314,25 @@ Now, we can replace the `timeout: 5000` setting with a `retries: 1000` setting i
 
 > You can find the files we have written throughout this post in [this Gist](https://gist.github.com/fractaledmind/3565e12db7e59ab46f839025d26b5715/645f2d2dde3a275c270eabc00ce3067583b1b530)
 
+Moreover, [Nate Hopkins](https://twitter.com/hopsoft?ref=fractaledmind.github.io) shared [a Gist](https://gist.github.com/hopsoft/9a0bf00be2816cbe036fae5aa3d85b73) with a Dockerfile that manually downloads and compiles SQLite with some specific performance optimizations. The SQLite docs outline some [preferable compilation optimizations](https://www.sqlite.org/compile.html) to make if you are compiling SQLite yourself, which Nate integrates nicely into his Dockerfile. Some are redundant with `PRAGMA` statements we employ, but others are compilation optimizations only. In short, Nate passes these flags when compiling SQLite:
+
+```shell
+SQLITE_DEFAULT_MEMSTATUS=0 \
+SQLITE_DEFAULT_PAGE_SIZE=16384 \
+SQLITE_DEFAULT_WAL_SYNCHRONOUS=1 \
+SQLITE_DQS=0 \
+SQLITE_ENABLE_FTS5 \
+SQLITE_LIKE_DOESNT_MATCH_BLOBS \
+SQLITE_MAX_EXPR_DEPTH=0 \
+SQLITE_OMIT_PROGRESS_CALLBACK \
+SQLITE_OMIT_SHARED_CACHE \
+SQLITE_USE_ALLOCA"
+```
+
+`SQLITE_DEFAULT_WAL_SYNCHRONOUS` is redundant with our `PRAGMA journal_mode = WAL;` and `PRAGMA synchronous = NORMAL;` settings, but disabling memory tracking and `LIKE` working with `BLOB` fields are compilation-only optimizations.
+
+As always, if you can, you absolutely should learn how to tune your database to better fit your needs. Read through the SQLite docs page on [recommended compile-time options](https://www.sqlite.org/compile.html#recommended_compile_time_options) and [Nate's Dockerfile](https://gist.github.com/hopsoft/9a0bf00be2816cbe036fae5aa3d85b73) and study how you can squeeze those extra cycles out of your SQLite installation to make your Rails app really hum.
+
 - - -
 
 ## All posts in this series
