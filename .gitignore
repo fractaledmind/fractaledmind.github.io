@@ -28,7 +28,6 @@ vendor
 .DS_Store
 
 # Yarn
-.yarn
 yarn-error.log
 yarn-debug.log*
 .pnp/
