@@ -15,15 +15,13 @@ Once again we are enhancing our [Ruby on Rails](https://rubyonrails.org) applica
 
 - - -
 
-Personally, I find SQLite to be essentially feature complete, but sometimes you have specific needs for your database that SQLite doesn't support. Luckily, SQLite offers a rich extension ecosystem. There is an [(unofficial) package manager](https://sqlpkg.org), an [(unofficial) standard library](https://github.com/nalgeon/sqlean), and a rich collection of [Alex Garcia extensions](https://github.com/asg017/sqlite-ecosystem). For a general introduction to installing SQLite extensions, read [this post](https://antonz.org/install-sqlite-extension/).
+Personally, I find SQLite to be essentially feature complete, but sometimes you have specific needs for your database that SQLite doesn't support. Luckily, SQLite offers a rich extension ecosystem. There is an [(unofficial) package manager](https://sqlpkg.org)—`sqlpkg`, an [(unofficial) standard library](https://github.com/nalgeon/sqlean)—`sqlean`, and a rich collection of [Alex Garcia extensions](https://github.com/asg017/sqlite-ecosystem). For a general introduction to installing SQLite extensions, read [this post](https://antonz.org/install-sqlite-extension/).
 
-We want, however, a simple way to install and load SQLite extensions in a Rails application. Unfortunately, at the moment the `sqlpkg` and `sqlean` extension collections do not provide Ruby gem releases. Fortunately though, Alex Garcia _does_ release each of his extensions as a Ruby gem. You can find all of his extensions under his [RubyGems' profile](https://rubygems.org/profiles/asg017). Let's focus on how to make it easy to install and load one of these extensions.
+We want, however, a simple way to install and load SQLite extensions in a Rails application. Unfortunately, at the moment the `sqlpkg` and `sqlean` extension collections do not provide Ruby gem releases. Fortunately though, Alex Garcia _does_ release each of his extensions as a Ruby gem. You can find all of his extensions under his [RubyGems' profile](https://rubygems.org/profiles/asg017). Let's focus on how to make it easy to install and load one of _these_ extensions.
 
 The installation is simple, as these are Ruby gems. We can simply use `bundle add {extension-name}`. Loading is the tricky part.
 
-Before extensions are loading, we have to first enable extension loading for the SQLite database. The [`SQLite3` Ruby adapter](https://github.com/sparklemotion/sqlite3-ruby) provides a `#enable_load_extension` method for this purpose.
-
-Alex Garcia's extension provide a `.load` method on the Ruby extension class that will load the extension. So, in full we would need to do the following to load an extension in Ruby:
+Before extensions are loaded, we have to first enable extension loading for the SQLite database. The [`SQLite3` Ruby adapter](https://github.com/sparklemotion/sqlite3-ruby) provides a `#enable_load_extension` method for this purpose. Alex Garcia's extensions then provide a `.load` method on the Ruby extension class that will load the extension. So, in full we would need to do the following to load an extension in Ruby:
 
 ```ruby
 @raw_connection.enable_load_extension(true)
@@ -70,7 +68,7 @@ default: &default
     - sqlite_ulid
 ```
 
-What I love about this approach to loading SQLite extensions is that extensions are explicitly installed (in the `Gemfile`) and loaded (in the `database.yml` file), plus it naturally builds on top of our existing enhancement to the SQLite adapter. In total, our enhanced adapter now supports [pragma configuration]({% link _posts/2023-09-07-enhancing-rails-sqlite-fine-tuning.md %}) as well as extension loading. Plus, our database configuration powers a [Git branch-bound database branching approach]({% link _posts/2023-09-06-enhancing-rails-sqlite-branch-databases.md %}).
+What I love about this approach to loading SQLite extensions is that extensions are _explicitly_ installed (in the `Gemfile`) and loaded (in the `database.yml` file), plus it naturally builds on top of our existing enhancement to the SQLite adapter. In total, our enhanced adapter now supports [pragma configuration]({% link _posts/2023-09-07-enhancing-rails-sqlite-fine-tuning.md %}) as well as extension loading. Plus, our database configuration powers a [Git branch-bound database branching approach]({% link _posts/2023-09-06-enhancing-rails-sqlite-branch-databases.md %}).
 
 This provides a rich and powerful set of functionality for local development. In the next post, we will dig into how to install and setup [`Litestream`](https://litestream.io) so that our production database will have point-in-time backups and recovery. Exiting things ahead!
 
