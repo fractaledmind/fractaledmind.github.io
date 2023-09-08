@@ -14,7 +14,7 @@ p ['filesystem', Encoding.find('filesystem')]
 p ['external', Encoding.default_external]
 p ['internal', Encoding.default_internal]
 p ['result', result.encoding]
-        element.replace(result.encode('UTF-8', 'US-ASCII').strip)
+        element.replace(result.force_encoding('UTF-8').strip)
       end
     end
   end
