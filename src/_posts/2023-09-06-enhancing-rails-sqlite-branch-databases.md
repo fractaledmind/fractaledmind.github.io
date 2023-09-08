@@ -112,3 +112,4 @@ It is precisely these kinds of enhancements—simple, small, but powerful—that
 
 * {:.bg-[var(--tw-prose-bullets)]}[Part 1 — branch-specific databases]({% link _posts/2023-09-06-enhancing-rails-sqlite-branch-databases.md %})
 * [Part 2 — fine-tuning SQLite configuration]({% link _posts/2023-09-07-enhancing-rails-sqlite-fine-tuning.md %})
+* [Part 3 — loading extensions]({% link _posts/2023-09-08-enhancing-rails-sqlite-loading-extensions.md %})
