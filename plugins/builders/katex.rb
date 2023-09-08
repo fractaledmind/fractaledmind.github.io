@@ -9,9 +9,11 @@ class Builders::Katex < SiteBuilder
       document.query_selector_all(SELECTOR).each do |element|
         result, _stderr_str, _status = Open3.capture3("npx katex", stdin_data: element.text)
 p '*' * 100
-p result.encoding
-p result.bytes
-p result.inspect
+p ['locale', Encoding.locale_charmap]
+p ['filesystem', Encoding.find('filesystem')]
+p ['external', Encoding.default_external]
+p ['internal', Encoding.default_internal]
+p ['result', result.encoding]
         element.replace(result.encode('UTF-8', 'US-ASCII').strip)
       end
     end
