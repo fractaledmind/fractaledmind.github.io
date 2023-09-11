@@ -38,6 +38,10 @@ defaults:
       path: "pdfs"
     values:
       pdf: true
+  - scope:
+      path: "functions"
+    values:
+      function: true
 
 summary_separator: <!--/summary-->
 
