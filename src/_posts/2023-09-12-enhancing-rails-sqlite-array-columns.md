@@ -7,7 +7,6 @@ tags:
   - ruby
   - rails
   - sqlite
-published: false
 ---
 
 One of the reasons people hesitate to use [SQLite](https://www.sqlite.org/index.html) in their [Ruby on Rails](https://rubyonrails.org) applications, in my opinion, is a fear that they will miss certain features they are accustomed to from [PostgeSQL](https://www.postgresql.org) or [MySQL](https://www.mysql.com). As discussed in an [earlier post]({% link _posts/2023-09-08-enhancing-rails-sqlite-loading-extensions.md %}), we can load SQLite extensions into our Rails applications to enhance the functionality of SQLite. Moreover, today I want to show you that it is possible to build on top of SQLite's primitives to provide matching behavior for one of my favorite features of Postgres—[array columns](https://www.postgresql.org/docs/current/arrays.html).
