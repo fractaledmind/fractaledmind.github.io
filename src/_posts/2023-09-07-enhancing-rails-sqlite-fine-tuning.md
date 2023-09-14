@@ -113,12 +113,14 @@ I created a new Rails `7.0.7.2` application and checked the values for each of t
  "wal_autocheckpoint"=>1000}
 ```
 
-> **Note:** This output was achieved with this command:
->```ruby
-> pragmas.reduce({}) do |memo, pragma|
+<div class="notice" markdown="1">
+**Note:** This output was achieved with this command:
+```ruby
+pragmas.reduce({}) do |memo, pragma|
   memo.merge!(ActiveRecord::Base.connection.execute("PRAGMA #{pragma}").first)
 end
->```
+```
+</div>
 
 This is interesting, but of course not every pragma is equally important for tuning Rails/ActiveRecord. So, let's focus in on the most impactful pragmas. There are around _six_ pragmas that play a big role in performance, especially in the context of a web application:
 

@@ -174,3 +174,20 @@ h1 {
 .tree span:hover + ol ul::before {
   border-color: rgb(56 189 248);
 }
+
+.notice {
+  background-color: var(--tw-prose-quote-borders);
+  border-color: var(--tw-prose-quotes);
+  border-left-width: 0.25em;
+  padding-left: 1em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  border-radius: 6px;
+}
+div.notice > :first-child {
+  margin-top: 0;
+}
+div.notice > :last-child {
+  margin-bottom: 0;
+}

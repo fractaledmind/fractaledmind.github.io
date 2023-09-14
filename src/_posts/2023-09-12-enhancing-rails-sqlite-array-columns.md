@@ -86,7 +86,9 @@ add_column :posts, :tags, :json, default: [], null: false
 add_check_constraint "JSON_TYPE(tags) = 'array'", name: 'post_tags_is_array'
 ```
 
-> **Note:** SQLite does not support `GIN` indexes. In order to provide an index for a `JSON` column, the recommended pattern in SQLite is to define a [generated column](https://www.sqlite.org/gencol.html) and then index that column. This [blog post](https://antonz.org/json-virtual-columns/) provides a good overview of the approach. Unfortunately for us Rails developers, the `ActiveRecord` adapter for SQLite doesn't yet support generated attributes, so we would have to drop down to running raw SQL. Support for Postgres generated columns was [recently added](https://github.com/rails/rails/pull/41856), and I plan to open a similar pull request for the SQLite adapter in the near future. For the time being, therefore, I will not dig into indexing an "array" column in our SQLite database. Since SQLite doesn't need to eat the network latency cost of a query, even unindexed queries can be sufficiently fast. However, of course, we would prefer to be able to ensure our SQLite implementation of "array columns" can be indexed. Once I have improved Rails' support, I will write a new post detailing how to work with SQLite generated columns and indexing them.
+{:.notice}
+**Note:** SQLite does not support `GIN` indexes. In order to provide an index for a `JSON` column, the recommended pattern in SQLite is to define a [generated column](https://www.sqlite.org/gencol.html) and then index that column. This [blog post](https://antonz.org/json-virtual-columns/) provides a good overview of the approach. Unfortunately for us Rails developers, the `ActiveRecord` adapter for SQLite doesn't yet support generated attributes, so we would have to drop down to running raw SQL. Support for Postgres generated columns was [recently added](https://github.com/rails/rails/pull/41856), and I plan to open a similar pull request for the SQLite adapter in the near future. For the time being, therefore, I will not dig into indexing an "array" column in our SQLite database. Since SQLite doesn't need to eat the network latency cost of a query, even unindexed queries can be sufficiently fast. However, of course, we would prefer to be able to ensure our SQLite implementation of "array columns" can be indexed. Once I have improved Rails' support, I will write a new post detailing how to work with SQLite generated columns and indexing them.
+
 
 This gives us a `JSON` column that will only ever be an array of values. Without a schema setup, let's turn to the "taggable" functionality that we want to support. `tag_columns` supports 11 methods:[^1]
 
@@ -155,7 +157,8 @@ As we stated earlier, every single query we need uses `JSON_EACH` at its heart. 
 json_each = Arel::Nodes::NamedFunction.new("JSON_EACH", [arel_table[column_name]])
 ```
 
-> **Note:** `arel_table` is available to us as we will be executing this code in the context of an ActiveRecord model concern.
+{:.notice}
+**Note:** `arel_table` is available to us as we will be executing this code in the context of an ActiveRecord model concern.
 
 With our `json_each` expression object ready, we could built the `.unique_tags` method like so:
 
@@ -207,7 +210,8 @@ We wrap all of this in an `ArrayColumns` model concern and we are good to go. Wi
 
 Hopefully, this demonstrates the power and flexibility available in SQLite. Even without all of the native features and data types provided by Postgres, a little bit of ingenuity can provide equivalent functionality.
 
-> You can find the full code for the model concern detailed in [this Gist](https://gist.github.com/fractaledmind/af105bc2f102bfba50b3f83adef5283e). Check out the full script to see the full set of test cases as well.
+{:.notice}
+You can find the full code for the model concern detailed in [this Gist](https://gist.github.com/fractaledmind/af105bc2f102bfba50b3f83adef5283e). Check out the full script to see the full set of test cases as well.
 
 - - -
 

@@ -9,7 +9,8 @@ tags:
 summary: Should the central tenets of Christian theology be best understood as <em>antinomies</em>, or <em>paradoxes</em>, or both?
 ---
 
-> **Note:** This post builds on and relates to a number of earlier posts where I am thinking through the nature of theological reasoning and logic. If you read this and it seems thin and implicit, try reading the other articles with these tags to flesh out the picture.
+{:.notice}
+**Note:** This post builds on and relates to a number of earlier posts where I am thinking through the nature of theological reasoning and logic. If you read this and it seems thin and implicit, try reading the other articles with these tags to flesh out the picture.
 
 I define **antinomies** as _actual contradictions_; **paradoxes** are _seeming contradictions_. Here I follow Kant’s jargon that defines antinomies as the combination of a rationally-justified (and true?) thesis along with a rationally-justified (and true?) antithesis. If knowledge is defined as justified true belief, such an antinomy produces contradictory knowledge. That is, I know `P` and `not-P`. In the language of some of [my earlier posts]({% link _posts/2016-02-21-conjunctive-binarism.md %}), an antinomy is a strong "conjunctive binary".
 

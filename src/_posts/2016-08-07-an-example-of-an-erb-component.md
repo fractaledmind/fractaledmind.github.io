@@ -97,7 +97,8 @@ Now, I just needed to write the `props_for` and `value_for` methods for the part
 %>
 ~~~
 
-> **NOTE:** The `value_for` method here is precisely the same as the `access` method I discussed in [this past article]({% link _posts/2016-07-15-accessing-values-from-nested-hashes.md %}).
+{:.notice}
+**NOTE:** The `value_for` method here is precisely the same as the `access` method I discussed in [this past article]({% link _posts/2016-07-15-accessing-values-from-nested-hashes.md %}).
 
 While simple and elegant, these methods have two problems. First, `local_assigns` is not accessible from any scope except the outer partial scope; you will get a `undefined local variable or method 'local_assigns'` error when you try to run these methods in the partial. Second, these methods won't handle params passed using string keys. Let's refactor and fix both of these issues:
 

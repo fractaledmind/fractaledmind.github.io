@@ -71,7 +71,8 @@ Simple and reasonable. Each Rails environment gets its own database file. Every 
 git branch --show-current
 ```
 
-> **Note:** If you are using a Git version less than 2.22 (when the `--show-current` option was added), you can use `git rev-parse --abbrev-ref HEAD` instead.
+{:.notice}
+**Note:** If you are using a Git version less than 2.22 (when the `--show-current` option was added), you can use `git rev-parse --abbrev-ref HEAD` instead.
 
 So, how do we use this in our `/config/database.yml` file? Well, Rails makes this easy as it allows for ERB. Adding a tiny bit of resilience to the code, we can replace our `development` section with this:
 

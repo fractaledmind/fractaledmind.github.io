@@ -46,7 +46,8 @@ bundle config set build.sqlite3 \
 "--with-sqlite-cflags='-DSQLITE_DEFAULT_CACHE_SIZE=9999 -DSQLITE_DEFAULT_PAGE_SIZE=4444'"
 ```
 
-> **Note:** These values are for demonstration purposes only. _Do not_ copy this and run this in your project. I will provide an appropriate set of `CFLAGS` shortly.
+{:.notice}
+**Note:** These values are for demonstration purposes only. _Do not_ copy this and run this in your project. I will provide an appropriate set of `CFLAGS` shortly.
 
 Running this command will create or update your project's `.bundler/config` file to include an option like so:
 
@@ -54,7 +55,8 @@ Running this command will create or update your project's `.bundler/config` file
 BUNDLE_BUILD__SQLITE3: "--with-sqlite-cflags='-DSQLITE_DEFAULT_CACHE_SIZE=9999 -DSQLITE_DEFAULT_PAGE_SIZE=4444'"
 ```
 
-> **Note:** The use of single quotes within the double-quoted string to ensure the space between compiler flags is interpreted correctly.
+{:.notice}
+**Note:** The use of single quotes within the double-quoted string to ensure the space between compiler flags is interpreted correctly.
 
 That's it! You only need those two changes. An update to your `Gemfile` and your `.bundler/config` file is all it takes to get a project-specific, fine-tuned SQLite installation. You can find these steps, as well as additional instructions for more advanced usage of the `sqlite3-ruby` gem, in the [gem's installation documentation](https://github.com/sparklemotion/sqlite3-ruby/blob/master/INSTALLATION.md).
 
