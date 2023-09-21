@@ -79,9 +79,12 @@ SQLITE_USE_ALLOCA
 SQLITE_OMIT_AUTOINIT
 ```
 
-Two of these options won't work with the `sqlite3-ruby` gem: `SQLITE_OMIT_DEPRECATED` and `SQLITE_OMIT_DECLTYPE`. The gem needs those features of SQLite in order to function, so we must remove them.
+<div class="notice" markdown="1">
+**Note:** The SQLite docs themselves note that even this recommended set of compile-time options will only make around a 5% improvement:
+> When all of the recommended compile-time options above are used, the SQLite library will be approximately 3% smaller and use about 5% fewer CPU cycles. So these options do not make a huge difference. But in some design situations, every little bit helps.
+</div>
 
-Next, we should remove the `SQLITE_THREADSAFE=0` option, as this is only usable by applications that never access SQLite from more than one thread at a time. In a web app, we are likely to access the database from multiple threads.
+Two of these options won't work with the `sqlite3-ruby` gem: `SQLITE_OMIT_DEPRECATED` and `SQLITE_OMIT_DECLTYPE`. The gem needs those features of SQLite in order to function, so we must remove them.[^2]
 
 We should also remove the `SQLITE_OMIT_AUTOINIT` option as it requires applications to correctly call SQLite's `initialize` method at appropriate times. We can't guarantee that level of control, and if you fail to call `initialize` properly, you will get a segfault.
 
@@ -91,6 +94,7 @@ With our removals (and one possible addition), our set of flags now looks like t
 
 ```shell
 SQLITE_DQS=0
+SQLITE_THREADSAFE=0
 SQLITE_DEFAULT_MEMSTATUS=0
 SQLITE_DEFAULT_WAL_SYNCHRONOUS=1
 SQLITE_LIKE_DOESNT_MATCH_BLOBS
@@ -105,7 +109,7 @@ We can turn these into the Bundler config we need via the CLI command:
 
 ```shell
 bundle config set build.sqlite3 \
-"--with-sqlite-cflags='-DSQLITE_DQS=0 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1 -DSQLITE_LIKE_DOESNT_MATCH_BLOBS -DSQLITE_MAX_EXPR_DEPTH=0 -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_USE_ALLOCA -DSQLITE_ENABLE_FTS5'"
+"--with-sqlite-cflags='-DSQLITE_DQS=0 -DSQLITE_THREADSAFE=0 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_DEFAULT_WAL_SYNCHRONOUS=1 -DSQLITE_LIKE_DOESNT_MATCH_BLOBS -DSQLITE_MAX_EXPR_DEPTH=0 -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_USE_ALLOCA -DSQLITE_ENABLE_FTS5'"
 ```
 
 Or just manually updating your project's `.bundler/config` file:
@@ -137,3 +141,4 @@ So, we now have the ability to tweak each of the knobs that SQLite provides to f
 - - -
 
 [^1]: Note that you can only use the `force_ruby_platform: true` on Bunder version 2.3.18 or higher. For Bundler version 2.1 or later (up to 2.3.18), you will need to run `bundle config set force_ruby_platform true`, which has the unfortunate side-effect of setting this option globally for your Gemfile 😕. For version 2.0 or earlier, you'll need to run `bundle config force_ruby_platform true`, which has the same side-effect.
+[^2]: While you may think that we need to remove the `SQLITE_THREADSAFE=0` option, as web apps use multiple threads, we don't. The [`sqlite3-ruby` gem](https://github.com/sparklemotion/sqlite3-ruby) doesn't release the GVL when waiting for responses, so parallelism isn't possible. That is, a call to the sqlite3 API cannot run in parallel to any other work occurring in the Ruby process. In a Rails app, ActiveRecord itself is already thread-safe. So, because of the thread-safety of ActiveRecord and the non-parallelizability of the `sqlite3-ruby` gem, we don't actually need SQLite itself to add its own layer of thread-safety.
