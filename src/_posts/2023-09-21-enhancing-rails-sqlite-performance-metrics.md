@@ -7,7 +7,6 @@ tags:
   - ruby
   - rails
   - sqlite
-published: false
 ---
 
 When using [SQLite](https://www.sqlite.org/index.html) in your [Ruby on Rails](https://rubyonrails.org) application, [fine]({% link _posts/2023-09-07-enhancing-rails-sqlite-fine-tuning.md %})-[tuning]({% link _posts/2023-09-10-enhancing-rails-sqlite-optimizing-compilation.md %}) is essential. While SQLite is naturally fast, it's default configuration isn't tuned for web app usage. In this post, I want to explore some benchmarks and dig into why fine-tuning your SQLite database is so valuable.
@@ -18,13 +17,13 @@ When using [SQLite](https://www.sqlite.org/index.html) in your [Ruby on Rails](h
 
 Benchmarking a database or an ORM can take a large variety of different shapes and sizes. There are enterprise-grade, council-produced standards, like the [Transaction Processing Performance Council](http://www.tpc.org)'s [TPC-E](https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-E_v1.14.0.pdf). There are large-scale benchmarks used often in academic research, like the [Telecom Application Transaction Processing Benchmark](https://tatpbenchmark.sourceforge.net). Then, there are the ad-hoc, custom benchmarks used typically by individuals.
 
-I didn't want to write my own benchmarking suite, but I also needed something that would work seamlessly with SQLite and Rails. Luckily, one of Ruby's true gems—[Jeremy Evans](http://code.jeremyevans.net)—has a [benchmarking suite](https://github.com/jeremyevans/simple_orm_benchmark) which he has used for benchmarking different Ruby ORMs against different databases. It is written in Ruby, for Ruby ORMs. It has a nice mix of operations, and I know Jeremy is a top-notch programmer, so I basically just implicitly trust him. This suite of benchmarking operations forms the foundation of my benchmark.
+I didn't want to write my own benchmarking suite, but I also needed something that would work seamlessly with SQLite and Rails. Luckily, one of Ruby's true gems—[Jeremy Evans](http://code.jeremyevans.net)—has a [benchmarking suite](https://github.com/jeremyevans/simple_orm_benchmark) that he has used for benchmarking different Ruby ORMs against different databases. It is written in Ruby, for Ruby ORMs. It has a nice mix of operations, and I know Jeremy is a top-notch programmer, so I basically just implicitly trust him. This suite of benchmarking operations forms the foundation of my benchmark.
 
 I did rewrite the code, both to remove the indirection required in his code to support multiple ORMs and database engines and also to tailor the benchmark results to my interests. You can find the code for the benchmarking done in this blog post in [this Gist](https://gist.github.com/fractaledmind/fa7e975d59b093808334624ebe0b6f86).
 
 The goal is to provide insight into how the fine-tuning options I've described in [past]({% link _posts/2023-09-07-enhancing-rails-sqlite-fine-tuning.md %}) [posts]({% link _posts/2023-09-10-enhancing-rails-sqlite-optimizing-compilation.md %}) impact the performance of ActiveRecord across a range of different operations, loads, and contexts. All benchmarks were run on my MacBook Pro (16-inch, 2021), which has an Apple M1 Max chip and 32GB of RAM running macOS Monterey (12.5.1). I also use version [1.6.6](https://github.com/sparklemotion/sqlite3-ruby/releases/tag/v1.6.6) of the [`sqlite3-ruby`](https://github.com/sparklemotion/sqlite3-ruby) gem for each benchmark run.
 
-For each scenario, I will report all of the compile-time options set as well as the values of all of the relevant `PRAGMA`s.[^1] It is important to provide the full picture of how SQLite is configured for a benchmark, because as Purohith, Mohan, and Chidambaram detail in their paper ["The Dangers and Complexities of SQLite Benchmarking"](https://www.cs.utexas.edu/~vijay/papers/apsys17-sqlite.pdf), benchmarking results without this context are insufficient to both reproduce the result and place it in the larger context of benchmarks. This is particularly true of SQLite, as even a single configuration change can lead to more than a 10× performance improvement. And since our entire interest here is how different configurations impact performance, this context is essential.
+For each scenario, I will report all of the compile-time options set as well as the values of all of the relevant `PRAGMA`s.[^1] It is important to provide the full picture of how SQLite is configured for a benchmark, because as Purohith, Mohan, and Chidambaram detail in their paper "[The Dangers and Complexities of SQLite Benchmarking](https://www.cs.utexas.edu/~vijay/papers/apsys17-sqlite.pdf)", benchmarking results without this context are insufficient to both reproduce the result and place it in the larger context of benchmarks. This is particularly true of SQLite, as even a single configuration change can lead to more than a 10× performance improvement. And since our entire interest here is how different configurations impact performance, this context is essential.
 
 We will benchmark four scenarios:
 
@@ -762,7 +761,7 @@ This is a couple seconds faster than the non-tuned default SQLite, but it is nea
 * [Part 6 — array columns]({% link _posts/2023-09-12-enhancing-rails-sqlite-array-columns.md %})
 * [Part 7 — local snapshots]({% link _posts/2023-09-14-enhancing-rails-sqlite-local-snapshots.md %})
 * [Part 8 — Rails improvements]({% link _posts/2023-09-15-enhancing-rails-sqlite-activerecord-adapter-improvements.md %})
-* {:.bg-[var(--tw-prose-bullets)]}[Part 9 — Performance metrics]({% link _posts/2023-09-20-enhancing-rails-sqlite-performance-metrics.md %})
+* {:.bg-[var(--tw-prose-bullets)]}[Part 9 — Performance metrics]({% link _posts/2023-09-21-enhancing-rails-sqlite-performance-metrics.md %})
 
 - - -
 
