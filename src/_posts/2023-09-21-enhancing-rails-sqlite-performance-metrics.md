@@ -697,7 +697,58 @@ Compared to the second scenario, we see another ~3% improvement:
 
 After all of that, what conclusions can we draw? Well, it is clear that tuning `PRAGMA`s, and in particular setting the `journal_mode`, `synchronization`, and `journal_size_limit` pragmas, are **_essential_**. And, while compilation-tuning doesn't provide the same 2× improvements as pragma-tuning, given that it is now trivially easy, why leave the 3-5% on the table, right?
 
-Having this benchmarking suite also now provides us with the opportunity to investigate different SQLite configurations. So, how have you fine-tuned your SQLite database? Let's check more benchmarks together.
+I wanted to see how these different SQLite setups compared to running PostgreSQL locally on my laptop thru the same benchmark. I confess that I don't know much about how to fine-tune PG, so I only ran the benchmark once with the default installation of PG (gem version 1.5.4) on my Macbook Pro. Here are the results:
+
+{:.notice}
+**11.4623s**
+
+<details markdown="1">
+  <summary>Breakdown by benchmark operation</summary>
+
+{:.tables}
+| Operation                                                          | Duration |
+| heavy_threading                                                    | 2.8473s |
+| model_object_destruction                                           | 1.232s  |
+| eager_loading_single_query_with_1_to_n_to_n_records                | 1.2192s |
+| eager_loading_single_query_with_1_to_n_to_n_records (txn)          | 1.2174s |
+| model_object_and_associated_object_creation                        | 1.0791s |
+| model_object_select_and_save                                       | 0.7963s |
+| model_object_select_and_save (txn)                                 | 0.3855s |
+| light_threading                                                    | 0.3575s |
+| lazy_loading_with_1_to_1_records (txn)                             | 0.3465s |
+| lazy_loading_with_1_to_1_records                                   | 0.3404s |
+| model_object_update_json                                           | 0.2407s |
+| model_object_select_by_attr (txn)                                  | 0.1708s |
+| model_object_select_by_attr                                        | 0.1591s |
+| model_object_select_json_nested                                    | 0.1392s |
+| model_object_select_json_nested (txn)                              | 0.1383s |
+| model_object_update_json_nested                                    | 0.1219s |
+| model_object_update_json (txn)                                     | 0.1008s |
+| model_object_update_json_nested (txn)                              | 0.0655s |
+| eager_loading_query_per_association_with_1_to_n_to_n_records (txn) | 0.0545s |
+| eager_loading_query_per_association_with_1_to_n_to_n_records       | 0.0521s |
+| lazy_loading_with_1_to_n_records                                   | 0.0474s |
+| lazy_loading_with_1_to_n_records (txn)                             | 0.0471s |
+| eager_loading_single_query_with_1_to_n_records                     | 0.0392s |
+| eager_loading_single_query_with_1_to_n_records (txn)               | 0.0375s |
+| eager_loading_query_per_association_with_1_to_n_records (txn)      | 0.0303s |
+| eager_loading_query_per_association_with_1_to_n_records            | 0.0302s |
+| model_object_select_by_pk                                          | 0.0299s |
+| model_object_select_by_pk (txn)                                    | 0.0295s |
+| eager_loading_single_query_with_1_to_1_records (txn)               | 0.0265s |
+| eager_loading_single_query_with_1_to_1_records                     | 0.0263s |
+| eager_loading_query_per_association_with_1_to_1_records            | 0.0249s |
+| eager_loading_query_per_association_with_1_to_1_records (txn)      | 0.0247s |
+| model_object_creation                                              | 0.0017s |
+| model_object_creation (txn)                                        | 0.0015s |
+| model_object_destruction (txn)                                     | 0.0009s |
+| model_object_and_associated_object_creation (txn)                  | 0.0007s |
+| model_object_select (txn)                                          | 0.0001s |
+| model_object_select                                                | 0.0s    |
+
+</details>
+
+This is a couple seconds faster than the non-tuned default SQLite, but it is nearly 2× **slower** than the fine-tuned SQLite installation. And this is without a full, realistic network delay, as both the benchmark and Postgres server are running on the same machine. Hopefully, even this simple benchmark demonstrates how performant SQLite can be, especially when tuned for web application usage.
 
 - - -
 
