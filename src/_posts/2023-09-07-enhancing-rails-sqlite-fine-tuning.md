@@ -201,8 +201,8 @@ These six pragmas can be configured in SQLite using the following SQL:
 ```sql
 PRAGMA journal_mode = WAL;
 PRAGMA synchronous = NORMAL;
-PRAGMA journal_size_limit = 67108864 -- 64 megabytes;
-PRAGMA mmap_size = 134217728 -- 128 megabytes;
+PRAGMA journal_size_limit = 67108864; -- 64 megabytes
+PRAGMA mmap_size = 134217728; -- 128 megabytes
 PRAGMA cache_size = 2000;
 PRAGMA busy_timeout = 5000;
 ```
