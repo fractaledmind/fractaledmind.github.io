@@ -17,7 +17,7 @@ tags:
 
 Today I opened my first two pull requests to begin improving Rails' `SQLite3Adapter`:
 
-* [support `||` concatentation in default functions](https://github.com/rails/rails/pull/49287)
+* [support `||` concatenation in default functions](https://github.com/rails/rails/pull/49287)
 * [support `RETURNING` values on `INSERT`](https://github.com/rails/rails/pull/49290)
 
 And this blog post is my personal declaration of intent—I am going to do my part in bringing as many of the newer ActiveRecord features to the SQLite adapter. From [composite foreign keys](https://www.sqlite.org/foreignkeys.html#fk_composite) to [virtual columns](https://www.sqlite.org/gencol.html), with [auto-populated columns](https://github.com/rails/rails/pull/48241) thrown in, SQLite will no longer lag behind PostgreSQL and MySQL.
@@ -42,3 +42,4 @@ That's it for today. But be on the lookout for a post on how supporting Rails' `
 * {:.bg-[var(--tw-prose-bullets)]}[Part 8 — Rails improvements]({% link _posts/2023-09-15-enhancing-rails-sqlite-activerecord-adapter-improvements.md %})
 * [Part 9 — performance metrics]({% link _posts/2023-09-21-enhancing-rails-sqlite-performance-metrics.md %})
 * [Part 10 — custom primary keys]({% link _posts/2023-09-22-enhancing-rails-sqlite-ulid-primary-keys.md %})
+* [Part 11 — more Rails improvements]({% link _posts/2023-09-26-enhancing-rails-sqlite-more-activerecord-adapter-improvements.md %})
