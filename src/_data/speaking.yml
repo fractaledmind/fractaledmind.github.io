@@ -1,0 +1,27 @@
+- type: podcast
+  show:
+    name: "GemRuby Show"
+    link: https://gemrubyshow.transistor.fm
+  episode:
+    name: "ActiveRecordEnhancedSqlite3Adapter"
+    link: https://gemrubyshow.transistor.fm/episodes/gemruby-show-stephen-margheim-activerecordenhancedsqlite3adapter
+  date: 2023-09-07
+  description: |
+    In this episode, we discuss SQLiteOnRails with Stephen Margheim.
+    Stephen has contributed to Rails and he created a gem to bring this experience to all the Rails developers. 
+    He has also created another gem called AcidicJob.
+    
+    SQLiteOnRails is something that is taking some place in the ecosystem, I am sure you will learn some new stuff.
+    
+    I hope you will appreciate this episode :).
+
+- type: talk
+  show:
+    name: "RubyConf 2021"
+    link: https://www.youtube.com/playlist?list=PLbHJudTY1K0f0oMhWtY-UyzOb7tUlaHps
+  episode:
+    name: "Acidic Jobs: A Layman's Guide to Job Bliss"
+    link: https://www.youtube.com/watch?v=2JOlAnN62k8
+  date: 2021-10-09
+  description: |
+    Background jobs have become an essential component of any Ruby infrastructure, and, as the Sidekiq Best Practices remind us, it is essential that jobs be "idempotent and transactional." But how do we make our jobs idempotent and transactional? In this talk, we will explore various techniques to make our jobs robust and ACIDic.
