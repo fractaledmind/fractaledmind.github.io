@@ -1,11 +1,22 @@
 - type: podcast
   show:
+    name: "Rooftop Ruby"
+    link: https://www.rooftopruby.com
+  episode:
+    name: "SQLite in Production With Stephen Margheim"
+    link: https://www.rooftopruby.com/2108545/13811044-28-sqlite-in-production-with-stephen-margheim
+  date: 2023-10-19
+  description: |
+    Stephen Margheim talks about SQLite in production Rails and more.
+
+- type: podcast
+  show:
     name: "GemRuby Show"
     link: https://gemrubyshow.transistor.fm
   episode:
     name: "ActiveRecordEnhancedSqlite3Adapter"
     link: https://gemrubyshow.transistor.fm/episodes/gemruby-show-stephen-margheim-activerecordenhancedsqlite3adapter
-  date: 2023-09-07
+  date: 2023-10-07
   description: |
     In this episode, we discuss SQLiteOnRails with Stephen Margheim.
     Stephen has contributed to Rails and he created a gem to bring this experience to all the Rails developers. 
