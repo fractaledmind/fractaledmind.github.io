@@ -9,6 +9,14 @@
 
 @import "variables.css";
 
+@font-face {
+  font-family: 'ballet';
+  src: url('/fonts/ballet.woff2') format('woff2'),
+       url('/fonts/ballet.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .stroke-current{
   stroke: currentColor
 }
@@ -17,12 +25,9 @@
   color: var(--tw-prose-body)
 }
 
-[aria-hidden="true"] {
-  visibility: hidden;
-}
-
 .anchor {
   text-decoration: none;
+  visibility: hidden;
 }
 
 h2:hover .anchor,

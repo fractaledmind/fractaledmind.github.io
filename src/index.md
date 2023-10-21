@@ -20,6 +20,17 @@ I'm full-stack Ruby on Rails Software Engineer, an Engineering Manager, and gene
 </a>
 
 <a href="{{ '/posts' | relative_url }}" class="no-underline">
-  <span class="underline">Check out my most recent posts</span>
+  <span class="underline">Read my most recent posts</span>
   <i>→</i>
 </a>
+
+<a href="{{ '/speaking' | relative_url }}" class="no-underline">
+  <span class="underline">Listen to my recent speaking opportunities</span>
+  <i>→</i>
+</a>
+
+<div>
+  <span class="bold text-[var(--tw-prose-links)]">Connect with me</span>
+  <i>↓</i>
+  {% render "socials" %}
+</div>
