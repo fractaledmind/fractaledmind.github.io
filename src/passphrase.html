@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Passphrase Example</title>
+    <script src="https://unpkg.com/@hotwired/stimulus/dist/stimulus.umd.js"></script>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 56rem;
+        margin: 2rem auto;
+      }
+      label {
+        display: block;
+      }
+      hr {
+        margin: 2rem 0;
+      }
+      h2 {
+        margin-top: 0;
+      }
+      .requirements > p {
+        margin-bottom: 0;
+      }
+      .requirements > ul {
+        margin-top: 0;
+        list-style: none;
+      }
+      .requirements > ul > li {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+      }
+      .requirements svg {
+        height: 1em;
+        width: 1em;
+      }
+      output {
+        display: block;
+        background-color: black;
+        color: white;
+        border-radius: 4px;
+        padding: 0.5em;
+        overflow: auto;
+        word-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Customer registering passphrase</h2>
+      
+      <form action="#" data-controller="passphrase-registration" data-action="passphrase-registration#encrypt">
+        <input type="hidden" value="TRvFbGm5LSJrX89R6CjLTQ==" data-passphrase-registration-target="salt">
+        
+        <section data-controller="passphrase">
+          <label for="passphrase-for-registration">Passphrase</label>
+          <input type="text"
+                 id="passphrase-for-registration"
+                 data-passphrase-registration-target="input"
+                 data-action="passphrase#validate"
+                 autocomplete="new-password"
+                 required
+                 minlength="12"
+                 pattern="^(?=.*[a-z].*[a-z])(?=.*[A-Z].*[A-Z])(?=.*[0-9].*[0-9])(?=.*[!@#$%^&*_=+-].*[!@#$%^&*_=+-]).+$">
+          <div class="requirements">
+            <p>Passphrase must contain:</p>
+            <ul>
+              <li data-passphrase-target="lengthValidation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <defs>
+                    <path id="valid" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    <g id="invalid">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </g>
+                  </defs>
+                  <use href="#invalid" fill="red" />
+                </svg>
+                <span>At least 12 characters</span>
+              </li>
+              <li data-passphrase-target="lowercaseValidation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <defs>
+                    <path id="valid" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    <g id="invalid">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </g>
+                  </defs>
+                  <use href="#invalid" fill="red" />
+                </svg>
+                <span>At least two lowercase letters <code>(a...z)</code></span>
+              </li>
+              <li data-passphrase-target="uppercaseValidation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <defs>
+                    <path id="valid" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    <g id="invalid">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </g>
+                  </defs>
+                  <use href="#invalid" fill="red" />
+                </svg>
+                <span>At least two uppercase letters <code>(A...Z)</code></span>
+              </li>
+              <li data-passphrase-target="numericalValidation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <defs>
+                    <path id="valid" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    <g id="invalid">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </g>
+                  </defs>
+                  <use href="#invalid" fill="red" />
+                </svg>
+                <span>At least two numbers <code>(0...9)</code></span>
+              </li>
+              <li data-passphrase-target="characterValidation">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <defs>
+                    <path id="valid" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                    <g id="invalid">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </g>
+                  </defs>
+                  <use href="#invalid" fill="red" />
+                </svg>
+                <span>At least two special characters <code>(!@#$%^&*_=+-)</code></span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
+        <button type="submit">Submit</button>
+      </form>
+      
+      <br />
+      
+      <div>
+        <label for="encrypted_private_key"><code>encrypted_private_key</code></label>
+        <output id="encrypted_private_key"></output>
+      </div>
+      
+      <div>
+        <label for="public_key"><code>public_key</code></label>
+        <output id="public_key"></output>
+      </div>
+    </section>
+    
+    <hr />
+    
+    <section>
+      <h2>Tester submitting card</h2>
+      
+      <form action="#" data-controller="card-submission" data-action="card-submission#encrypt">
+        <input type="hidden" value="" data-card-submission-target="publicKey">
+        
+        <section>
+          <label for="card_number">Card Number</label>
+          <input type="text" id="card_number" name="number" autocomplete="off" inputmode="numeric">
+        </section>
+        
+        <section>
+          <label for="card_holder">Card Holder</label>
+          <input type="text" id="card_holder" name="holder" autocomplete="off">
+        </section>
+        
+        <fieldset style="border: none; padding: 0;">
+          <label for="card_expiration_month">Month</label>
+          <select id="card_expiration_month" name="month">
+            <option value="" disabled selected>MM</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          
+          <label for="card_expiration_year">Year</label>
+          <select id="card_expiration_year" name="year">
+            <option value="" disabled selected>YY</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+          </select>
+        </fieldset>
+        
+        <section>
+          <label for="card_cvv">CVV</label>
+          <input type="text" id="card_cvv" name="cvv" autocomplete="off" inputmode="numeric">
+        </section>
+        
+        <br  />
+        
+        <button type="submit">Submit</button>
+      </form>
+      
+      <br  />
+      
+      <div>
+        <label for="encrypted_data"><code>encrypted_data</code></label>
+        <output id="encrypted_data"></output>
+      </div>
+    </section>
+    
+    <hr />
+    
+    <section>
+      <h2>Customer viewing card</h2>
+      
+      <form action="#" data-controller="card-retrieval" data-action="card-retrieval#decrypt">
+        <input type="hidden" value="TRvFbGm5LSJrX89R6CjLTQ==" data-card-retrieval-target="salt">
+        <input type="hidden" value="" data-card-retrieval-target="encryptedPrivateKey">
+        <input type="hidden" value="" data-card-retrieval-target="encryptedData">
+        
+        <section>
+          <label for="passphrase-for-retrieval">Passphrase</label>
+          <input type="text"
+                 id="passphrase-for-retrieval"
+                 data-card-retrieval-target="input"
+                 data-action="passphrase#validate"
+                 autocomplete="new-password"
+                 required
+                 minlength="12"
+                 pattern="^(?=.*[a-z].*[a-z])(?=.*[A-Z].*[A-Z])(?=.*[0-9].*[0-9])(?=.*[!@#$%^&*_=+-].*[!@#$%^&*_=+-]).+$">
+        </section>
+        
+        <button type="submit">Submit</button>
+      </form>
+      
+      <br  />
+      
+      <div>
+        <label for="decrypted_data"><code>decrypted_data</code></label>
+        <output id="decrypted_data"></output>
+      </div>
+    </section>
+    
+    <script>
+      class PassphraseController extends Stimulus.Controller {
+        static get targets() {
+          return [
+            "lengthValidation",
+            "lowercaseValidation",
+            "uppercaseValidation",
+            "numericalValidation",
+            "characterValidation",
+            "encryptedPrivateKey"
+          ]
+        }
+        
+        validate(event) {
+          const input = event.currentTarget
+          const minlength = parseInt(input.getAttribute('minlength'))
+          const pattern = input.getAttribute('pattern')
+          // => "^(?=.*[a-z].*[a-z])(?=.*[A-Z].*[A-Z])(?=.*[0-9].*[0-9])(?=.*[!@#$%^&*_=+-].*[!@#$%^&*_=+-]).+$"
+          const validations = pattern.match(/\(\?\=.*?\)/g)
+          // => ["(?=.*[a-z].*[a-z])", "(?=.*[A-Z].*[A-Z])", "(?=.*[0-9].*[0-9])", "(?=.*[!@#$%^&*_=+-].*[!@#$%^&*_=+-])"]
+          const lowercaseValidation = validations.find(v => v.includes('[a-z]'))
+          const uppercaseValidation = validations.find(v => v.includes('[A-Z]'))
+          const numericalValidation = validations.find(v => v.includes('[0-9]'))
+          const characterValidation = validations.find(v => v.includes('[!@#$%^&*_=+-]'))
+          
+          this.#validateLength(input, minlength)
+          this.#validateLowercase(input, lowercaseValidation)
+          this.#validateUppercase(input, uppercaseValidation)
+          this.#validateNumerical(input, numericalValidation)
+          this.#validateCharacter(input, characterValidation)
+        }
+        
+        #validateLength(input, minlength) {
+          const validationIcon = this.lengthValidationTarget.querySelector("svg use")
+          if (input.value.length >= minlength) {
+            validationIcon.setAttribute("href", "#valid")
+            validationIcon.setAttribute("fill", "green")
+          } else {
+            validationIcon.setAttribute("href", "#invalid")
+            validationIcon.setAttribute("fill", "red")
+          }
+        }
+        
+        #validateLowercase(input, pattern) {
+          const regexp = new RegExp(pattern + ".+")
+          const validationIcon = this.lowercaseValidationTarget.querySelector("svg use")
+          if (regexp.test(input.value)) {
+            validationIcon.setAttribute("href", "#valid")
+            validationIcon.setAttribute("fill", "green")
+          } else {
+            validationIcon.setAttribute("href", "#invalid")
+            validationIcon.setAttribute("fill", "red")
+          }
+        }
+        
+        #validateUppercase(input, pattern) {
+          const regexp = new RegExp(pattern + ".+")
+          const validationIcon = this.uppercaseValidationTarget.querySelector("svg use")
+          if (regexp.test(input.value)) {
+            validationIcon.setAttribute("href", "#valid")
+            validationIcon.setAttribute("fill", "green")
+          } else {
+            validationIcon.setAttribute("href", "#invalid")
+            validationIcon.setAttribute("fill", "red")
+          }
+        }
+        
+        #validateNumerical(input, pattern) {
+          const regexp = new RegExp(pattern + ".+")
+          const validationIcon = this.numericalValidationTarget.querySelector("svg use")
+          if (regexp.test(input.value)) {
+            validationIcon.setAttribute("href", "#valid")
+            validationIcon.setAttribute("fill", "green")
+          } else {
+            validationIcon.setAttribute("href", "#invalid")
+            validationIcon.setAttribute("fill", "red")
+          }
+        }
+        
+        #validateCharacter(input, pattern) {
+          const regexp = new RegExp(pattern + ".+")
+          const validationIcon = this.characterValidationTarget.querySelector("svg use")
+          if (regexp.test(input.value)) {
+            validationIcon.setAttribute("href", "#valid")
+            validationIcon.setAttribute("fill", "green")
+          } else {
+            validationIcon.setAttribute("href", "#invalid")
+            validationIcon.setAttribute("fill", "red")
+          }
+        }
+      }
+      class PassphraseRegistrationController extends Stimulus.Controller {
+        static get targets() {
+          return [
+            "input",
+            "salt"
+          ]
+        }
+        
+        connect() {
+          this.saltBuffer = this.#encode(this.salt)
+        }
+        
+        async encrypt(event) {
+          event.preventDefault()
+          
+          const secretKey = await this.deriveSecretKey()
+          const { publicKey, privateKey } = await this.generateKeyPair()
+          
+          const wrappedPrivateKey = await crypto.subtle.wrapKey(
+            "jwk",
+            privateKey,
+            secretKey,
+            {
+              name: "AES-GCM",
+              iv: this.saltBuffer
+            }
+          )
+          
+          const exportedPublicKey = await crypto.subtle.exportKey('spki', publicKey);
+          const packedPublicKey = this.#pack(exportedPublicKey)
+          const packedWrappedPrivateKey = this.#pack(wrappedPrivateKey)
+          
+          // TODO: submit this form with these values
+          document.getElementById('encrypted_private_key').textContent = packedWrappedPrivateKey
+          document.getElementById('public_key').textContent = packedPublicKey
+          
+          // TODO: delete this code in production. This is only for the single-page demo
+          document.querySelector('[data-card-submission-target="publicKey"]').value = packedPublicKey
+          document.querySelector('[data-card-retrieval-target="encryptedPrivateKey"]').value = packedWrappedPrivateKey
+        }
+        
+        async deriveSecretKey() {
+          let derivedKeyMaterial = await crypto.subtle.importKey(
+            'raw',
+            this.#encode(this.passphrase),
+            { name: 'PBKDF2' },
+            false, // extractable
+            ['deriveKey']
+          )
+          
+          return await crypto.subtle.deriveKey(
+            {
+              name: "PBKDF2",
+              salt: this.saltBuffer,
+              // https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#pbkdf2
+              iterations: 600000,
+              hash: "SHA-256",
+            },
+            derivedKeyMaterial,
+            { name: "AES-GCM", length: 256 },
+            true, // extractable
+            ["wrapKey", "unwrapKey"],
+          )
+        }
+        
+        async generateKeyPair() {
+          return crypto.subtle.generateKey(
+            {
+              name: "RSA-OAEP",
+              modulusLength: 4096,
+              publicExponent: new Uint8Array([1, 0, 1]),
+              hash: "SHA-256"
+            },
+            true,
+            ["encrypt", "decrypt"]
+          );
+        }
+        
+        get salt() {
+          return this.saltTarget.value
+        }
+        
+        get passphrase() {
+          return this.inputTarget.value
+        }
+        
+        #encode(data) {
+          // https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder
+          const encoder = new TextEncoder()
+      
+          return encoder.encode(data)
+        }
+        
+        #decode(bytestream) {
+          // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder
+          const decoder = new TextDecoder()
+      
+          return decoder.decode(bytestream)
+        }
+        
+        #pack(buffer) {
+          // https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+          return window.btoa(
+            String.fromCharCode.apply(null, new Uint8Array(buffer))
+          )
+        }
+      }
+      class CardSubmissionController extends Stimulus.Controller {
+        static get targets() {
+          return [
+            "publicKey"
+          ]
+        }
+        
+        async encrypt(event) {
+          event.preventDefault()
+          
+          const cryptoKey = await crypto.subtle.importKey(
+            "spki",
+            this.#unpack(this.publicKey),
+            {
+              name: 'RSA-OAEP',
+              modulusLength: 4096,
+              publicExponent: new Uint8Array([1, 0, 1]), // 65537
+              hash: 'SHA-256',
+            },
+            false,
+            ["encrypt"]
+          )
+          
+          var encryptedData = await crypto.subtle.encrypt(
+            {
+              name: "RSA-OAEP"
+            },
+            cryptoKey,
+            this.#encode(this.jsonFormData)
+          )
+          
+          // TODO: submit this form with these values
+          const packedEncryptedData = this.#pack(encryptedData)
+          document.getElementById('encrypted_data').textContent = packedEncryptedData
+          
+          // TODO: delete this code in production. This is only for the single-page demo
+          document.querySelector('[data-card-retrieval-target="encryptedData"]').value = packedEncryptedData
+        }
+        
+        get publicKey() {
+          return this.publicKeyTarget.value
+        }
+        get jsonFormData() {
+          const formData = new FormData(event.target)
+          const value = Object.fromEntries(formData.entries())
+          return JSON.stringify(value)
+        }
+        
+        #pack(buffer) {
+          // https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+          return window.btoa(
+            String.fromCharCode.apply(null, new Uint8Array(buffer))
+          )
+        }
+        
+        #unpack(packed) {
+          // https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+          const string = window.atob(packed)
+          const buffer = new ArrayBuffer(string.length)
+          const bufferView = new Uint8Array(buffer)
+        
+          for (let i = 0; i < string.length; i++) {
+            bufferView[i] = string.charCodeAt(i)
+          }
+        
+          return buffer
+        }
+        
+        #encode(data) {
+          // https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder
+          const encoder = new TextEncoder()
+        
+          return encoder.encode(data)
+        }
+      }
+      class CardRetrievalController extends Stimulus.Controller {
+        static get targets() {
+          return [
+            "input",
+            "salt",
+            "encryptedPrivateKey",
+            "encryptedData"
+          ]
+        }
+        
+        connect() {
+          this.saltBuffer = this.#encode(this.salt)
+        }
+        
+        async decrypt(event) {
+          event.preventDefault()
+
+          const secretKey = await this.deriveSecretKey()
+          const privateKey = await crypto.subtle.unwrapKey(
+            "jwk",
+            this.#unpack(this.encryptedPrivateKey),
+            secretKey,
+            {
+              name: "AES-GCM",
+              iv: this.saltBuffer
+            },
+            {
+              name: "RSA-OAEP",
+              hash: "SHA-256"
+            },
+            false,
+            ["decrypt"]
+          )
+          
+          var decryptedData = await crypto.subtle.decrypt(
+            {
+              name: "RSA-OAEP"
+            },
+            privateKey,
+            this.#unpack(this.encryptedData)
+          )
+          const decodedData = this.#decode(decryptedData)
+
+          // TODO: render a pretty <template> tag with this data
+          document.getElementById('decrypted_data').textContent = decodedData
+        }
+        
+        async deriveSecretKey() {
+          const derivedKeyMaterial = await crypto.subtle.importKey(
+            'raw',
+            this.#encode(this.passphrase),
+            { name: 'PBKDF2' },
+            false, // extractable
+            ['deriveKey']
+          )
+          
+          return await crypto.subtle.deriveKey(
+            {
+              name: "PBKDF2",
+              salt: this.saltBuffer,
+              // https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#pbkdf2
+              iterations: 600000,
+              hash: "SHA-256",
+            },
+            derivedKeyMaterial,
+            { name: "AES-GCM", length: 256 },
+            true, // extractable
+            ["wrapKey", "unwrapKey"],
+          )
+        }
+        
+        #encode(data) {
+          // https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder
+          const encoder = new TextEncoder()
+        
+          return encoder.encode(data)
+        }
+        
+        #decode(bytestream) {
+          // https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder
+          const decoder = new TextDecoder()
+        
+          return decoder.decode(bytestream)
+        }
+        
+        #unpack(packed) {
+          // https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+          const string = window.atob(packed)
+          const buffer = new ArrayBuffer(string.length)
+          const bufferView = new Uint8Array(buffer)
+        
+          for (let i = 0; i < string.length; i++) {
+            bufferView[i] = string.charCodeAt(i)
+          }
+        
+          return buffer
+        }
+        
+        #pack(buffer) {
+          // https://developers.google.com/web/updates/2012/06/How-to-convert-ArrayBuffer-to-and-from-String
+          return window.btoa(
+            String.fromCharCode.apply(null, new Uint8Array(buffer))
+          )
+        }
+        
+        get salt() {
+          return this.saltTarget.value
+        }
+        get encryptedPrivateKey() {
+          return this.encryptedPrivateKeyTarget.value
+        }
+        get encryptedData() {
+          return this.encryptedDataTarget.value
+        }
+        get passphrase() {
+          return this.inputTarget.value
+        }
+      }
+      
+      const application = Stimulus.Application.start()
+      application.register('passphrase', PassphraseController)
+      application.register('passphrase-registration', PassphraseRegistrationController)
+      application.register('card-submission', CardSubmissionController)
+      application.register('card-retrieval', CardRetrievalController)
+    </script>
+  </body>
+</html>
