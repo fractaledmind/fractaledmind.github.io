@@ -2,7 +2,7 @@
   <a href="{{ '/' | relative_url }}" class="group">
     {% svg "/images/logo.svg" %}
   </a>
-  <nav role="navigation" class="flex gap-4">
+  <nav role="navigation" class="flex flex-col gap-x-4 sm:flex-row">
     <a href="{{ '/' | relative_url }}" class="no-underline hover:underline">Home</a>
     <a href="{{ '/about' | relative_url }}" class="no-underline hover:underline">About</a>
     <a href="{{ '/posts' | relative_url }}" class="no-underline hover:underline">Posts</a>
@@ -10,4 +10,3 @@
     <a href="{{ '/archive' | relative_url }}" class="no-underline hover:underline">Archive</a>
   </nav>
 </header>
-

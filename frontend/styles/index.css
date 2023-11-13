@@ -9,20 +9,25 @@
 
 @import "variables.css";
 
+.prose {
+  max-width: 75ch;
+}
+
 @font-face {
-  font-family: 'ballet';
-  src: url('/fonts/ballet.woff2') format('woff2'),
-       url('/fonts/ballet.woff') format('woff');
+  font-family: "ballet";
+  src:
+    url("/fonts/ballet.woff2") format("woff2"),
+    url("/fonts/ballet.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-.stroke-current{
-  stroke: currentColor
+.stroke-current {
+  stroke: currentColor;
 }
 
-.text-\[var\(--tw-prose-body\)\]{
-  color: var(--tw-prose-body)
+.text-\[var\(--tw-prose-body\)\] {
+  color: var(--tw-prose-body);
 }
 
 .anchor {
@@ -40,10 +45,10 @@ h6:hover .anchor {
 
 .pagination [aria-current="page"] {
   text-decoration: none;
-  color: var(--tw-prose-captions)
+  color: var(--tw-prose-captions);
 }
 .pagination li > span:only-child {
-  color: var(--tw-prose-captions)
+  color: var(--tw-prose-captions);
 }
 
 h1 {
@@ -57,12 +62,13 @@ h1 {
   line-height: 1.15;
 
   .atom-top {
-    border-bottom:1px solid;
+    border-bottom: 1px solid;
   }
   .atom-left {
-    border-right:1px solid;
+    border-right: 1px solid;
   }
-  td, th {
+  td,
+  th {
     padding: 0.25em 0.5em;
   }
   td {
@@ -77,7 +83,8 @@ h1 {
   margin: 0 !important;
   padding: 0;
 }
-.tree ul, .tree ol {
+.tree ul,
+.tree ol {
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -90,7 +97,8 @@ h1 {
   /* Parent Connectors */
 }
 .tree ul ul::before,
-.tree ul ol::before, .tree ol ul::before,
+.tree ul ol::before,
+.tree ol ul::before,
 .tree ol ol::before {
   content: "";
   position: absolute;
@@ -99,7 +107,8 @@ h1 {
   border-left: 1px solid var(--tw-prose-counters);
   height: 30px;
 }
-.tree ul:first-child, .tree ol:first-child {
+.tree ul:first-child,
+.tree ol:first-child {
   padding-top: 0;
 }
 .tree li {
@@ -112,7 +121,8 @@ h1 {
   /* Connectors */
   /* remove left connector from first child and right connector from last child */
 }
-.tree li::before, .tree li::after {
+.tree li::before,
+.tree li::after {
   content: "";
   position: absolute;
   top: 0;
@@ -130,10 +140,12 @@ h1 {
 .tree li:only-child {
   padding-top: 0;
 }
-.tree li:only-child::after, .tree li:only-child::before {
+.tree li:only-child::after,
+.tree li:only-child::before {
   display: none;
 }
-.tree li:first-child::before, .tree li:last-child::after {
+.tree li:first-child::before,
+.tree li:last-child::after {
   border: 0 none;
 }
 .tree li:last-child::before {
@@ -162,7 +174,9 @@ h1 {
   /* apply the hover effect to lineage of element */
   /*Connector styles on hover*/
 }
-.tree span:hover, .tree span:hover + ul li span, .tree span:hover + ol li span {
+.tree span:hover,
+.tree span:hover + ul li span,
+.tree span:hover + ol li span {
   background-color: #38bdf833;
   color: rgb(56 189 248);
   border-color: rgb(56 189 248);
