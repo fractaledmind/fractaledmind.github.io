@@ -61,4 +61,5 @@ Until then, I'd love to hear your thoughts and reactions. Reach out on [Twitter]
 ## All posts in this series
 
 * {:.bg-[var(--tw-prose-bullets)]}[Myth 1 — concurrent writes can corrupt the database]({% link _posts/2023-10-13-sqlite-myths-concurrent-writes-can-corrupt-the-database.md %})
-* [Myth 2 — linear writes do not scale]({% link _posts/2023-12-05-sqlite-myths-linear-writes-do-not-scale.md %})
+* [Myth 2 — don't use autoincrement primary keys]({% link _posts/2023-11-12-sqlite-myths-autoincrement-primary-keys.md %})
+* [Myth 3 — linear writes do not scale]({% link _posts/2023-12-05-sqlite-myths-linear-writes-do-not-scale.md %})
