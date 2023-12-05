@@ -72,7 +72,7 @@ hey -c N -z 10s -m POST http://127.0.0.1:3000/requests
 Here are my results as I scale up the number of concurrent requests.
 
 {:.tables}
-| Concurrent requests | RPS   | Average response time | Slowest response time |
+| Concurrent requests | <abbr title="requests per second">RPS</abbr>   | Average response time | Slowest response time |
 | :---:               | :---  | :---                  | :---                  |
 | 1                   | 750   | 1.33ms                | 13.1ms                |
 | 2                   | 1,080 | 1.83ms                | 15.4ms                |
