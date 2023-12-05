@@ -38,7 +38,7 @@ module RailsExt
   module SQLite3Adapter
     def configure_connection
       # ...
-      
+
       @raw_connection.enable_load_extension(true)
       @config[:extensions].each do |extension_name|
         require extension_name
@@ -90,3 +90,4 @@ This provides a rich and powerful set of functionality for local development. In
 * [Part 9 — performance metrics]({% link _posts/2023-09-21-enhancing-rails-sqlite-performance-metrics.md %})
 * [Part 10 — custom primary keys]({% link _posts/2023-09-22-enhancing-rails-sqlite-ulid-primary-keys.md %})
 * [Part 11 — more Rails improvements]({% link _posts/2023-09-26-enhancing-rails-sqlite-more-activerecord-adapter-improvements.md %})
+* [Part 12 — table schema and metadata]({% link _posts/2023-11-13-enhancing-rails-sqlite-table-schema-and-metadata.md %})

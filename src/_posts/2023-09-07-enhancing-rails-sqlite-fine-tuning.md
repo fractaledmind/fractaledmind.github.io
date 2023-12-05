@@ -238,7 +238,7 @@ module RailsExt
     # extends https://github.com/rails/rails/blob/main/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb#L691
     def configure_connection
       super
-      
+
       # ...
     end
   end
@@ -250,7 +250,7 @@ We want to provide an enhancement to the Rails database configuration setup. In 
 ```ruby
 def configure_connection
   super
-  
+
   @config[:pragmas].each do |key, value|
     raw_execute("PRAGMA #{key} = #{value}", "SCHEMA")
   end
@@ -301,9 +301,9 @@ def configure_connection
       count <= @config[:retries]
     end
   end
-  
+
   super
-  
+
   @config[:pragmas].each do |key, value|
     raw_execute("PRAGMA #{key} = #{value}", "SCHEMA")
   end
@@ -312,7 +312,7 @@ end
 
 Now, we can replace the `timeout: 5000` setting with a `retries: 1000` setting instead, and the appropriate `busy_handler` will get setup.
 
-- - - 
+- - -
 
 > You can find the files we have written throughout this post in [this Gist](https://gist.github.com/fractaledmind/3565e12db7e59ab46f839025d26b5715/645f2d2dde3a275c270eabc00ce3067583b1b530)
 
@@ -350,6 +350,7 @@ As always, if you can, you absolutely should learn how to tune your database to 
 * [Part 9 — performance metrics]({% link _posts/2023-09-21-enhancing-rails-sqlite-performance-metrics.md %})
 * [Part 10 — custom primary keys]({% link _posts/2023-09-22-enhancing-rails-sqlite-ulid-primary-keys.md %})
 * [Part 11 — more Rails improvements]({% link _posts/2023-09-26-enhancing-rails-sqlite-more-activerecord-adapter-improvements.md %})
+* [Part 12 — table schema and metadata]({% link _posts/2023-11-13-enhancing-rails-sqlite-table-schema-and-metadata.md %})
 
 - - -
 

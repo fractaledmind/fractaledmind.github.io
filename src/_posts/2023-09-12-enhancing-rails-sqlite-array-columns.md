@@ -184,7 +184,7 @@ scope :"with_any_#{method_name}", ->(*items) {
     .where(Arel.sql('value').in(values))
     .take(1)
     .exists
-  
+
   where overlap
 }
 ```
@@ -199,7 +199,7 @@ scope :"with_all_#{method_name}", ->(*items) {
     .project(Arel.sql('value').count(distinct = true))
     .where(Arel.sql('value').in(values))
   contains = Arel::Nodes::Equality.new(count, values.size)
-  
+
   where contains
 }
 ```
@@ -228,6 +228,7 @@ You can find the full code for the model concern detailed in [this Gist](https:/
 * [Part 9 — performance metrics]({% link _posts/2023-09-21-enhancing-rails-sqlite-performance-metrics.md %})
 * [Part 10 — custom primary keys]({% link _posts/2023-09-22-enhancing-rails-sqlite-ulid-primary-keys.md %})
 * [Part 11 — more Rails improvements]({% link _posts/2023-09-26-enhancing-rails-sqlite-more-activerecord-adapter-improvements.md %})
+* [Part 12 — table schema and metadata]({% link _posts/2023-11-13-enhancing-rails-sqlite-table-schema-and-metadata.md %})
 
 - - -
 
