@@ -95,7 +95,7 @@ In addition to improving the default configuration of SQLite, I found myself wor
 On September 14<sup>th</sup>, [Clayton](https://twitter.com/claytonlz?ref=fractaledmind.github.io) asked a question about custom primary keys with Rails and SQLite:
 
 > Any resources about using UUIDs (or ULIDs) as primary keys in Rails?
-> I’ve gotten used to that with PostgreSQL but it seems a little wonky with SQLite3. 
+> I’ve gotten used to that with PostgreSQL but it seems a little wonky with SQLite3.
 
 — [Clayton LZ](https://x.com/claytonlz/status/1702390021377106412)
 
@@ -365,6 +365,7 @@ I'm curious to see what October will hold!
 * [Part 9 — performance metrics]({% link _posts/2023-09-21-enhancing-rails-sqlite-performance-metrics.md %})
 * [Part 10 — custom primary keys]({% link _posts/2023-09-22-enhancing-rails-sqlite-ulid-primary-keys.md %})
 * [Part 11 — more Rails improvements]({% link _posts/2023-09-26-enhancing-rails-sqlite-more-activerecord-adapter-improvements.md %})
+* [Part 12 — table schema and metadata]({% link _posts/2023-11-13-enhancing-rails-sqlite-table-schema-and-metadata.md %})
 
 - - -
 

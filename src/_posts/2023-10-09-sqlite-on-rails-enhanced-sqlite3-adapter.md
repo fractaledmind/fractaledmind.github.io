@@ -9,7 +9,7 @@ tags:
   - sqlite
 ---
 
-Rails version 7.1 was [released recently](https://rubyonrails.org/2023/10/5/Rails-7-1-0-has-been-released) and it includes a number of enhancements to the [SQLite](https://www.sqlite.org/index.html) ActiveRecord adapter. There are a few enhancements that didn't quite make it into the 7.1 release though, so today I am releasing the [`activerecord-enhancedsqlite3-adapter`](https://rubygems.org/gems/activerecord-enhancedsqlite3-adapter) gem. 
+Rails version 7.1 was [released recently](https://rubyonrails.org/2023/10/5/Rails-7-1-0-has-been-released) and it includes a number of enhancements to the [SQLite](https://www.sqlite.org/index.html) ActiveRecord adapter. There are a few enhancements that didn't quite make it into the 7.1 release though, so today I am releasing the [`activerecord-enhancedsqlite3-adapter`](https://rubygems.org/gems/activerecord-enhancedsqlite3-adapter) gem.
 
 <!--/summary-->
 
@@ -110,3 +110,20 @@ default: &default
 - - -
 
 All in all, there has never been a better time to start a new Rails application using SQLite.
+
+- - -
+
+## All posts in this series
+
+* [Part 1 — branch-specific databases]({% link _posts/2023-09-06-enhancing-rails-sqlite-branch-databases.md %})
+* [Part 2 — fine-tuning SQLite configuration]({% link _posts/2023-09-07-enhancing-rails-sqlite-fine-tuning.md %})
+* [Part 3 — loading extensions]({% link _posts/2023-09-08-enhancing-rails-sqlite-loading-extensions.md %})
+* [Part 4 — setting up `Litestream`]({% link _posts/2023-09-09-enhancing-rails-sqlite-setting-up-litestream.md %})
+* [Part 5 — optimizing compilation]({% link _posts/2023-09-10-enhancing-rails-sqlite-optimizing-compilation.md %})
+* [Part 6 — array columns]({% link _posts/2023-09-12-enhancing-rails-sqlite-array-columns.md %})
+* [Part 7 — local snapshots]({% link _posts/2023-09-14-enhancing-rails-sqlite-local-snapshots.md %})
+* [Part 8 — Rails improvements]({% link _posts/2023-09-15-enhancing-rails-sqlite-activerecord-adapter-improvements.md %})
+* [Part 9 — performance metrics]({% link _posts/2023-09-21-enhancing-rails-sqlite-performance-metrics.md %})
+* [Part 10 — custom primary keys]({% link _posts/2023-09-22-enhancing-rails-sqlite-ulid-primary-keys.md %})
+* [Part 11 — more Rails improvements]({% link _posts/2023-09-26-enhancing-rails-sqlite-more-activerecord-adapter-improvements.md %})
+* [Part 12 — table schema and metadata]({% link _posts/2023-11-13-enhancing-rails-sqlite-table-schema-and-metadata.md %})
