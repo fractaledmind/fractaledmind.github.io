@@ -15,7 +15,7 @@ One of the biggest myths around running SQLite in production for web application
 
 - - -
 
-SQLite [lays out clearly](SQLite [clearly documents](https://www.sqlite.org/howtocorrupt.html) the situations under which a client/server database (like Postgres or MySQL) is a better fit than SQLite. One of those scenarios is when you need to support a large number of concurrent writes:
+SQLite [lays out clearly](https://www.sqlite.org/howtocorrupt.html) the situations under which a client/server database (like Postgres or MySQL) is a better fit than SQLite. One of those scenarios is when you need to support a large number of concurrent writes:
 
 > SQLite supports an unlimited number of simultaneous readers, but it will only allow one writer at any instant in time. For many situations, this is not a problem. Writers queue up. Each application does its database work quickly and moves on, and no lock lasts for more than a few dozen milliseconds. But there are some applications that require more concurrency, and those applications may need to seek a different solution.
 
@@ -30,7 +30,7 @@ But, let's dig into the details.
 To start, I scaffolded a new Rails app:
 
 ```shell
-rails new sqlite-benchmark --database=sqlite3 --asset-pipeline=propshaft --javascript=esbuild --css=tailwind --skip-jbuilder --skip-action-mailbox --skip-spring`)
+rails new sqlite-benchmark --database=sqlite3 --asset-pipeline=propshaft --javascript=esbuild --css=tailwind --skip-jbuilder --skip-action-mailbox --skip-spring
 ```
 
 I setup a resource that doesn't require any inputs so that we can load test `POST` requests without needing a tool that can generate dynamic inputs:
@@ -87,7 +87,9 @@ Another way to put this in perspective is to consider how many "daily active use
 
 So, I think it is fair to say, this myth is just that — a myth. A SQLite on Rails application can handle a lot of traffic. The fact that SQLite only allows linear writes does not put a performance ceiling on your application.
 
-That being said, we do also see that there is a point where the performance starts to degrade. By running the Rails app in Puma's clustered mode with 10 workers, the app can handle 10 concurrent requests. If we have more concurrent requests coming in than Puma workers, the contention on our SQLite database can lead to timeouts. So, you will need to ensure that you configure your Puma workers to match the maximum number of concurrent requests you expect to receive. And thus, the myth is _partially_ true — you do need to be careful about how many concurrent requests you expect to receive, but this is true of any application, regardless of the database you are using. The maximum number of concurrent requests will also be a clear signal for when you need to vertically scale.
+That being said, we do also see that there is a point where the performance starts to degrade. By running the Rails app in Puma's clustered mode with 10 workers, the app can handle 10 concurrent requests. If we have more concurrent requests coming in than Puma workers, the contention on our SQLite database can lead to timeouts.
+
+So, you will need to ensure that you configure your Puma workers to match the maximum number of concurrent requests you expect to receive. And thus, the myth is _partially_ true — you do need to be careful about how many concurrent requests you expect to receive, but this is true of any application, regardless of the database you are using. The maximum number of concurrent requests will also be a clear signal for when you need to vertically scale.
 
 With all of this in mind, I think it is fair to say that SQLite is a great choice for a lot of applications. It is simple, it is fast, and it is reliable. It is a great choice for a lot of applications, and it is a great choice for a lot of Rails applications.
 
