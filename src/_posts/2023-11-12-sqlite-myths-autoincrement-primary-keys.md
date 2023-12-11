@@ -1,6 +1,6 @@
 ---
 title: SQLite Myths
-subtitle: Don't use utoincrement primary keys
+subtitle: Don't use autoincrement primary keys
 date: 2023-11-12
 tags:
   - code
