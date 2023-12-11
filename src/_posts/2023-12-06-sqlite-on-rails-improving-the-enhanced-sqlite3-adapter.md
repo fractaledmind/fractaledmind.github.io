@@ -65,3 +65,12 @@ end
 Of course, this isn't as performant as having the backoff in C, but releasing the GIL between retries is a big win.
 
 Go and download the latest version of the gem and give it a try. You can also find the source code on [GitHub](https://github.com/fractaledmind/activerecord-enhancedsqlite3-adapter).
+
+- - -
+
+## All posts in this series
+
+* [SQLite on Rails — September State of the Union]({% link _posts/2023-09-27-sqlite-on-rails-september-state-of-the-union.md %})
+* [SQLite on Rails — Introducing the enhanced adapter gem]({% link _posts/2023-10-09-sqlite-on-rails-enhanced-sqlite3-adapter.md %})
+* {:.bg-[var(--tw-prose-bullets)]}[SQLite on Rails — Improving the enhanced adapter gem]({% link _posts/2023-12-06-sqlite-on-rails-improving-the-enhanced-sqlite3-adapter.md %})
+* [SQLite on Rails — Improving concurrency]({% link _posts/2023-12-11-sqlite-on-rails-improving-concurrency.md %})
