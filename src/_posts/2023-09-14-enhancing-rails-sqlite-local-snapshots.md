@@ -81,7 +81,7 @@ Restoring a snapshot itself is straight-forward. We take the most recent snapsho
 
 - - -
 
-Because our database is just a file on the file system, working with our production data can also be simplified. I will write about that in a future post. For now, I think that this exploration of how we can snapshot and restore local databases is sufficient for one post. With a bit of cleanup and polish, we can create a `/lib/tasks/dbspan.rake` file that provides the following usage:
+Because our database is just a file on the file system, working with our production data can also be simplified. I will write about that in a future post. For now, I think that this exploration of how we can snapshot and restore local databases is sufficient for one post. With a bit of cleanup and polish, we can create a `/lib/tasks/dbsnap.rake` file that provides the following usage:
 
 ```shell
 bin/rails db:snap:list
