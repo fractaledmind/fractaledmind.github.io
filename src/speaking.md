@@ -15,19 +15,23 @@ title: Speaking Opportunities
         <span>🎙️</span>
         {% elsif opportunity.type == "talk" %}
         <span>📺️</span>
+        {% elsif opportunity.type == "presentation" %}
+        <span>📽️</span>
         {% endif %}
         <a href="{{ opportunity.episode.link }}">{{ opportunity.episode.name }}</a>
       </h2>
       {% if opportunity.description %}
       <p>{{ opportunity.description }}</p>
       {% endif %}
-      
+
       <a href="{{ opportunity.episode.link }}" class="no-underline">
         <span class="underline">
           {%- if opportunity.type == "podcast" -%}
           Listen
           {%- elsif opportunity.type == "talk" -%}
           Watch
+          {%- elsif opportunity.type == "presentation" -%}
+          Read
           {%- endif -%}
         </span>
         &hellip;

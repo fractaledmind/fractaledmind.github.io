@@ -1,3 +1,14 @@
+- type: presentation
+  show:
+    name: "RubyConf Taiwan 2022"
+    link: https://2023.rubyconf.tw/
+  episode:
+    name: "How (and why) to run SQLite in production"
+    link: https://speakerdeck.com/fractaledmind/how-and-why-to-run-sqlite-in-production
+  date: 2022-12-16
+  description: |
+    You've heard the whispers, sensed the hype, but you're still not sure what all the fuss is about with SQLite these days. Join me as we explore the use-cases and benefits of running SQLite in a production environment. Along the way, we will learn why SQLite makes sense as your next production database and how to ensure that your setup is optimized for end-user performance and developer happiness. We will setup and deploy a full Rails application—with caching, background jobs, websockets, and full-text search all backed by SQLite—in these 40 minutes. Come along for the ride!
+
 - type: podcast
   show:
     name: "Rooftop Ruby"
@@ -19,11 +30,11 @@
   date: 2023-10-07
   description: |
     In this episode, we discuss SQLiteOnRails with Stephen Margheim.
-    Stephen has contributed to Rails and he created a gem to bring this experience to all the Rails developers. 
+    Stephen has contributed to Rails and he created a gem to bring this experience to all the Rails developers.
     He has also created another gem called AcidicJob.
-    
+
     SQLiteOnRails is something that is taking some place in the ecosystem, I am sure you will learn some new stuff.
-    
+
     I hope you will appreciate this episode :).
 
 - type: talk
