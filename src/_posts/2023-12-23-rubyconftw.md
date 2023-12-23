@@ -1,6 +1,6 @@
 ---
 title: How (and why) to run SQLite in production
-subtitle: RubyConf Taiwan 2022
+subtitle: RubyConf Taiwan 2023
 date: 2023-12-23
 tags:
   - code
