@@ -152,6 +152,8 @@ Once you have confirmed that your recovery process is up and running, you are go
 * [Part 10 — custom primary keys]({% link _posts/2023-09-22-enhancing-rails-sqlite-ulid-primary-keys.md %})
 * [Part 11 — more Rails improvements]({% link _posts/2023-09-26-enhancing-rails-sqlite-more-activerecord-adapter-improvements.md %})
 * [Part 12 — table schema and metadata]({% link _posts/2023-11-13-enhancing-rails-sqlite-table-schema-and-metadata.md %})
+* [Part 13 — prefixed ULID keys]({% link _posts/2023-12-13-enhancing-rails-sqlite-prefixed-ulids.md %})
+* [Part 14 — installing extensions]({% link _posts/2023-12-24-enhancing-rails-installing-extensions.md %})
 
 - - -
 
