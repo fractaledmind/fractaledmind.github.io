@@ -17,7 +17,7 @@ When building a full-featured Rails application, you will want not just a databa
 
 The short answer is that you should use separate database files for each service. This is what [Litestack](https://github.com/oldmoe/litestack) does, and for good reason. You notably increase your concurrency throughput by isolating each service to its own database. While it is a myth that [linear writes do not scale]({% link _posts/2023-12-05-sqlite-myths-linear-writes-do-not-scale.md %}), serializing all of your writes across each of these services is very likely to produce noticeable performance effects.
 
-So, how do we setup our separate databases for each service? Here is my `config/database.yml` file for a recent project that uses [`SolidQueue`](https://github.com/basecamp/solid_queue) as the job backend:
+So, how do we setup our separate databases for each service? Here is my `config/database.yml` file for a recent project that uses [`SolidQueue`](https://github.com/basecamp/solid_queue) as the job backend:[^1]
 
 ```yaml
 default: &default
@@ -48,7 +48,6 @@ production:
   primary: *primary
   queue: *queue
 ```
-[^1]
 
 Then, in my `config/application.rb` file, I simply have this:
 
