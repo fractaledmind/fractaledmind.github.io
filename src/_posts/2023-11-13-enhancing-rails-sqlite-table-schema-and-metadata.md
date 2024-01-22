@@ -46,17 +46,19 @@ class ApplicationRecord < ActiveRecord::Base
       WHERE type = 'table'
         AND name = ?;
     SQL
+    column_names = columns_info.map { |column| column["name"] }
 
     collate_regex = /COLLATE\s+(\w+).*/i
     primary_key_autoincrement_regex = /PRIMARY KEY AUTOINCREMENT/i
     unquoted_open_parens_regex = /\((?![^'"]*['"][^'"]*$)/
     final_close_parens_regex = /\);*\z/
+    column_separator_regex = /,(?=\s(?:CONSTRAINT|"(?:#{Regexp.union(column_names).source})"))/i
 
     column_defs = table_sql["sql"]
       .partition(unquoted_open_parens_regex)
       .last
       .sub(final_close_parens_regex, "")
-      .split(",")
+      .split(column_separator_regex)
       .map do |definition|
         definition = definition.strip
         key = definition.partition(" ").first.gsub(/^"*|"*$/, "")
