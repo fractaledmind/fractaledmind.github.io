@@ -4,8 +4,24 @@
 - [ ] using SolidCache with SQLite in Rails app
 - [ ] using Litestack in Rails app
 - [ ] using sqlpkg in Rails app to add more SQLite extensions
-- [ ] 
+- [ ]
 
+SQLITE_ENABLE_BYTECODE_VTAB
+  https://www.sqlite.org/bytecodevtab.html
+SQLITE_ENABLE_DBPAGE_VTAB
+  https://www.sqlite.org/dbpage.html
+SQLITE_ENABLE_DBSTAT_VTAB
+  https://www.sqlite.org/dbstat.html
+SQLITE_ENABLE_STMTVTAB
+  https://www.sqlite.org/stmt.html
+
+https://www.sqlite.org/memstat.html
+
+https://atlasgo.io/guides/sqlite/descending-indexes
+
+flags: <%= SQLite3::Constants::Open::READWRITE |
+            SQLite3::Constants::Open::CREATE |
+            SQLite3::Constants::Open::SHAREDCACHE %>
 
 
 
