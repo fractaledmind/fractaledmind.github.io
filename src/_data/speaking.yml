@@ -1,3 +1,14 @@
+- type: talk
+  show:
+    name: "Teach Kelvin Your Thing"
+    link: https://dominuskelvin.dev/tkyt
+  episode:
+    name: "Enhance your Rails app with SQLite"
+    link: https://youtu.be/5yL9JXbIf_0
+  date: 2024-02-12
+  description: |
+    With Pieter Levels using SQLite to serve 50 million requests and 37Signals shipping ONCE/Campfire with SQLite as the database, SQLite is on the rise. In this TKYT session, Stephen Margheim shows how to fine-tune SQLite for web application development.
+
 - type: presentation
   show:
     name: "RubyConf Taiwan 2023"
