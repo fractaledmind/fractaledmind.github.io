@@ -9,6 +9,17 @@
   description: |
     With Pieter Levels using SQLite to serve 50 million requests and 37Signals shipping ONCE/Campfire with SQLite as the database, SQLite is on the rise. In this TKYT session, Stephen Margheim shows how to fine-tune SQLite for web application development.
 
+- type: podcast
+  show:
+    name: "Ruby on Rails Podcast"
+    link: https://www.therubyonrailspodcast.com
+  episode:
+    name: "SQLite in Ruby on Rails Applications"
+    link: https://www.therubyonrailspodcast.com/507
+  date: 2024-02-14
+  description: |
+    If you start a new Rails project today, you’re probably going to pick Postgres for your database. And if you have a ten year old Rails app, you might be using MySQL. But Rails ships with support for SQLite, a lightweight SQL database. Can that lightweight database be used to make production-ready software? Stephen Margheim joins the show to help us answer that question.
+
 - type: presentation
   show:
     name: "RubyConf Taiwan 2023"
