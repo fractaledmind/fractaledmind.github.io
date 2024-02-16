@@ -1,32 +1,32 @@
-- type: podcast
-  show:
-    name: "Code and the Coding Coders Who Code It"
-    link: https://podcast.drbragg.dev
-  episode:
-    name: "SQLite in Production"
-    link: https://podcast.drbragg.dev/episodes/episode-33-stephen-margheim/
-  date: 2024-02-19
-  description: |
+# - type: podcast
+#   show:
+#     name: "Code and the Coding Coders Who Code It"
+#     link: https://podcast.drbragg.dev
+#   episode:
+#     name: "SQLite in Production"
+#     link: https://podcast.drbragg.dev/episodes/episode-33-stephen-margheim/
+#   date: 2024-02-19
+#   description: |
 
-- type: podcast
-  show:
-    name: "Ruby Dev Summit"
-    link:
-  episode:
-    name: "SQLite in Production"
-    link: https://rubydevsummit.com/episodes/sqlite-in-production
-  date: 2024-02-19
-  description: |
+# - type: podcast
+#   show:
+#     name: "Ruby Dev Summit"
+#     link:
+#   episode:
+#     name: "SQLite in Production"
+#     link: https://rubydevsummit.com/episodes/sqlite-in-production
+#   date: 2024-02-19
+#   description: |
 
-- type: podcast
-  show:
-    name: "Friendly Show"
-    link: https://www.friendly.show
-  episode:
-    name: "SQLite in Production"
-    link: https://www.friendly.show/2278525/14383589
-  date: 2024-02-19
-  description: |
+# - type: podcast
+#   show:
+#     name: "Friendly Show"
+#     link: https://www.friendly.show
+#   episode:
+#     name: "SQLite in Production"
+#     link: https://www.friendly.show/2278525/14383589
+#   date: 2024-02-19
+#   description: |
 
 - type: podcast
   show:
