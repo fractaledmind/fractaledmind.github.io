@@ -1,13 +1,32 @@
-- type: talk
+- type: podcast
   show:
-    name: "Teach Kelvin Your Thing"
-    link: https://dominuskelvin.dev/tkyt
+    name: "Code and the Coding Coders Who Code It"
+    link: https://podcast.drbragg.dev
   episode:
-    name: "Enhance your Rails app with SQLite"
-    link: https://youtu.be/5yL9JXbIf_0
-  date: 2024-02-12
+    name: "SQLite in Production"
+    link: https://podcast.drbragg.dev/episodes/episode-33-stephen-margheim/
+  date: 2024-02-19
   description: |
-    With Pieter Levels using SQLite to serve 50 million requests and 37Signals shipping ONCE/Campfire with SQLite as the database, SQLite is on the rise. In this TKYT session, Stephen Margheim shows how to fine-tune SQLite for web application development.
+
+- type: podcast
+  show:
+    name: "Ruby Dev Summit"
+    link:
+  episode:
+    name: "SQLite in Production"
+    link: https://rubydevsummit.com/episodes/sqlite-in-production
+  date: 2024-02-19
+  description: |
+
+- type: podcast
+  show:
+    name: "Friendly Show"
+    link: https://www.friendly.show
+  episode:
+    name: "SQLite in Production"
+    link: https://www.friendly.show/2278525/14383589
+  date: 2024-02-19
+  description: |
 
 - type: podcast
   show:
@@ -19,6 +38,17 @@
   date: 2024-02-14
   description: |
     If you start a new Rails project today, you’re probably going to pick Postgres for your database. And if you have a ten year old Rails app, you might be using MySQL. But Rails ships with support for SQLite, a lightweight SQL database. Can that lightweight database be used to make production-ready software? Stephen Margheim joins the show to help us answer that question.
+
+- type: talk
+  show:
+    name: "Teach Kelvin Your Thing"
+    link: https://dominuskelvin.dev/tkyt
+  episode:
+    name: "Enhance your Rails app with SQLite"
+    link: https://youtu.be/5yL9JXbIf_0
+  date: 2024-02-12
+  description: |
+    With Pieter Levels using SQLite to serve 50 million requests and 37Signals shipping ONCE/Campfire with SQLite as the database, SQLite is on the rise. In this TKYT session, Stephen Margheim shows how to fine-tune SQLite for web application development.
 
 - type: presentation
   show:
