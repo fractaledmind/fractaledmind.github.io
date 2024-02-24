@@ -10,16 +10,6 @@
 
 # - type: podcast
 #   show:
-#     name: "Ruby Dev Summit"
-#     link:
-#   episode:
-#     name: "SQLite in Production"
-#     link: https://rubydevsummit.com/episodes/sqlite-in-production
-#   date: 2024-02-19
-#   description: |
-
-# - type: podcast
-#   show:
 #     name: "Friendly Show"
 #     link: https://www.friendly.show
 #   episode:
@@ -27,6 +17,17 @@
 #     link: https://www.friendly.show/2278525/14383589
 #   date: 2024-02-19
 #   description: |
+
+- type: podcast
+  show:
+    name: "Ruby Dev Summit 2024 (Ruby Rogues)"
+    link: https://open.spotify.com/show/06Gzz17ISUn1rGwItgQdl0
+  episode:
+    name: "SQLite in Production"
+    link: https://open.spotify.com/episode/28mA80T5xLvYI8Oh8AZIkT?si=J6MH94uNRNaPCSL4yKvWIw
+  date: 2024-02-15
+  description: |
+    Charles Wood explores the resurgence of Ruby and Ruby on Rails in the web development community. Our featured speaker, Stephen Margheim, delves into the technical aspects that have contributed to the renewed interest in Ruby, including its simplicity, intuitive nature, and pragmatic approach. They discuss the practical applications of Ruby in web development, the emergence of new companies adopting Ruby on Rails, and the ongoing efforts to expand the ecosystem of tools and guides for advanced use cases with SQLite in web applications. Join them as they analyze the impact of Ruby's resurgence and its potential to shape the future of web development.
 
 - type: podcast
   show:
