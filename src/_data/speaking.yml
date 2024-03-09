@@ -8,15 +8,22 @@
 #   date: 2024-02-19
 #   description: |
 
-# - type: podcast
-#   show:
-#     name: "Friendly Show"
-#     link: https://www.friendly.show
-#   episode:
-#     name: "SQLite in Production"
-#     link: https://www.friendly.show/2278525/14383589
-#   date: 2024-02-19
-#   description: |
+- type: podcast
+  show:
+    name: "Friendly Show"
+    link: https://www.friendly.show
+  episode:
+    name: "Meet SQLite Jesus, Stephen Margheim"
+    link: https://www.friendly.show/2278525/14575392-meet-sqlite-jesus-steven-margheim
+  date: 2024-02-26
+  description: |
+    Stephen is on a mission to make SQLite good enough for production.
+
+    We talked about
+
+    * SQLite and Litestack
+    * contributing to open source
+    * being "the guy" in a niche, creating your own luck
 
 - type: podcast
   show:
