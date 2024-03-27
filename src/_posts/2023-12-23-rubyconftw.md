@@ -294,3 +294,10 @@ Finally, you can take advantage of SQLite’s speed and simplicity to simply use
 In the end, I hope that this exploration of the tools, techniques, and defaults for SQLite on Rails applications has shown you how powerful, performant, and flexible this approach is. Rails is legitimately the best web application framework for working with SQLite today. The community’s growing ecosystem of tools and gems is unparalleled. And today is absolutely the right time to start a SQLite on Rails application and explore these things for yourself.
 
 <img loading="lazy" src="{{ '/images/rubyconftw/066.jpg' | relative_url }}" alt="" style="width: 100%" />
+
+- - -
+
+This is an edited transcript of a talk I gave at [RubyConf Taiwan 2023](https://2023.rubyconf.tw). You can watch the full talk on YouTube below.
+
+[![RubyConf Taiwan 2023 - How (and why) to run SQLite in production by Stephen Margheim
+](http://img.youtube.com/vi/uT6TUfopY6E/0.jpg)](http://www.youtube.com/watch?v=uT6TUfopY6E "How (and why) to run SQLite in production")
