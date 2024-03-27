@@ -37,8 +37,6 @@ Why not use SQLite in production? What are some of the reasons you haven’t con
 
 Well, the primary reason I choose SQLite is that it allows me to build useful and valuable applications quickly and to maintain them easily.
 
-Why? So, let’s explore that together. Who here is running or has run an application in production with SQLite? Who has experimented with SQLite for an app, but not shipped it to production? There are a couple hands up, but not many. So, let’s turn this question around.
-
 <img loading="lazy" src="{{ '/images/rubyconftw/007.jpg' | relative_url }}" alt="" style="width: 100%" />
 
 In his RailsWorld keynote, DHH re-emphasized the point that Rails, at its core, is “the one-person framework”. It aims to be a bridge over complexity that allows even the smallest possible team—only you—to build full, rich, valuable web applications. And I believe that SQLite aligns perfectly with that vision. There are 3 basic reasons…
