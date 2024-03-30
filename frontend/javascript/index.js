@@ -20,3 +20,19 @@ Object.entries(controllers).forEach(([filename, controller]) => {
     Stimulus.register(identifier, controller.default)
   }
 })
+
+document.querySelectorAll("details[name]").forEach(($details) => {
+  $details.addEventListener("toggle", (e) => {
+    const name = $details.getAttribute("name");
+
+    if ($details.open) {
+      document
+        .querySelectorAll(`details[name=${name}][open]`)
+        .forEach(($openDetails) => {
+          if (!($openDetails === $details)) {
+            $openDetails.removeAttribute("open");
+          }
+        });
+    }
+  });
+});

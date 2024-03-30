@@ -1,13 +1,14 @@
 /* If you need to add @import statements, do so up here */
 
 @import "jit-refresh.css"; /* triggers frontend rebuilds */
+@import "variables.css";
+@import "torchlight.css";
+@import "signals.css";
 
 /* Set up Tailwind imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "variables.css";
 
 .prose {
   max-width: 75ch;
