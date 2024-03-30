@@ -38,3 +38,4 @@ yarn-debug.log*
 frontend/styles/jit-refresh.css
 .torchlight-cache
 .envrc
+/misc
