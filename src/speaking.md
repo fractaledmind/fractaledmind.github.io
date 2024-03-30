@@ -9,9 +9,7 @@ title: Speaking Opportunities
       <aside role="note" class="text-[var(--tw-prose-captions)] !text-sm lg:!text-base mb-4">
         <time datetime="{{ opportunity.date | date: "%Y-%m-%dT%H:%M:%SZ" }}">{{ opportunity.date | date: "%B %d, %Y" }}</time>
         · <a href="{{ opportunity.show.link }}" class="no-underline font-normal text-inherit italic hover:underline">{{ opportunity.show.name }}</a>
-        {% if opportunity.type == "upcoming" %}
-        · <span>upcoming</span>
-        {% endif %}
+        · <span>{{ opportunity.type }}</span>
       </aside>
       <h2 class="!text-2xl !mt-0">
         {% if opportunity.type == "podcast" %}
