@@ -1,0 +1,92 @@
+---
+permalink: /tailwindlabs.html
+layout: default
+page_class: prose-h2:text-base lg:prose-h2:text-lg
+---
+
+<style>
+  @counter-style pad-2 {
+    system: numeric;
+    symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+    pad: 2 "0";
+  }
+</style>
+
+<h1 class="sr-only">Cover letter for TailwindLabs role</h1>
+
+<ol start="0" class="list-[pad-2] space-y-4">
+  <li>
+    <h2 class="">Hey Adam 👋,</h2>
+    <p>
+      I’m Stephen. I am an American expat living in Berlin with my wife (as of March 2<sup>nd</sup>) and 2 dogs—Tuck 🐶 and Ruby 🐕 (weirdly both emoji are pretty accurate depictions). We haven't formally met, but I did ask a question at your pre-RailsWorld talk run through in Amsterdam. I'm a Rails guy, not a Laravel guy, but I've still been following you since before the Tailwind days (back in the KiteTail stream days). I'm a big fan of your work and the way you approach things. I'm excited about the opportunity to join <em>Tailwind Labs</em>.
+    </p>
+
+    <div class="grid grid-cols-2 items-end gap-1">
+      <img src="{{ '/images/me-and-geniya.jpg' | relative_url }}" alt="Me and wife, Geniya, on the Brooklyn bridge" class="!mt-0" />
+      <img src="{{ '/images/pups.jpg' | relative_url }}" alt="My two dogs, Tuck and Ruby" class="!mt-0" />
+    </div>
+  </li>
+
+  <li>
+    <h2>Let's get something out of the way</h2>
+    <p>
+      If you need to hire an expert Figma user or React developer on day one, I am <em>not</em> your guy. But, if you are looking for someone who sweats the details, someone that would rather design in CodePen than Figma, someone who can learn both deeply and quickly because they aren't afraid to read obscure low-level source code or keep tabs on upcoming HTML, CSS, and JS features, and someone that enjoys sharing problems, solutions, tips and tricks with others, then I <strong>am</strong> your guy.
+    </p>
+    <p>
+      I know that I could do the work of my life alongside the team at Tailwind Labs, and if you give me 10 minutes of your time, I want to explain why.
+    </p>
+  </li>
+
+  <li>
+    <h2>I'm a quick learner</h2>
+    <p>
+      At this point one year ago, I had never read or written a line of C, knew nearly nothing about SQLite, and had only contributed one small documentation fix to Rails core. Fast forward to today, I am now a <a href="https://contributors.rubyonrails.org/contributors/stephen-margheim/commits" class="underline">top-500 Rails core contributor</a>. I have written <a href="https://github.com/sparklemotion/sqlite3-ruby/pulls?q=is%3Apr+author%3Afractaledmind+is%3Aclosed">multiple PRs to the `sqlite3-ruby` gem (I'm now a top-5 contributor)</a>, including <a href="https://github.com/sparklemotion/sqlite3-ruby/pull/463/files#diff-5a393d9872eb01d26891fb3583a9415dd3e4e5635964c82aee5263fde02ecde3">a few in C</a>. I have also now read large swathes of the SQLite C source code, and I am in the process of writing <a href="https://github.com/fractaledmind/feather">a lexer and parser for SQLite</a> by translating the entagled C code into Ruby. I am now <a href="https://x.com/levelsio/status/1763599554409079286?s=20">recognized</a> as one of the <em>the</em> experts in SQLite in the Ruby community.
+    </p>
+    <p>
+      Similarly, when I got my first job in tech after leaving graduate school in Classical Studies, I had never written a line of Ruby and knew nothing about Rails. Nonetheless, within 6 months of starting I was promoted from junior to mid-level Rails developer. In my second job, I was again promoted after 6 months in the role. This time, though, I was promoted to an engineering management role, and I have spent the last 4 years growing our team from 6 on-site, full-stack engineers maintaining one product to a department of 45+ remote engineers who have built and now maintain 4 products.
+    </p>
+    <p>
+      My key to learning new topics, tools, or technologies is to dive in head first and build something. I am a hands-on learner. Whether it is things for work or things I am simply interested in, I learn by doing. Being such a hands-on "manager-of-one" has granted me essentially all of my opportunities. I got into tech by building tools to be a more effective and efficient scholar. I got my first job from building Alfred workflows. And I now have a reputation in the Ruby community for my work on SQLite because I built various applications using SQLite and numerous tools on top of SQLite. I am confident that I can learn and contribute to Tailwind Labs in the same way.
+    </p>
+  </li>
+
+  <li>
+    <h2>I'm a minimalist perfectionist</h2>
+    <p>
+      If there was only one word to describe Tailwind and Tailwind Labs, I believe it would be <em>✨polish💅🏼</em>. And yet you have kept the team small and lean. You focus on leverage—how you can produce the absolute best possible interface, component, DX with the absolute minimal bloat. I believe that you, Steve, Jonathan, and Robin are each individually and collectively minimalist perfectionists. I am too.
+    </p>
+    <p>
+      I recently <a href="https://codepen.io/smargh/full/KKEbmyG">tried to implement</a> the <a href="https://www.superlist.com">Superlist</a> inbox page in Tailwind CSS, which I could only do by eye as the source code is not available. I then spent the next two weeks before leaving for my wedding working to build a Rails clone using cutting-egde browser features (e.g. popovers and anchor positioning) and morphing. I streamed <a href="https://www.youtube.com/playlist?list=PLuoosK264omOd8uszVOD0dzRfQc0uVJOK">the whole process</a>. It isn't perfect, I am still not satisfied with it, but I also didn't let that stop me from iterating, shipping, and sharing.
+    </p>
+    <p>
+      I also love to explore UX patterns to try and find an optimal balance between beauty, usability, and simplicity. As one example, I experimented with two different approaches to building a multiple file input in an edit form. In <a href="https://codepen.io/smargh/pen/mdGLpEz">one version</a>, I split the already saved files from the newly attached files and displayed them in two separate lists. In <a href="https://codepen.io/smargh/pen/MWqGKrp">the other</a>, I combined them into a single list but varied their styling. I believe that the second approach is more intuitive and user-friendly, but I am not sure. I would love to hear your thoughts. For one other example, I tried a few different approaches to an avatar component. I <a href="https://codepen.io/smargh/pen/qBQEaKj">started off</a> with a simple screen name text input that generates a deterministic avatar from <a href="https://boringavatars.com">Boring avatars</a>. I <a href="https://codepen.io/smargh/pen/poONzWG">then</a> tried using a generated avatar from <a href="https://avvvatars.com">avvvatars</a> along with a file upload button. <a href="https://codepen.io/smargh/pen/bGxBazW">Finally</a>, I allowed the user to choose if they wanted a shape or initial-based avatar or upload a custom image. Polish isn't simply how it looks statically, but how it works and feels to use.
+    </p>
+  </li>
+
+  <li>
+    <h2>I want to delight</h2>
+    <p>
+      Where I am from in Louisiana, we have the concept of <em><a href="https://en.wikipedia.org/wiki/Lagniappe">lagniappe</a></em>, or a little something extra. I want the things I build to have lagniappe. When I was exploring inline text editing, I wanted to keep things simple by simply stying regular form inputs to either look like static content or editable fields depending on focus, but I also wanted that transition between states to be delightful. I've experimented with both <a href="https://codepen.io/smargh/pen/dyepyVe">single line</a> and <a href="https://codepen.io/smargh/pen/yLjaLPO">multi-line</a> inputs, which each utilizing slight Tailwind animations. In fact, my very first larger project was <a href="https://codepen.io/smargh/pen/ZGNWmY">a CSS library</a> to provide a collection of icons that you could visually toggle between, like an up-chevron morphing into a down-chevron.
+    </p>
+    <p>
+      I will spend hours tweaking slides, even just for our company's bi-weekly Townhalls, where I have ended up incidentally defining much of the aesthetic of our slide deck. In the <a href="https://fractaledmind.github.io/2023/12/23/rubyconftw/">slide deck</a> for my most recent conference talk, I spent days scouring the internet, working with GPTs, and experimenting in Sketch just to create this one image of a red ruby and a blue feather that I only use for a few seconds.
+      <img src="{{ '/images/ruby-and-feather.png' | relative_url }}" alt="A red ruby and a blue feather, representing Ruby on Rails and SQLite" class="mx-auto" />
+    </p>
+    <p>
+      I also care deeply about the polish and delight in the code interfaces I build. This is, in fact, the first thing that attracted me to Tailwind. I had been experimenting with <a href="https://tachyons.io">Tachyons</a> for a bit and liked atomic CSS, but I found their terse class names to be a bit too terse. When I first saw Tailwind I immediately noted how well considered the class names were—terse but not too terse. I strive to strike a similar balance in the code that I write, especially that code that is meant to be consumed by other developers. I want my code to be a joy to use, delightful to read, and a pleasure to maintain.
+    </p>
+  </li>
+
+  <li>
+    <h2>What next?</h2>
+    <p>
+      I could do the work of my life alongside the team at Tailwind Labs. I am excited about the opportunity to work on a product that I use every day and that I believe in. I would love to help build elegent, delightful, and accessible interfaces that make the web a better place. If the team grows, I also think that I could lend some of my experience leading a remote team to help build a strong culture that can execute on flexible but defined processes in a repeatable manner.
+    </p>
+    <p>
+      I know that I am not coming in with the most polished portfolio of React components, Typescript libraries, and Figma designs. But I also know that a Design Engineer is so much more than their tools. Tools can be learned. What can't be learned is passion, taste, or curiosity. I have those in spades.
+    </p>
+    <p>
+      So, I hope you give me the chance simply to demonstrate that I am capable of doing the work with the take-home project. I've been brushing up on modern React and TypeScript over the last few weeks to prepare for this opportunity.
+    </p>
+  </li>
+</ol>
