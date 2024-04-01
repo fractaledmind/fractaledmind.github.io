@@ -10,7 +10,7 @@ layout: default
 
 # Stephen Margheim
 
-Hey there! 👋 
+Hey there! 👋
 
 I'm full-stack Ruby on Rails Software Engineer, an Engineering Manager, and general web denizen. This is my personal website where I document my journey as a full stack developer and/or manager, as well as publish tutorials/write-ups of things I've learned for myself and others.
 
@@ -25,7 +25,7 @@ I'm full-stack Ruby on Rails Software Engineer, an Engineering Manager, and gene
 </a>
 
 <a href="{{ '/speaking' | relative_url }}" class="no-underline">
-  <span class="underline">Listen to my recent speaking opportunities</span>
+  <span class="underline">Checkout my recent speaking opportunities</span>
   <i>→</i>
 </a>
 
