@@ -3,7 +3,6 @@
 @import "jit-refresh.css"; /* triggers frontend rebuilds */
 @import "variables.css";
 @import "torchlight.css";
-@import "signals.css";
 
 /* Set up Tailwind imports */
 @tailwind base;
@@ -12,15 +11,6 @@
 
 .prose {
   max-width: 75ch;
-}
-
-@font-face {
-  font-family: "ballet";
-  src:
-    url("/fonts/ballet.woff2") format("woff2"),
-    url("/fonts/ballet.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 .stroke-current {
