@@ -8,7 +8,7 @@ tags:
   - gem
 ---
 
-Version 0.5.0 of the [Litestream](https://github.com/fractaledmind/litestream-ruby) is out. The 0.5.x versions of the gem adds a new `restore` command, making it simple to restore a database from a remote backup. This is a huge feature that makes Litestream even more useful.
+Version 0.5.1 of the [Litestream](https://github.com/fractaledmind/litestream-ruby) is out. The 0.5.x versions of the gem adds a new `restore` command along with some useful introspection commands, making it simple to restore a database from a remote backup. This is a huge feature that makes Litestream even more useful.
 
 <!--/summary-->
 
@@ -74,6 +74,47 @@ You can forward arguments in whatever order you like, you simply need to ensure 
 ```
 
 Whether you need to restore a copy of the production database locally to debug an issue on your development machine, or you need to spin up a new production machine with the latest data, the `litestream:restore` rake task makes it easy to restore a database from a remote backup.
+
+- - -
+
+Litestream offers a handful of commands that allow you to introspect the state of your replication. The gem provides a few rake tasks that wrap these commands for you. For example, you can list the databases that Litestream is configured to replicate:
+
+```shell
+bin/rails litestream:databases
+```
+
+This will return a list of databases and their configured replicas:
+
+```
+path                                                 replicas
+/Users/you/Code/your-app/storage/production.sqlite3  s3
+```
+
+You can also list the generations of a specific database:
+
+```shell
+bin/rails litestream:generations -- --database=storage/production.sqlite3
+```
+
+This will list all generations for the specified database, including stats about their lag behind the primary database and the time range they cover.
+
+```
+name  generation        lag     start                 end
+s3    a295b16a796689f3  -156ms  2024-04-17T00:01:19Z  2024-04-17T00:01:19Z
+```
+
+Finally, you can list the snapshots available for a database:
+
+```shell
+bin/rails litestream:snapshots -- --database=storage/production.sqlite3
+```
+
+This command lists snapshots available for that specified database:
+
+```
+replica  generation        index  size     created
+s3       a295b16a796689f3  1      4645465  2024-04-17T00:01:19Z
+```
 
 - - -
 
