@@ -1,14 +1,3 @@
-- type: podcast
-  show:
-    name: "Code and the Coding Coders Who Code It"
-    link: https://podcast.drbragg.dev
-  episode:
-    name: "SQLite in Production"
-    link: https://podcast.drbragg.dev/episodes/episode-33-stephen-margheim/
-  date: 2024-04-02
-  description: |
-    Embark on a journey through the landscape of SQLite and Ruby on Rails as I chat with the exceptional Stephen Margheim, who enlightens us on the robustness and agility of SQLite for modern web development. Stephen brings to the table his extensive open-source contributions and projects that integrate SQLite with Rails, offering insights into Ruby gems like Lightstream for backups and an SQLite package manager for extensions. Dispel any doubts about SQLite's scalability with us, as Stephen dismantles misconceptions and highlights how this database can stand tall among the giants.
-
 - type: upcoming
   show:
     name: "Friendly.rb"
@@ -52,6 +41,18 @@
   date: 2024-04-13
   description: |
     Join me as we explore the use-cases and benefits of running SQLite in a production environment. Along the way, we will learn why SQLite makes sense as your next production database and how to ensure that your setup is optimized for end-user performance and developer happiness.
+
+- type: podcast
+  show:
+    name: "Code and the Coding Coders Who Code It"
+    link: https://podcast.drbragg.dev
+  episode:
+    name: "SQLite in Production"
+    link: https://podcast.drbragg.dev/episodes/episode-33-stephen-margheim/
+  date: 2024-04-02
+  description: |
+    Embark on a journey through the landscape of SQLite and Ruby on Rails as I chat with the exceptional Stephen Margheim, who enlightens us on the robustness and agility of SQLite for modern web development. Stephen brings to the table his extensive open-source contributions and projects that integrate SQLite with Rails, offering insights into Ruby gems like Lightstream for backups and an SQLite package manager for extensions. Dispel any doubts about SQLite's scalability with us, as Stephen dismantles misconceptions and highlights how this database can stand tall among the giants.
+
 
 - type: podcast
   show:
