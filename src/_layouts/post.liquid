@@ -4,7 +4,9 @@ layout: default
 
 {% render "post_note", post: resource %}
 
-<h1>{{ data.title }}{% if data.subtitle %}: {{ data.subtitle }}{% endif %}</h1>
+<h1>
+  {% if data.series %}{{ data.series }}: {% endif %}{{ data.title }}{% if data.subtitle %}: {{ data.subtitle }}{% endif %}
+</h1>
 
 {% if data.image %}
 <figure>
