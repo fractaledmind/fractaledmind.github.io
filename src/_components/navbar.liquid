@@ -1,11 +1,16 @@
-<header role="banner" class="flex-shrink flex items-center justify-between !mt-10 !mb-20">
-  <a href="{{ '/' | relative_url }}" class="group">
-    {% svg "/images/logo.svg" %}
-  </a>
-  <nav role="navigation" class="flex flex-col gap-x-4 sm:flex-row">
-    <a href="{{ '/' | relative_url }}" class="no-underline hover:underline">Home</a>
-    <a href="{{ '/posts' | relative_url }}" class="no-underline hover:underline">Posts</a>
-    <a href="{{ '/speaking' | relative_url }}" class="no-underline hover:underline">Speaking</a>
-    <a href="{{ '/archive' | relative_url }}" class="no-underline hover:underline">Archive</a>
-  </nav>
+<header role="banner" class="flex-shrink relative !mt-10 !mb-20">
+  <div class="flex items-center sm:items-start justify-between mb-4">
+    <a href="{{ '/' | relative_url }}" class="group">
+      {% svg "/images/logo.svg" %}
+    </a>
+
+    <nav role="navigation" class="flex flex-col gap-x-4 sm:flex-row">
+      <a href="{{ '/' | relative_url }}" class="no-underline hover:underline">Home</a>
+      <a href="{{ '/posts' | relative_url }}" class="no-underline hover:underline">Posts</a>
+      <a href="{{ '/speaking' | relative_url }}" class="no-underline hover:underline">Speaking</a>
+      <a href="{{ '/archive' | relative_url }}" class="no-underline hover:underline">Archive</a>
+    </nav>
+  </div>
+
+  {% render "bridgetown_quick_search/search", placeholder: "Search", input_class: "search-input w-full sm:w-1/2 sm:absolute sm:top-16 sm:right-px", theme: "dark", snippet_length: 200 %}
 </header>

@@ -201,3 +201,11 @@ div.notice > :first-child {
 div.notice > :last-child {
   margin-bottom: 0;
 }
+
+.search-input {
+  @apply border px-3 bg-white border-zinc-100 dark:bg-zinc-800 dark:border-zinc-700;
+  border-radius: 4px;
+}
+bridgetown-search-results {
+  right: 0;
+}
