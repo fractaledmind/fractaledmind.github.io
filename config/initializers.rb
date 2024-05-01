@@ -18,6 +18,7 @@ Bridgetown.configure do |config|
   #
   init :"bridgetown-svg-inliner"
   init :"bridgetown-feed"
+  init :"bridgetown-quick-search"
 
   # Uncomment to use Bridgetown SSR (aka dynamic rendering of content via Roda):
   #

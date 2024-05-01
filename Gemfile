@@ -38,3 +38,5 @@ gem "puma", "< 7"
 gem "bridgetown-svg-inliner", "~> 2.0"
 
 gem "bridgetown-feed", "~> 3.0"
+
+gem "bridgetown-quick-search", "~> 2.0"
