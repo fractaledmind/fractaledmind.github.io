@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Setting up Litestream
+series: Enhancing your Rails app with SQLite
+title: Setting up Litestream
 date: 2023-09-09
 tags:
   - code

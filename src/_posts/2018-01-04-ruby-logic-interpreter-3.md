@@ -1,6 +1,6 @@
 ---
-title: 'Building an Interpreter for Propositional Logic'
-subtitle: 'An interlude with minitest/autorun'
+series: 'Building an Interpreter for Propositional Logic'
+title: 'An interlude with minitest/autorun'
 date: 2018-01-04
 tags:
   - code
@@ -42,7 +42,7 @@ class LogicInterpreterTest < Minitest::Test
     assert_equal true, interpret('T')
     assert_equal false, interpret('F')
   end
-  
+
   # ...
 end
 ```

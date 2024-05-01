@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Array columns
+series: Enhancing your Rails app with SQLite
+title: Array columns
 date: 2023-09-12
 tags:
   - code

@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: ULID primary keys
+series: Enhancing your Rails app with SQLite
+title: ULID primary keys
 date: 2023-09-22
 tags:
   - code

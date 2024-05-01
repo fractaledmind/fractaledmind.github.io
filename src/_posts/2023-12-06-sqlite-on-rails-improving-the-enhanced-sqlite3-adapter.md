@@ -1,6 +1,6 @@
 ---
-title: SQLite on Rails
-subtitle: Improving the enhanced SQLite3 adapter
+series: SQLite on Rails
+title: Improving the enhanced SQLite3 adapter
 date: 2023-12-06
 tags:
   - code

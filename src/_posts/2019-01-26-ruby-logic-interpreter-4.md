@@ -1,6 +1,6 @@
 ---
-title: 'Building an Interpreter for Propositional Logic'
-subtitle: 'Handling variables'
+series: 'Building an Interpreter for Propositional Logic'
+title: 'Handling variables'
 date: 2019-01-26
 tags:
   - code
@@ -49,7 +49,7 @@ With a new `Token` type, we now need to create a new `AST` class as well so that
 module AST
   class Variable
     attr_reader :value
-  
+
     def initialize(value)
       @value = value
     end
@@ -105,9 +105,9 @@ class Interpreter
     @ast = ast
     @context = context
   end
-  
+
   # ...
-  
+
   def visit_variable(node)
     @context[node.value]
   end
@@ -270,7 +270,7 @@ Next, let's run the `Lexer` and `Parser` to generate an array of `Token`s and an
 ```ruby
 class Expression
   # ...
-  
+
   def tokens = Lexer.new(@string).tokens
   def ast = Parser.new(tokens).parse
 end
@@ -281,7 +281,7 @@ For convenience with fixed value expressions, let's add a `resolve` method that 
 ```ruby
 class Expression
   # ...
-  
+
   def resolve
     interpreter = Interpreter.new(ast)
     interpreter.interpret
@@ -303,7 +303,7 @@ For expressions with variables, we can add a `given` method that takes a context
 ```ruby
 class Expression
   # ...
-  
+
   def given(context)
     interpreter = Interpreter.new(ast, context)
     interpreter.interpret
@@ -325,7 +325,7 @@ With all of this setup, we can finally turn back to creating a `truth_table` met
 ```ruby
 class Expression
   # ...
-  
+
   def truth_table
     table = {}
     [true, false].repeated_permutation(variables.count).each do |booleans|
@@ -334,7 +334,7 @@ class Expression
     end
     table
   end
-  
+
   def variables = tokens.select { |t| t.type == :VAR }.map(&:value)
 end
 ```
@@ -348,17 +348,17 @@ class Expression
   def initialize(string)
     @string = string
   end
-  
+
   def resolve
     interpreter = Interpreter.new(ast)
     interpreter.interpret
   end
-  
+
   def given(context)
     interpreter = Interpreter.new(ast, context)
     interpreter.interpret
   end
-  
+
   def truth_table
     table = {}
     [true, false].repeated_permutation(variables.count).each do |booleans|
@@ -367,7 +367,7 @@ class Expression
     end
     table
   end
-  
+
   def variables = tokens.select { |t| t.type == :VAR }.map(&:value)
   def tokens = Lexer.new(@string).tokens
   def ast = Parser.new(tokens).parse

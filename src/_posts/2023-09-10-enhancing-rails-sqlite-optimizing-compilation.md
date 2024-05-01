@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Optimizing compilation
+series: Enhancing your Rails app with SQLite
+title: Optimizing compilation
 date: 2023-09-10
 tags:
   - code

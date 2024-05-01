@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Local snapshots
+series: Enhancing your Rails app with SQLite
+title: Local snapshots
 date: 2023-09-14
 tags:
   - code

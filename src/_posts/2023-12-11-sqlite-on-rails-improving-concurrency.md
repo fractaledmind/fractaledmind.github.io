@@ -1,6 +1,6 @@
 ---
-title: SQLite on Rails
-subtitle: Improving concurrency
+series: SQLite on Rails
+title: Improving concurrency
 date: 2023-12-11
 tags:
   - code

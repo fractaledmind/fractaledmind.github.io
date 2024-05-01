@@ -1,6 +1,6 @@
 ---
-title: SQLite in Ruby
-subtitle: Non-blocking timeout
+series: SQLite in Ruby
+title: Non-blocking timeout
 date: 2024-01-11
 tags:
   - code

@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Branch-specific databases
+series: Enhancing your Rails app with SQLite
+title: Branch-specific databases
 date: 2023-09-06
 tags:
   - code

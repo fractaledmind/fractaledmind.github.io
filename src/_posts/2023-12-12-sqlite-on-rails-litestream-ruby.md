@@ -1,6 +1,6 @@
 ---
-title: SQLite on Rails
-subtitle: Introducing <code>litestream-ruby</code>
+series: SQLite on Rails
+title: Introducing <code>litestream-ruby</code>
 date: 2023-12-12
 tags:
   - code

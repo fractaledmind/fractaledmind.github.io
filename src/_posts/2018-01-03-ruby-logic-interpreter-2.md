@@ -1,6 +1,6 @@
 ---
-title: 'Building an Interpreter for Propositional Logic'
-subtitle: 'Proper Propositional Logic'
+series: 'Building an Interpreter for Propositional Logic'
+title: 'Proper Propositional Logic'
 date: 2018-01-03
 tags:
   - code
@@ -137,7 +137,7 @@ Next, we need to update our grammar to allow for such grouped sub-expressions.
 ~~~
 expression :: formula ((AND | OR | IFSO) formula)*
 formula :: (NOT)* formula | LPAREN expression RPAREN | term
-term :: TRUE | FALSE 
+term :: TRUE | FALSE
 ~~~
 
 We say that an `expression` comes between parenthese, and not a `formula`, because any valid logical expression can be placed between parens, not just a negation operation or a term.
@@ -293,7 +293,7 @@ The final issue we have with our interpreter is that is doesn't properly handle 
 
 This order of operations says that the arithmetic expression `1^2 * 3 / 4 + 5 - 6` should be evaluated as `((((1^2) * 3) / 4) + 5) - 6`. So, operator precedence tells our interpreter what order to evaluate the operations in. Should it evaluate the multiplication before the addition, or vice versa?
 
-In propositional logic, the operator precedence is "negation conjunction disjunction implication": 
+In propositional logic, the operator precedence is "negation conjunction disjunction implication":
 
 {:.tables}
 | Operator | Precedence |
@@ -577,7 +577,7 @@ class Parser
     result
   end
 
-  # disjunction :: conjunction (OR disjunction)* 
+  # disjunction :: conjunction (OR disjunction)*
   def disjunction
     result = conjunction
     token = @current_token
@@ -590,7 +590,7 @@ class Parser
     result
   end
 
-  # conjunction :: formula (AND conjunction)* 
+  # conjunction :: formula (AND conjunction)*
   def conjunction
     result = formula
     token = @current_token

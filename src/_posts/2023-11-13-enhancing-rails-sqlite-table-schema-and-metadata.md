@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Table Schema and Metadata
+series: Enhancing your Rails app with SQLite
+title: Table Schema and Metadata
 date: 2023-11-13
 tags:
   - code

@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Fine-tuning your database
+series: Enhancing your Rails app with SQLite
+title: Fine-tuning your database
 date: 2023-09-07
 tags:
   - code

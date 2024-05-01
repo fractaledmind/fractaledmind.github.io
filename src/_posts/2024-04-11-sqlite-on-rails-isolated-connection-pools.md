@@ -1,6 +1,6 @@
 ---
-title: SQLite on Rails
-subtitle: Isolated connection pools
+series: SQLite on Rails
+title: Isolated connection pools
 date: 2024-04-11
 tags:
   - code

@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Performance metrics
+series: Enhancing your Rails app with SQLite
+title: Performance metrics
 date: 2023-09-21
 tags:
   - code

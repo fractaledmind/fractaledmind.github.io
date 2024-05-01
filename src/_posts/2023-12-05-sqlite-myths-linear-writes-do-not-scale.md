@@ -1,6 +1,6 @@
 ---
-title: SQLite Myths
-subtitle: Linear writes don't scale
+series: SQLite Myths
+title: Linear writes don't scale
 date: 2023-12-05
 tags:
   - code

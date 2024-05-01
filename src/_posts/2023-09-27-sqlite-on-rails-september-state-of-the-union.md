@@ -1,6 +1,6 @@
 ---
-title: SQLite on Rails
-subtitle: September State of the Union
+series: SQLite on Rails
+title: September State of the Union
 date: 2023-09-27
 tags:
   - code

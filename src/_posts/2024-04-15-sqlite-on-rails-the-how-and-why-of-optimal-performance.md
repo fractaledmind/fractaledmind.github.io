@@ -1,6 +1,6 @@
 ---
-title: SQLite on Rails
-subtitle: The how and why of optimal performance
+series: SQLite on Rails
+title: The how and why of optimal performance
 date: 2024-04-15
 tags:
   - code

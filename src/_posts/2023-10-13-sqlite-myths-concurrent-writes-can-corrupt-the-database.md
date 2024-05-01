@@ -1,6 +1,6 @@
 ---
-title: SQLite Myths
-subtitle: Concurrent writes can corrupt the database file
+series: SQLite Myths
+title: Concurrent writes can corrupt the database file
 date: 2023-10-13
 tags:
   - code

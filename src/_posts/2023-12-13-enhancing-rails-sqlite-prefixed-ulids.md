@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Prefixed ULID keys
+series: Enhancing your Rails app with SQLite
+title: Prefixed ULID keys
 date: 2023-12-13
 tags:
   - code

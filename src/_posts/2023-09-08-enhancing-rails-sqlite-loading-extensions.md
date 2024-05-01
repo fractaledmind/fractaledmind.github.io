@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: Loading extensions
+series: Enhancing your Rails app with SQLite
+title: Loading extensions
 date: 2023-09-08
 tags:
   - code

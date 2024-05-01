@@ -1,6 +1,6 @@
 ---
-title: Enhancing your Rails app with SQLite
-subtitle: ActiveRecord adapter improvements
+series: Enhancing your Rails app with SQLite
+title: ActiveRecord adapter improvements
 date: 2023-09-15
 tags:
   - code
