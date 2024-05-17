@@ -18,8 +18,12 @@ title: Speaking Opportunities
         <span>📺️</span>
         {% elsif opportunity.type == "presentation" %}
         <span>📽️</span>
+        {% elsif opportunity.type == "workshop" %}
+        <span>💻️</span>
         {%- elsif opportunity.type == "upcoming" -%}
         <span>🎟</span>
+        {%- elsif opportunity.type == "waiting" -%}
+        <span>⏰</span>
         {% endif %}
         <a href="{{ opportunity.episode.link }}">{{ opportunity.episode.name }}</a>
       </h2>
@@ -35,8 +39,12 @@ title: Speaking Opportunities
           Watch
           {%- elsif opportunity.type == "presentation" -%}
           Read
+          {%- elsif opportunity.type == "workshop" -%}
+          Watch
           {%- elsif opportunity.type == "upcoming" -%}
           Tickets
+          {%- elsif opportunity.type == "waiting" -%}
+          (Unavailable)
           {%- endif -%}
         </span>
         &hellip;
