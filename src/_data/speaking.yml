@@ -37,7 +37,7 @@
     link: https://wrocloverb.com
   episode:
     name: "How (and why) to run SQLite in production"
-    link: https://speakerdeck.com/fractaledmind/wroclove-dot-rb-2024-how-and-why-to-run-sqlite-on-rails-in-production
+    link: https://www.youtube.com/watch?v=qwG5hjaZlN4
   date: 2024-04-13
   description: |
     Join me as we explore the use-cases and benefits of running SQLite in a production environment. Along the way, we will learn why SQLite makes sense as your next production database and how to ensure that your setup is optimized for end-user performance and developer happiness.
