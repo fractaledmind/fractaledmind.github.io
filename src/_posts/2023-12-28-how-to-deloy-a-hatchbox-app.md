@@ -1,5 +1,5 @@
 ---
-title: How to deplay a Hatchbox app
+title: How to deploy a Hatchbox app
 date: 2023-12-28
 tags:
   - code
