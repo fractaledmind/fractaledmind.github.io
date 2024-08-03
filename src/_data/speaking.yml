@@ -14,11 +14,11 @@
     name: "Friendly.rb 2024"
     link: https://friendlyrb.com
   episode:
-    name: "TBD"
+    name: "SQLite on Rails: Everything you need to know"
     link: https://www.tickettailor.com/events/friendlyrb/1031276
   date: 2024-09-18
   description: |
-    I'm still cooking up the details for this talk, but I promise it will be a good one! Stay tuned for more details.
+    SQLite seems to be all the rage these days, but what's the story for us Rails developers? Join me as we explore why SQLite is worthy of the hype, how to harness its simplicity and power for your applications, and what it takes to build resilient applications on top of it.
 
 - type: upcoming
   show:
