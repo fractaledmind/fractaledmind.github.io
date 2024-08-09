@@ -37,6 +37,17 @@
 
     The primary desired outcome is the developers feeling knowledgable and com- fortable with the differences and details of running a SQLite on Rails application. Secondarily and relatedly, this workshop will provide a hands-on introduction to the emerging SQLite+Ruby/Rails ecosystem of tools.
 
+- type: talk
+  show:
+    name: "Database School with Aaron Francis"
+    link: https://databaseschool.transistor.fm
+  episode:
+    name: "Ruby on Rails + SQLite with Stephen Margheim"
+    link: https://databaseschool.transistor.fm/episodes/ruby-on-rails-sqlite-with-stephen-margheim
+  date: 2024-08-08
+  description: |
+    This was such an enjoyable conversation. We talked about my journey into programming, old college rivalries, the aesthetics of simplicity, and—of course—some nitty gritty details around Ruby and SQLite. Aaron was a gracious and curious host. Such a pleasure!
+
 - type: waiting
   show:
     name: "RubyConf Africa 2024"
