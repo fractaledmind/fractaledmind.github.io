@@ -17,7 +17,7 @@ In this series, I will be sharing some of the things I have learned while workin
 
 - - -
 
-My template script needs to be able to make modifications to the application's `database.yml` file. And the work "modification" is key here. I need to react to the existing contents of the file, and make changes based on that. I'm not just replacing the file wholesale, and I'm not simply prepending or appending content. I need to make targeted changes. This proved to be more difficult than I naively anticipated.
+My template script needs to be able to make modifications to the application's `database.yml` file. And the word "modification" is key here. I need to react to the existing contents of the file, and make changes based on that. I'm not just replacing the file wholesale, and I'm not simply prepending or appending content. I need to make targeted changes. This proved to be more difficult than I naively anticipated.
 
 Even in my initial naive mindset, I knew that I would not be able to rely on regular expressions. YAML is a complex format, and using regular expressions to parse it is a recipe for disaster. So, I knew I would need to parse the YAML into an AST, make changes to the AST, and then dump the AST back to a YAML string. But, this is where things got tricky.
 
