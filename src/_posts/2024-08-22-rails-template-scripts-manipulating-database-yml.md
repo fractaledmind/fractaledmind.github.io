@@ -1,7 +1,7 @@
 ---
 series: Rails Template Scripts
 title: Manipulating <code>database.yml</code>
-date: 2024-08-21
+date: 2024-08-22
 tags:
   - code
   - ruby
