@@ -396,7 +396,7 @@ Aside from data resilience, probably the most common worry I hear centers on the
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/109.png' | relative_url }}" alt="" style="width: 100%" />
 
-The worry is that only having one write operation at a time will prevent your application from “scaling”, whatever that means. But, this worry is overblown. Firstly, most applications are read-heavy, not write-heavy. So likely only around 20% of your traffic is writes. Plus, we what a difference using an embedded database makes on performance.
+The worry is that only having one write operation at a time will prevent your application from “scaling”, whatever that means. But, this worry is overblown. Firstly, most applications are read-heavy, not write-heavy. So likely only around 20% of your traffic is writes. Plus, we forget what a difference using an embedded database makes on performance.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/110.png' | relative_url }}" alt="" style="width: 100%" />
 
