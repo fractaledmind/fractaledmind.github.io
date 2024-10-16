@@ -9,7 +9,10 @@ tags:
   - sqlite
 ---
 
-<img src="{{ '/images/railsworld-2024/001.png' | relative_url }}" alt="" style="width: 100%" />
+<a href="https://www.youtube.com/watch?v=l56IBad-5aQ"><img src="{{ '/images/railsworld-2024/001.png' | relative_url }}" alt="" style="width: 100%" /></a>
+
+{:.notice}
+**NOTE:** This is an edited transcript of a talk I gave at [Rails World 2024](https://rubyonrails.org/world/2024). You can watch the full talk on [YouTube](https://www.youtube.com/watch?v=l56IBad-5aQ).
 
 From its beginning, [Rails](https://rubyonrails.org) has been famous for being a kind of a rocket engine that could propel your idea to astronomic heights at supersonic speed. But, at least for me, it has lately felt like I needed to be a rocket scientist to then deploy and run my full-featured application.
 
@@ -486,3 +489,11 @@ Thank you.
 <img loading="lazy" src="{{ '/images/railsworld-2024/132.png' | relative_url }}" alt="" style="width: 100%" />
 
 - - -
+
+This is an edited transcript of a talk I gave at [Rails World 2024](https://rubyonrails.org/world/2024). You can watch the full talk on YouTube below.
+
+[![Stephen Margheim - SQLite on Rails: Supercharging the One-Person Framework - Rails World 2024
+](https://img.youtube.com/vi/l56IBad-5aQ/0.jpg)](https://www.youtube.com/watch?v=l56IBad-5aQ "How (and why) to run SQLite in production")
+
+- - -
+
