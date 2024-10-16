@@ -143,7 +143,7 @@ with [Kamal](https://kamal-deploy.org). Kamal offers everything you need to depl
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/037.png' | relative_url }}" alt="" style="width: 100%" />
 
-You can learn more about the new version of Kamal, version 2.0, in [Donal's Rails World talk]().
+You can learn more about the new version of Kamal, version 2.0, in [Donal's Rails World talk](https://www.youtube.com/watch?v=rne8OoabiC8).
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/038.png' | relative_url }}" alt="" style="width: 100%" />
 
