@@ -30,13 +30,13 @@ Let’s consider a [typical Heroku application architecture](https://blog.heroku
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/005.png' | relative_url }}" alt="" style="width: 100%" />
 
-Well, **this** is a standard Heroku application today—where the number of servers and services has basically tripled.
+Well, **this** 👇️ is a standard Heroku application today—where the number of servers and services has basically tripled.
 
 And I’m sure many, if not most, of you see this and think that this is simply the cost of running production-grade systems these days. It is easy enough to believe that complexity is the price to pay for progress.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/006.png' | relative_url }}" alt="" style="width: 100%" />
 
-But, not always. Sometimes progress is simplification. Sometimes progress is reducing the number of moving parts, shrinking the surface area of the system, yet still expanding its power and functionality.
+But, not always. Sometimes progress is simplification. Sometimes, progress is reducing the number of moving parts, shrinking the surface area of the system, yet still expanding its power and functionality.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/007.png' | relative_url }}" alt="" style="width: 100%" />
 
@@ -56,7 +56,7 @@ but are _this_ lean and _this_ simple.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/011.png' | relative_url }}" alt="" style="width: 100%" />
 
-Because, believe it or not, **this** is now a viable application architecture, and one that can serve tens of thousands of users, if not many, many more.
+Because, believe it or not, **this** 👇️ is now a viable application architecture, and one that can serve tens of thousands of users, if not many, many more.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/012.png' | relative_url }}" alt="" style="width: 100%" />
 
@@ -168,15 +168,15 @@ I like to say that SQLite **supercharges** Rails.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/042.png' | relative_url }}" alt="" style="width: 100%" />
 
-Because SQLite enables you to go from the moderate complexity of a minimally distributed system to the radical simplicity of an application and all of operational dependencies living on a single machine. And this is because of SQLite’s unique architecture…
+Because SQLite enables you to go from the moderate complexity of a minimally distributed system to the radical simplicity of an application and all of operational dependencies living on a single machine.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/043.png' | relative_url }}" alt="" style="width: 100%" />
 
-Most SQL engines run in a separate process from your application, even typically on separate machines.
+And this is because of SQLite’s unique architecture. Most SQL engines run in a separate process from your application, even typically on separate machines.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/044.png' | relative_url }}" alt="" style="width: 100%" />
 
-SQLite runs embedded within your Ruby process and the thread that spawns it.
+SQLite runs embedded within your Ruby thread and the process that spawns it.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/045.png' | relative_url }}" alt="" style="width: 100%" />
 
@@ -284,15 +284,15 @@ And that they don’t block, waiting for each other.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/080.png' | relative_url }}" alt="" style="width: 100%" />
 
-Ensuring that the embedded connections don’t conflict was solved with this change to how Rails constructs transactions for SQLite.
+Ensuring that the embedded connections don’t conflict was solved with [this change](https://github.com/rails/rails/pull/50371) to how Rails constructs transactions for SQLite.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/081.png' | relative_url }}" alt="" style="width: 100%" />
 
-And ensuring that they don’t block was fixed with a pair of PRs. One in the sqlite3-ruby gem, which is the lower level interface between Ruby and the SQLite engine.
+And ensuring that they don’t block was fixed with a pair of PRs. One [in the `sqlite3-ruby` gem](https://github.com/sparklemotion/sqlite3-ruby/pull/456), which is the lower level interface between Ruby and the SQLite engine.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/082.png' | relative_url }}" alt="" style="width: 100%" />
 
-And then one in Rails to make use of this new feature in the driver.
+And then [one in Rails](https://github.com/rails/rails/pull/51958) to make use of this new feature in the driver.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/083.png' | relative_url }}" alt="" style="width: 100%" />
 
@@ -304,7 +304,7 @@ But details aside, the results speak for themselves. Not only do we no longer se
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/085.png' | relative_url }}" alt="" style="width: 100%" />
 
-but our p99 latency is literally improved by an order of magnitude under heavier concurrent load.
+but our `p99` latency is literally improved by an order of magnitude under heavier concurrent load.
 
 <img loading="lazy" src="{{ '/images/railsworld-2024/086.png' | relative_url }}" alt="" style="width: 100%" />
 
