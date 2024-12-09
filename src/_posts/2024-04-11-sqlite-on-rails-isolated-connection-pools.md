@@ -188,3 +188,4 @@ I hope you have enjoyed this exploration of how to bring a more advanced perform
 * [SQLite on Rails — Improving concurrency]({% link _posts/2023-12-11-sqlite-on-rails-improving-concurrency.md %})
 * [SQLite on Rails — Introducing `litestream-ruby`]({% link _posts/2023-12-12-sqlite-on-rails-litestream-ruby.md %})
 * {:.bg-[var(--tw-prose-bullets)]}[SQLite on Rails — Isolated connection pools]({% link _posts/2024-04-11-sqlite-on-rails-isolated-connection-pools.md %})
+* [SQLite on Rails — Loading extensions]({% link _posts/2024-12-09-sqlite-on-rails-loading-extensions.md %})
