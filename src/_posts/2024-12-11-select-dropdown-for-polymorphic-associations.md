@@ -155,3 +155,34 @@ end
 Easy enough! In addition to our `Post#content_id` accessor we add a `Post#content_gid` accessor whose getter returns the associated `content`'s global ID and whose setter takes a global ID and uses it to set the full `content` association.
 
 So, instead of using a flat collection of choices in a `<select>` for a standard `belongs_to` association via the `content_id` field, when I am working with a _polymorphic_ association I reach for a grouped collection of choices via the `content_gid` field.
+
+If you want to ensure that _every_ ActiveRecord model with a polymorphic `belongs_to` association has this `*_gid` accessor, you can add the following initializer to your Rails app:
+
+```ruby
+# config/initializers/polymorphic_belongs_to_gid.rb
+ActiveSupport.on_load(:active_record) do
+  module_parent.const_get('Associations::Builder::BelongsTo').class_eval do
+    def self.define_accessors(model, reflection)
+      super
+
+      return unless reflection.polymorphic?
+
+      mixin = model.generated_association_methods
+      name = reflection.name
+
+      mixin.class_eval <<-CODE, __FILE__, __LINE__ + 1
+        def #{name}_gid
+          public_send(:#{name})&.to_gid
+        end
+
+        def #{name}_gid=(global_id)
+          value = GlobalID::Locator.locate global_id
+          association(:#{name}).writer(value)
+        end
+      CODE
+    end
+  end
+end
+```
+
+This patches Active Record's association builder to additionally define the `*_gid` accessors for polymorphic `belongs_to` associations. This way, you can always reach for `*_gid` accessors when working with polymorphic associations.
