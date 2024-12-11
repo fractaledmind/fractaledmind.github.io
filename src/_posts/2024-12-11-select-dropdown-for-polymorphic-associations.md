@@ -186,3 +186,108 @@ end
 ```
 
 This patches Active Record's association builder to additionally define the `*_gid` accessors for polymorphic `belongs_to` associations. This way, you can always reach for `*_gid` accessors when working with polymorphic associations.
+
+- - -
+
+{:.notice}
+**Update** _(11-12-2024)_
+
+[A](https://bsky.app/profile/kaspth.bsky.social/post/3lcxng4pxks2h) [number](https://x.com/matheusrich/status/1866662370040332415) [of](https://x.com/TheDumbTechGuy/status/1866531782214160708) [people](https://ruby.social/@henrik/113630983647966057) chimed in to point out the using [_signed_ global IDs](https://github.com/rails/globalid?tab=readme-ov-file#signed-global-ids) would prevent the potential for client-side tampering. This is a great point and a worthy tweak. The code doesn't get notably more complicated, but the functionality does get notably more secure. So, let's update our setup to use signed global IDs instead of plaintext global IDs.
+
+First, our methods (whether manually added or generated via an initializer) should read and write signed global IDs:
+
+```ruby
+class Post < ApplicationRecord
+  belongs_to :content, polymorphic: true
+
+  def content_gid
+    content&.to_sgid(for: :polymorphic_association, expires_in: nil)
+  end
+
+  def content_gid=(gid)
+    self.content = GlobalID::Locator.locate_signed(gid, for: :polymorphic_association)
+  end
+end
+```
+
+Here we change `.to_gid` to `.to_sgid` (an alias for `.to_signed_global_id`) and pass both an expiration and a purpose. We don't want this signed global ID to expire, so we pass `expires_in: nil` (default is that they expire in 1 month). The purpose is a string that helps ensure that the signed global ID is only used for this one intended purpose. This is a security feature that helps prevent signed global IDs from being used in unintended ways. Next, we change `GlobalID::Locator.locate` to `GlobalID::Locator.locate_signed` and pass the same purpose.
+
+Our form now needs to use the signed global ID as the value in the `<option>`s. And this is a great opportunity to clean up our form code a bit. The current version is a bit verbose:
+
+```erb
+<div>
+  <%= form.label :content_gid, style: "display: block" %>
+  <%= form.select(:content_gid,
+        grouped_options_for_select(
+          [
+            [ 'Articles',
+              Article
+                .order(:title)
+                .map { |it| [it.title, it.to_gid.to_s] } ],
+            [ 'Videos',
+              Video
+                .order(:title)
+                .map { |it| [it.title, it.to_gid.to_s] } ]
+          ]
+        )) %>
+</div>
+```
+
+And, it doesn't enforce that the different possible `content` models need to adhere to a shared interface. So, let's create a model concern that we can include into all "contentable" models to define and implement the needed interface:
+
+```ruby
+# app/models/concerns/contentable.rb
+module Contentable
+  extend ActiveSupport::Concern
+
+  class_methods do
+    def to_options
+      ordered.map { |it| [it.public_name, it.to_sgid(for: :polymorphic_association, expires_in: nil)] }
+    end
+  end
+
+  included do
+    scope :ordered, -> { order(**public_order) }
+  end
+
+  def public_name
+    raise NotImplementedError
+  end
+
+  def public_order
+    raise NotImplementedError
+  end
+end
+```
+
+Now, we could use this `Contentable` concern in our `Image` and `Video` models. For example, like this:
+
+```ruby
+class Article < ApplicationRecord
+  include Contentable
+
+  def public_name = title
+  def public_order = { title: :asc }
+end
+```
+
+By defining and implementing the interface that the models that can be used in the polymorphic `content` association need to adhere to, we can now simplify our form code:
+
+```erb
+<div>
+  <%= form.label :content_gid, style: "display: block" %>
+  <%= form.select(:content_gid,
+        grouped_options_for_select(
+          [
+            [ 'Articles',
+              Article.to_options ],
+            [ 'Videos',
+              Video.to_options ]
+          ]
+        )) %>
+</div>
+```
+
+All together, these are solid improvements that make our implementation both more secure and more maintainable.
+
+Thanks for the great feedback and for making this code even better!
