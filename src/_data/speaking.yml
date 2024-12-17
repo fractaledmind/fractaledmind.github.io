@@ -1,5 +1,16 @@
 - type: talk
   show:
+    name: "RubyConf 2024"
+    link: https://rubyconf.org
+  episode:
+    name: "ACIDic Jobs: Scaling a resilient jobs layer"
+    link: https://www.youtube.com/watch?v=JrLRFc5D6hI
+  date: 2024-09-26
+  description: |
+    Background jobs have become an essential component of any Rails app. As your /jobs directory grows, however, how do you both ensure that your jobs are resilient and that complex operations are maintainable and cohesive? In this talk, we will explore how we can build maintainable, resilient, cohesive jobs, all by making our jobs ACIDic.
+
+- type: talk
+  show:
     name: "Rails World 2024"
     link: https://rubyonrails.org/world/2024
   episode:
