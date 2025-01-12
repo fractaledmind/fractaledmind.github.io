@@ -209,3 +209,6 @@ div.notice > :last-child {
 bridgetown-search-results {
   right: 0;
 }
+.lh-tight {
+	line-height: 1 !important;
+}
