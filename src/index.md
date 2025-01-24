@@ -5,7 +5,7 @@ layout: default
 ---
 
 <figure class="h-32 w-32">
-  <img class="rounded-full" src="{{ '/images/headshot.jpg' | relative_url }}" alt="This is my headshot" />
+  <img class="rounded-full" src="{{ '/images/headshot-2024.jpg' | relative_url }}" alt="This is my headshot" />
 </figure>
 
 # Stephen Margheim
