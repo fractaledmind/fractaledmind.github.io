@@ -1,3 +1,51 @@
+- type: upcoming
+  show:
+    name: "RubyKaigi 2025"
+    link: https://rubykaigi.org/2025/
+  episode:
+    name: "Parsing and generating SQLite's SQL dialect with Ruby"
+    link: https://ti.to/rubykaigi/2025
+  date: 2025-04-16
+  description: |
+    SQLite's popularity is on the rise, and likewise the ecosystem of tools around it is growing. Unfortunately, SQLite does not expose its parser for 3rd parties to use independently. This greatly limits the ability of developers to build tools that must interact with SQLite's SQL dialect. And so, I have hand-written a 100% Ruby, 100% compatible parser for SQLite's SQL dialect. In addition, having a complete AST permits us to also generate SQL queries from terse, structured Ruby code. In this talk, I will demonstrate how we ensure that the parser is 100% compatible with SQLite's SQL dialect. We will also explore how the parser is implemented and what kind of AST it produces. Then, we will dive into how to use the parser to build tools that can analyze and manipulate SQL queries. Finally, we will look at how to use the generator to build tools that can generate SQL queries programmatically. As Ruby's only full SQLite SQL parser, this library opens up a world of possibilities for developers.
+
+- type: upcoming
+  show:
+    name: "Tropical on Rails 2025"
+    link: https://www.tropicalonrails.com/en/
+  episode:
+    name: "Resilient Jobs and Chaotic Tests"
+    link: https://www.tropicalonrails.com/en/stephen-margheim
+  date: 2025-04-03
+  description: |
+    Imagine this—a 3rd party API goes down for 10 minutes, what happens to your jobs calling this API? We all know the pain that swoops in when errors inevitably happen. Join me as we explore how the principles of chaos and simulation testing can help us and our teams write reliable and resilient jobs.
+
+- type: podcast
+  show:
+    name: "Remote Ruby"
+    link: https://www.remoteruby.com
+  episode:
+    name: "High Leverage Rails & SQLite with Stephen Margheim"
+    link: https://www.remoteruby.com/2260490/episodes/16553114-high-leverage-rails-sqlite-with-stephen-margheim
+  date: 2025-02-04
+  description: |
+    In this episode, Chris and Andrew welcome guest Stephen Margheim to discuss his specialization in Ruby and SQLite. Stephen shares his journey of improving the developer experience with SQLite by addressing various pain points and adapting it for production in the Rails ecosystem. He talks about his contributions to Rails 8, making it the first fully production ready SQLite compatible web application framework. The conversation also covers the importance of leveraging these tools to build high-quality applications quickly and efficiently. Also, Stephen announces his upcoming course "High Leverage Rails" which focuses on maximizing the potential of Rails and SQLite for rapid, reliable development. Hit download now to hear more!
+
+- type: podcast
+  show:
+    name: "Code and the Coding Coders Who Code It"
+    link: https://podcast.drbragg.dev
+  episode:
+    name: "Episode 45 - Stephen Margheim"
+    link: https://podcast.drbragg.dev/episodes/episode-45-stephen-margheim/
+  date: 2025-02-04
+  description: |
+    Stephen Margheim, a celebrated figure in the Ruby and Rails community, returns to unravel the fascinating intricacies of his latest project—writing a parser for SQLite's SQL dialect in Ruby. He shares his enlightening journey of translating complex SQL syntax, which at first seemed a simple endeavor but soon unfolded into a realm of deep learning and unexpected challenges. Alongside this, Stephen collaborates with Aaron Francis on "High Leverage Rails," a video course designed to spotlight the synergy between Rails and SQLite, offering a treasure trove of insights into developing high-quality applications.
+
+    We dive into the nuanced world of SQL parsing, where Stephen candidly recounts the arduous process of porting SQLite's lexer and parser into Ruby. What began as a straightforward task quickly turned into a labyrinth of complex syntax and discrepancies that required astute attention and incremental progress. He reflects on the absence of a fully compatible SQLite parser in any language, emphasizing the significance of open parsers like Postgres in creating a robust ecosystem for tools and libraries.
+
+    Stephen's excitement is palpable as he discusses Quickdraw, a groundbreaking testing framework that revolutionizes testing in multi-core environments. This innovation, along with the anticipation for RailsConf 2025 in Philadelphia, paints a bright future for the Rails community. With rich discussions on parsing, testing, and upcoming Rails events, this episode promises to inspire and engage both seasoned developers and newcomers to the Ruby and Rails landscape. Join us for an episode filled with excitement, insight, and a glimpse into the future of Rails development.
+
 - type: talk
   show:
     name: "RubyConf 2024"
