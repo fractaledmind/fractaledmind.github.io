@@ -14,6 +14,8 @@ Hey there! 👋
 
 I'm full-stack Ruby on Rails Software Engineer, an Engineering Manager, and general web denizen. This is my personal website where I document my journey as a full stack developer and/or manager, as well as publish tutorials/write-ups of things I've learned for myself and others.
 
+Most recently, I've been working on in-depth video course on Rails + SQLite for beginners called [High Leverage Rails](https://highleveragerails.com). Check it out if you're interested in learning Rails how to take advantage of the power of Rails and SQLite to kickstart your dreams.
+
 <a href="{{ '/about' | relative_url }}" class="no-underline">
   <span class="underline">Learn more about me</span>
   <i>→</i>
