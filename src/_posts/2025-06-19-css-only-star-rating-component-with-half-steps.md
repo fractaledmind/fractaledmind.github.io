@@ -203,28 +203,36 @@ But, this created a fragmented hover interaction:
 
 <img src="{{ '/images/rough-star-rating.gif' | relative_url }}" alt="A user interacting with a star rating component" style="margin-inline: auto;" />
 
-Whenever the mouse is _between_ stars, no stars are highlighted at all. This creates a fractured user experience, where stars are highlighted and unhighlighted in a disjointed manner. What we need is a way to ensure that there is a visual gap between stars, but when the mouse is in that visual gap, it is still _technically_ hovering over a star segment. We can accomplish this by adding a pseudo-element the same size as the star plus the margin:
+Whenever the mouse is _between_ stars, no stars are highlighted at all. This creates a fractured user experience, where stars are highlighted and unhighlighted in a disjointed manner. What we need is a way to ensure that there is a visual gap between stars, but when the mouse is in that visual gap, it is still _technically_ hovering over a star segment. We can accomplish this by adding expanding the width of the `label` elements for the outer, half step star segments, while keeping the image width the smaller fixed width:
 
 ```css
 label:nth-of-type(odd) {
   mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M0 0c12.2.1 23.3 7 28.6 18L93 150.3l143.6 21.2c12 1.8 22 10.2 25.7 21.7 3.7 11.5.7 24.2-7.9 32.7L150.2 329l24.6 145.7c2 12-3 24.2-12.9 31.3-9.9 7.1-23 8-33.8 2.3L0 439.8V0Z"/></svg>') no-repeat;
-  margin-inline-end: 0.25em;
-  &::after {
-    content: "";
-    display: block;
-    height: 2rem;
-    width: 1.25rem;
-  }
+  width: 1.25rem;
+  mask-size: 1rem;
 }
 ```
 
-The key detail is that the `width` of the `:after` pseudo-element equals the `width` of the star plus the `margin-inline-end`. Here, I have done it manually, but we can also use CSS properties and the `calc()` function. Either way, by creating this pseudo-element, we can fill the gap between the stars with a transparent area that belongs to the visually preceding star segment. This ensures that the hover interaction is seamless and continuous, providing a smoother user experience.
+The key detail is that the `mask-size` equals the default `width` of the stars and the `width` for these segments includes some visual padding. Here, I have done it manually, but we can also use CSS properties and the `calc()` function:
+
+```css
+/* settable properties */
+--star-size: 2rem;
+--star-gap: 0.25rem;
+/* computed properties */
+--star-height: var(--star-size);
+--star-width: calc(var(--star-size) / 2);
+--star-width-plus-gap: calc(var(--star-width) + var(--star-gap));
+```
+
+Either way, by expanding the width of the right-hand star segments, we create a gap between the stars that still triggers the hover styles on the visually preceding star segment. This ensures that the hover interaction is seamless and continuous, providing a smoother user experience.
 
 The only other final detail is to remove the final margin on the right-hand side of the component:
 
 ```css
 label:first-of-type {
-  margin-inline-end: 0;
+  width: 1rem;
+  /* or width: var(--star-width) */
 }
 ```
 
@@ -240,4 +248,4 @@ But, with all of that, our vanilla CSS star rating component is now complete. It
 
 <img src="{{ '/images/star-rating.gif' | relative_url }}" alt="A user interacting with a star rating component" style="margin-inline: auto;" />
 
-If you want to see the full code, check out the [playground](https://play.tailwindcss.com/i4k3OLQHWH). And, if you've enjoyed following along, you would likely enjoy following my Twitter account: [@fractaledmind](https://x.com/intent/follow?screen_name=fractaledmind).
+If you want to see the full code, check out the [playground](https://play.tailwindcss.com/PsVyOOtfR0). And, if you've enjoyed following along, you would likely enjoy following my Twitter account: [@fractaledmind](https://x.com/intent/follow?screen_name=fractaledmind).
