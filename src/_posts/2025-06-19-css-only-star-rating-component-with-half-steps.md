@@ -248,4 +248,4 @@ But, with all of that, our vanilla CSS star rating component is now complete. It
 
 <img src="{{ '/images/star-rating.gif' | relative_url }}" alt="A user interacting with a star rating component" style="margin-inline: auto;" />
 
-If you want to see the full code, check out the [playground](https://play.tailwindcss.com/boCQ8G8X8N). And, if you've enjoyed following along, you would likely enjoy following my Twitter account: [@fractaledmind](https://x.com/intent/follow?screen_name=fractaledmind).
+If you want to see the full code, check out the [playground](https://play.tailwindcss.com/SMXsGVXaHO). And, if you've enjoyed following along, you would likely enjoy following my Twitter account: [@fractaledmind](https://x.com/intent/follow?screen_name=fractaledmind).
