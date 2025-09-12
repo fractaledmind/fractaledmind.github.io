@@ -1,0 +1,19 @@
+---
+permalink: /enlitenment.html
+template_engine: liquid
+layout: empty
+title: Redirecting...
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting...</title>
+    <link rel="canonical" href="https://raw.githubusercontent.com/fractaledmind/enlitenment/main/template.rb" />
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=https://raw.githubusercontent.com/fractaledmind/enlitenment/main/template.rb" />
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
