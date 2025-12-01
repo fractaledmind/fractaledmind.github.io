@@ -1,21 +1,21 @@
-- type: upcoming
+- type: talk
   show:
     name: "RubyKaigi 2025"
     link: https://rubykaigi.org/2025/
   episode:
     name: "Parsing and generating SQLite's SQL dialect with Ruby"
-    link: https://ti.to/rubykaigi/2025
+    link: https://www.youtube.com/watch?v=VaSpF9JmbZo
   date: 2025-04-16
   description: |
     SQLite's popularity is on the rise, and likewise the ecosystem of tools around it is growing. Unfortunately, SQLite does not expose its parser for 3rd parties to use independently. This greatly limits the ability of developers to build tools that must interact with SQLite's SQL dialect. And so, I have hand-written a 100% Ruby, 100% compatible parser for SQLite's SQL dialect. In addition, having a complete AST permits us to also generate SQL queries from terse, structured Ruby code. In this talk, I will demonstrate how we ensure that the parser is 100% compatible with SQLite's SQL dialect. We will also explore how the parser is implemented and what kind of AST it produces. Then, we will dive into how to use the parser to build tools that can analyze and manipulate SQL queries. Finally, we will look at how to use the generator to build tools that can generate SQL queries programmatically. As Ruby's only full SQLite SQL parser, this library opens up a world of possibilities for developers.
 
-- type: upcoming
+- type: talk
   show:
     name: "Tropical on Rails 2025"
     link: https://www.tropicalonrails.com/en/
   episode:
     name: "Resilient Jobs and Chaotic Tests"
-    link: https://www.tropicalonrails.com/en/stephen-margheim
+    link: https://www.youtube.com/watch?v=NGeyotdnJS4
   date: 2025-04-03
   description: |
     Imagine this—a 3rd party API goes down for 10 minutes, what happens to your jobs calling this API? We all know the pain that swoops in when errors inevitably happen. Join me as we explore how the principles of chaos and simulation testing can help us and our teams write reliable and resilient jobs.
