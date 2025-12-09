@@ -7,4 +7,5 @@
       <a href="{{ '/tags/' | append: tag | relative_url }}" class="no-underline font-normal text-inherit hover:underline">{{ tag }}</a>{% if forloop.index != forloop.length %},{% endif %}
     {% endfor %}
   {% endunless %}
+  {% if post.data.series %} · <span class="text-[var(--tw-prose-body)] font-semibold">{{ post.data.series }}</span>{% endif %}
 </aside>
