@@ -16,7 +16,7 @@ I'm full-stack Ruby on Rails Software Engineer, an Engineering Manager, and gene
 
 Most recently, I've been working on in-depth video course on Rails + SQLite for beginners called [High Leverage Rails](https://highleveragerails.com). Check it out if you're interested in learning Rails how to take advantage of the power of Rails and SQLite to kickstart your dreams.
 
-### Like what you’re reading here? If so:
+### Like what you’re reading here?
 
 <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 <form action="https://app.kit.com/forms/8864509/subscriptions" 
