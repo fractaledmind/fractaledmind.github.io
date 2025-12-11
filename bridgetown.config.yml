@@ -19,6 +19,8 @@
 
 url: "https://fractaledmind.github.io" # the base hostname & protocol for your site, e.g. https://example.com
 
+future: <%= ENV["BRIDGETOWN_ENV"] != "production" %> # only include future posts in development
+
 permalink: pretty
 template_engine: liquid
 
