@@ -30,6 +30,10 @@ pagination:
 highlighter: ""
 
 collections:
+  tips:
+    output: true
+    permalink: pretty
+    sort_direction: descending
   archive:
     output: true
     permalink: pretty
@@ -40,6 +44,10 @@ defaults:
       path: "pdfs"
     values:
       pdf: true
+  - scope:
+      collection: tips
+    values:
+      layout: post
 
 summary_separator: <!--/summary-->
 

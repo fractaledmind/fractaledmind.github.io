@@ -1,0 +1,22 @@
+<div class="tips-feed">
+  {% for tip in collection %}
+    <article class="border-t border-dashed border-[var(--tw-prose-body)] py-12">
+      <aside role="note" class="flex items-center justify-between text-[var(--tw-prose-captions)] !text-sm lg:!text-base mb-4">
+        <div>
+          <time datetime="{{ tip.data.date | date: "%Y-%m-%dT%H:%M:%SZ" }}">{{ tip.data.date | date: "%B %d, %Y" }}</time>
+          {% unless tip.data.tags == empty %}
+          ·
+            {% for tag in tip.data.tags %}
+              <a href="{{ '/tags/' | append: tag | relative_url }}" class="no-underline font-normal text-inherit hover:underline">{{ tag }}</a>{% if forloop.index != forloop.length %},{% endif %}
+            {% endfor %}
+          {% endunless %}
+          {% if tip.data.series %} · <span class="text-[var(--tw-prose-body)] font-semibold">{{ tip.data.series }}</span>{% endif %}
+        </div>
+        <a href="{{ tip.relative_url }}" class="no-underline text-[var(--tw-prose-links)] hover:underline" title="Permalink">&#x27B9;</a>
+      </aside>
+      <div class="prose-content">
+        {{ tip.content }}
+      </div>
+    </article>
+  {% endfor %}
+</div>

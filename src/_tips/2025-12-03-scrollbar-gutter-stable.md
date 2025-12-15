@@ -26,19 +26,3 @@ The problem: when a popover opens and you hide the scrollbar with `overflow: hid
 The solution: `scrollbar-gutter: stable` reserves space for the scrollbar even when it's not visible, preventing the jarring horizontal shift.
 
 <img src="{{ '/images/scrollbar-layout-shift-fixed.gif' | relative_url }}" alt="With scrollbar-gutter stable, the page content stays in place when the popover opens" style="width: 100%" />
-
-
-
-- - -
-
-## All posts in this series
-
-* {:.bg-[var(--tw-prose-bullets)]}[Avoid layout shift with `scrollbar-gutter: stable`]({% link _posts/2025-12-03-scrollbar-gutter-stable.md %})
-* [Prevent scrolling when a dialog is open]({% link _posts/2025-12-04-prevent-scroll-with-dialog-modal.md %})
-* [Anchor popovers without distinct anchor names]({% link _posts/2025-12-05-anchor-popovers-with-attr.md %})
-* [De-emphasize scrollbars in small containers]({% link _posts/2025-12-06-style-scrollbars-in-popovers.md %})
-* [Auto-growing textareas with `field-sizing: content`]({% link _posts/2025-12-07-auto-growing-textareas.md %})
-* [Dialog cancel buttons with `formmethod="dialog"`]({% link _posts/2025-12-08-dialog-cancel-buttons-with-formmethod.md %})
-* [Dialog close buttons with `command="close"`]({% link _posts/2025-12-09-dialog-close-button-with-command.md %})
-* [Light dismiss dialogs with `closedby`]({% link _posts/2025-12-10-dialog-light-dismiss-with-closedby.md %})
-* [Open dialogs with `command` and `commandfor`]({% link _posts/2025-12-11-open-dialogs-with-command.md %})
