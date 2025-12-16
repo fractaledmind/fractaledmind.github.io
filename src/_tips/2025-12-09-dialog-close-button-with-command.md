@@ -5,6 +5,7 @@ date: 2025-12-09
 tags:
   - code
   - html
+typefully_published: true
 ---
 
 Continuing with closing `<dialog>`s, in addition to `formmethod="dialog"` you can also implement a dialog close button in the header with an invoker [`command="close"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#command). Perfect way to close a dialog without a `<form>`.

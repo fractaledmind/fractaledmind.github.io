@@ -5,6 +5,7 @@ date: 2025-12-13
 tags:
   - code
   - css
+typefully_published: true
 ---
 
 Enter animations are easy with `@starting-style`, but exit animations need [`transition-behavior: allow-discrete`](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-behavior) to work. Most CSS properties are continuous—opacity can be 0.5, colors can blend. But `display` is discrete: it's either `none` or `block`, with no intermediate values.

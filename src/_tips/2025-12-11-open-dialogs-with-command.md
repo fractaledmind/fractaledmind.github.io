@@ -5,6 +5,7 @@ date: 2025-12-11
 tags:
   - code
   - html
+typefully_published: true
 ---
 
 The [`command`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#command) attribute lets you open `<dialog>`s declaratively—no JavaScript required. Use `command="show-modal"` for modal dialogs or `command="show"` for non-modal ones.

@@ -5,6 +5,7 @@ date: 2025-12-06
 tags:
   - code
   - css
+typefully_published: true
 ---
 
 Have a small scroll container where you want to de-emphasize the scrollbar, like in a popover? Say hello to [`scrollbar-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color) and [`scrollbar-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width).

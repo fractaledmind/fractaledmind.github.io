@@ -5,6 +5,7 @@ date: 2025-12-05
 tags:
   - code
   - css
+typefully_published: true
 ---
 
 Double-dashed IDs and the enhanced [`attr()`](https://developer.mozilla.org/en-US/docs/Web/CSS/attr) CSS function allow us to bind `popovertarget`s with their `popover`s without having to create distinct [`anchor-name`](https://developer.mozilla.org/en-US/docs/Web/CSS/anchor-name)s.

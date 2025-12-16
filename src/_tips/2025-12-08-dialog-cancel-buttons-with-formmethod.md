@@ -5,6 +5,7 @@ date: 2025-12-08
 tags:
   - code
   - html
+typefully_published: true
 ---
 
 `<dialog>`s with forms have a simple HTML-only way to implement "Cancel" buttons. In addition to `POST` and `GET`, `<form>`s inside of `<dialog>`s can make use of the [`dialog` method](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#formmethod). This allows the submit button to close the dialog without submitting the form to the backend.

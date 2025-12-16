@@ -5,6 +5,7 @@ date: 2025-12-04
 tags:
   - code
   - css
+typefully_published: true
 ---
 
 Want to prevent scrolling when a modal dialog is open? Use the [`:modal`](https://developer.mozilla.org/en-US/docs/Web/CSS/:modal) pseudo-class with `body:has()` to disable scrolling purely in CSS—no JavaScript needed.

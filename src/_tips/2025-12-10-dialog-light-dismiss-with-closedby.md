@@ -5,6 +5,7 @@ date: 2025-12-10
 tags:
   - code
   - html
+typefully_published: true
 ---
 
 The [`closedby`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute gives you declarative control over how users can dismiss a `<dialog>`. Want users to close by clicking outside? Set `closedby="any"`. Need to force them through your buttons? Use `closedby="none"`.

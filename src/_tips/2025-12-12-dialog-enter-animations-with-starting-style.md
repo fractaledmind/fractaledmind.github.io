@@ -5,6 +5,7 @@ date: 2025-12-12
 tags:
   - code
   - css
+typefully_published: true
 ---
 
 Want smooth fade-in animations when your `<dialog>` opens? The [`@starting-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style) CSS rule defines the initial state when an element first appears—no JavaScript needed.
