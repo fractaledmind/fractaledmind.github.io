@@ -11,6 +11,8 @@
 
 .prose {
   max-width: 75ch;
+
+  code::before, code::after { content: "" }
 }
 
 .stroke-current {
