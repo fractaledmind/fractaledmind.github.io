@@ -5,6 +5,7 @@ date: 2025-12-14
 tags:
   - code
   - css
+typefully_published: true
 ---
 
 What happens when your anchored popover runs out of space? With [`position-try-fallbacks`](https://developer.mozilla.org/en-US/docs/Web/CSS/position-try-fallbacks), the browser automatically tries alternative positions—no JavaScript resize observers needed.

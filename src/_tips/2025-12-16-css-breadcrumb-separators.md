@@ -5,6 +5,7 @@ date: 2025-12-16
 tags:
   - code
   - css
+typefully_published: true
 ---
 
 Breadcrumb separators belong in CSS, not HTML. Using [`::after`](https://developer.mozilla.org/en-US/docs/Web/CSS/::after) pseudo-elements keeps your markup semantic and makes separators trivial to change globally.

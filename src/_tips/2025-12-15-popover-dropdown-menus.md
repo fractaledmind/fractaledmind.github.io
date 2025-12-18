@@ -5,6 +5,7 @@ date: 2025-12-15
 tags:
   - code
   - html
+typefully_published: true
 ---
 
 The [`popover`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover) attribute and [`popovertarget`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#popovertarget) give you dropdown menus with light-dismiss behavior—no JavaScript required.
