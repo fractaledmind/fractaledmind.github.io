@@ -10,7 +10,7 @@ tags:
 
 [Campsite](https://github.com/campsite/campsite) has some of my favorite UI styling on the web. Naturally, I cracked open their source hoping to learn something. What I found: React components rendering `<div>`s inside `<div>`s, with piles of JavaScript doing what `<dialog>` does for free.
 
-So I borrowed their visual design and rebuilt it with semantic HTML and CSS using [affordance classes]({% link _posts/2025-12-27-affordance-classes.md %}). I want to walk you through all of the choices I've made and how it all comes together.
+So I borrowed their visual design and rebuilt it with semantic HTML and CSS using [affordance classes]({% link _posts/2025-12-01-ui-affordances.md %}). I want to walk you through all of the choices I've made and how it all comes together.
 
 <!--/summary-->
 
@@ -801,4 +801,4 @@ Want to experiment? [Explore the full demo on Tailwind Play](https://play.tailwi
 
 ## What's Next
 
-Dialogs are just one piece. I'm building out a full set of [affordance classes]({% link _posts/2025-12-27-affordance-classes.md %})—buttons, forms, menus, popovers, tabs, tables. Designer-quality styling, browser-native behavior. The kind of UI that makes people ask who you hired. So be on the lookout for more like this 👀.
+Dialogs are just one piece. I'm building out a full set of [affordance classes]({% link _posts/2025-12-01-ui-affordances.md %})—buttons, forms, menus, popovers, tabs, tables. Designer-quality styling, browser-native behavior. The kind of UI that makes people ask who you hired. So be on the lookout for more like this 👀.
