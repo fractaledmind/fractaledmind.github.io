@@ -1,6 +1,6 @@
 ---
 title: Confirmation dialogs with zero JavaScript
-date: 2025-12-26
+date: 2025-12-16
 tags:
   - code
   - html
