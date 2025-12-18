@@ -1,6 +1,6 @@
 <aside role="note" class="text-[var(--tw-prose-captions)] !text-sm lg:!text-base mb-4">
   <time datetime="{{ post.data.date | date: "%Y-%m-%dT%H:%M:%SZ" }}">{{ post.data.date | date: "%B %d, %Y" }}</time>
-  · <a href="/about" class="no-underline font-normal text-inherit hover:underline">{{ post.data.author }}</a>
+  {% if post.data.author %} · <a href="/about" class="no-underline font-normal text-inherit hover:underline">{{ post.data.author }}</a>{% endif %}
   {% unless post.data.tags == empty %}
   ·
     {% for tag in post.data.tags %}
