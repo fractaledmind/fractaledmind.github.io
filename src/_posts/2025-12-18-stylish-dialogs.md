@@ -719,7 +719,7 @@ Here's a working demo. Try opening it, then close it different ways: click the Ã
 </style>
 
 <script src="https://unpkg.com/invokers-polyfill" type="module"></script>
-<script src="https://unpkg.com/@nicjansma/dialog-closedby-polyfill" type="module"></script>
+<script src="https://unpkg.com/@fractaledmind/dialog-closedby-polyfill" type="module"></script>
 
 <div class="not-prose overflow-hidden rounded-lg bg-zinc-900">
   <div class="flex justify-center p-6">
