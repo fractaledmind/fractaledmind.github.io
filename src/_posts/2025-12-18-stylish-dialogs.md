@@ -795,7 +795,7 @@ Here's a working demo. Try opening it, then close it different ways: click the Ã
   })();
 </script>
 
-Want to experiment? [Explore the full demo on Tailwind Play](https://play.tailwindcss.com/BFs63aoh9G?file=css) where you can tweak the styles and see how everything fits together.
+Want to experiment? [Explore the full demo on Tailwind Play](https://play.tailwindcss.com/0V4LTBpdHC) where you can tweak the styles and see how everything fits together.
 
 - - -
 
