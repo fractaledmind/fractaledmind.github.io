@@ -1,8 +1,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="1password-ignore" content="true" />
-{% capture resource_title %}{{ title | strip_html | strip_newlines }}{% endcapture %}
-<title>{% if resource_title != "Index" %}{{ resource_title | escape }} | {{ metadata.title | escape }}{% else %}{{ metadata.title | escape }}: {{ metadata.tagline | escape }}{% endif %}</title>
+{% capture resource_title %}{{ title | strip_html | plain_text | strip_newlines }}{% endcapture %}
+<title>{% if resource_title != "Index" %}{{ resource_title }} | {{ metadata.title | escape }}{% else %}{{ metadata.title | escape }}: {{ metadata.tagline | escape }}{% endif %}</title>
 
 <meta name="description" content="{{ metadata.description }}" />
 <link rel="icon" type="image/png" href="{{ "/images/favicon.png" | relative_url }}">
