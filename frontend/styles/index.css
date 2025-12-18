@@ -214,3 +214,6 @@ bridgetown-search-results {
 .lh-tight {
 	line-height: 1 !important;
 }
+[data-element="errors"] {
+  margin-block: 0 !important;
+}
