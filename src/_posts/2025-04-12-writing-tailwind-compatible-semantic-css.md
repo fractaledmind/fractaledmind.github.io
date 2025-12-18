@@ -2,6 +2,7 @@
 series: Design Tips
 title:
 date: 2025-04-12
+draft: true
 tags:
   - code
   - css
