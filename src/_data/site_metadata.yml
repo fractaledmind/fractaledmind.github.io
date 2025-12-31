@@ -5,7 +5,7 @@
 # in the templates via {{ site.metadata.myvariable }}.
 
 title: Fractaled Mind
-tagline: Thoughts on Ruby and beyond
+tagline: Stephen Margheim's personal blog
 email: stephen.margheim@gmail.com
 author: Stephen Margheim
 description: >-
