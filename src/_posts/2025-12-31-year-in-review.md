@@ -230,7 +230,7 @@ A few things became clear:
 
 ## Looking Ahead
 
-As I write this, Emma is just over three months old. She's starting to smile on purpose. She likes being held upright so she can look around. She has strong opinions about bath time.
+As I write this, Emma is just over three months old. She's starting to smile on purpose. She likes being held upright so she can look around. 
 
 For 2026, I'm keeping it simple:
 
@@ -238,8 +238,6 @@ For 2026, I'm keeping it simple:
 - **Keep speaking.** I'm already scheduled to speak at [RubyConf Thailand](https://rubyconfth.com), and I'm on the program committee for [RubyConf Austria](https://www.rubyconf.at).
 - **Keep shipping open source.** I have some awesome stuff brewing that I can't wait to share.
 - **Be present.** Emma's first year only happens once.
-
-Germany offers 14 months of paid parental leave that can be split between parents. We're figuring out how to use that time well. Universal childcare means we'll have options when we're ready.
 
 To everyone who read a post, attended a talk, joined a call, or sent a kind message this year: thank you. The Ruby community remains one of the best places on the internet.
 
