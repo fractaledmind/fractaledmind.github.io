@@ -217,3 +217,23 @@ bridgetown-search-results {
 [data-element="errors"] {
   margin-block: 0 !important;
 }
+
+.lightbox {
+  max-height: 90vh;
+  max-width: 90vw;
+  padding: 0;
+  border: none;
+}
+
+.lightbox img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  margin: 0 !important;
+}
+
+.lightbox::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
