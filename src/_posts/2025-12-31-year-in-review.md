@@ -230,7 +230,7 @@ A few things became clear:
 
 ## Looking Ahead
 
-As I write this, Emma is just over three months old. She's starting to smile on purpose. She likes being held upright so she can look around. 
+As I write this, Emma is just over three months old. She's has been smiling on purpose for a month or so now. She likes being held upright so she can look around. 
 
 For 2026, I'm keeping it simple:
 
