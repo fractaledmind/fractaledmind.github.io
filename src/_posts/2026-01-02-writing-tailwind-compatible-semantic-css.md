@@ -7,7 +7,7 @@ tags:
   - tailwind
 ---
 
-Building [HTML UI](https://html-ui.com) forced me to figure out how to write reusable CSS classes that play nice with Tailwind. Along the way, I looked at how other libraries tackle this. Spoiler: most of them get it wrong.
+Building HTML UI forced me to figure out how to write reusable CSS classes that play nice with Tailwind. Along the way, I looked at how other libraries tackle this. Spoiler: most of them get it wrong.
 
 <!--/summary-->
 
