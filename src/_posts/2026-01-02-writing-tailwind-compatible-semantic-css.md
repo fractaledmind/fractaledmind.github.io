@@ -1,6 +1,6 @@
 ---
 title: Writing Tailwind-compatible Semantic CSS
-date: 2025-04-12
+date: 2026-01-02
 tags:
   - code
   - css
