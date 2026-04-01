@@ -1,6 +1,6 @@
 ---
 title: Basic role management
-date: 2024-01-04
+date: 2026-04-01
 tags:
   - code
   - ruby
@@ -137,57 +137,4 @@ class User < ApplicationRecord
 end
 ```
 
-These methods exactly capture the landscope of our application's roles. I use these methods in my policy classes to drive authorization. And maybe I'll write more in-depth about that in the future, but there isn't much magical going on. What I want to dig into here at the close is how we can leverage this data model to bring wonderful clarity and expressiveness to our application.
-
-- - -
-
-Here was the feature I needed to add today:
-
-> An `admin` needs to be able to manage a `Customer`'s `manager`s.
-
-The UX that I wanted was to add a collection of checkboxes to the `Customer` edit form that would allow an `admin` to select which `User`s should be `manager`s of the `Customer`. One of the niceties of Rails is that it makes it easy to manage a `has_many` association via a collection of checkboxes:
-
-```ruby
-# /app/models/customer.rb
-class Customer < ApplicationRecord
-  # ...
-  has_many :managers
-end
-
-# /app/controllers/customers_controller.rb
-class CustomersController < ApplicationController
-  # ...
-
-  # PATCH/PUT /customers/1
-  def update
-    if @customer.update(customer_params)
-      redirect_to @customer, notice: "Customer was successfully updated."
-    else
-      render :edit, status: :unprocessable_entity
-    end
-  end
-
-  def customer_params
-    params.require(:customer).permit(
-      # ...
-      manager_ids: []
-    )
-  end
-end
-
-# /app/views/customers/_form.html.erb
-<%= form.collection_check_boxes(:manager_ids, User.all.pluck(:id, :username), :first, :last) %>
-```
-
-This is a pretty straightforward feature, but it is a great example of how we can leverage our role-based authorization to drive our application's behavior.
-
-
-
-
-has_one :csm_role, ->(customer) { manager.for_instance(customer) }, class_name: "Role", inverse_of: :resource
-has_many :manager_roles, through: :csm_role, source: :user_roles
-has_many :managers, through: :manager_roles, source: :user
-
-def managers
-  User.where(id: UserRole.where(role: Role.manager.for_class("Customer")).select(:user_id))
-end
+These methods exactly capture the landscope of our application's roles. I use these methods in my policy classes to drive authorization.
